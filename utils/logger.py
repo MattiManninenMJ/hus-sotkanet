@@ -6,6 +6,8 @@ from pathlib import Path
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 
+import colorlog
+
 # Default configuration
 LOG_DIR = Path(__file__).parent.parent / "logs"
 LOG_LEVEL = "INFO"
@@ -123,7 +125,7 @@ def log_function_call(func):
     
     return wrapper
 
-def log_api_call(url: str, method: str = "GET", response_code: int = None):
+def log_api_call(url: str, method: str = "GET", response_code: int = -1):
     """
     Log an API call.
     
@@ -144,7 +146,7 @@ def log_api_call(url: str, method: str = "GET", response_code: int = None):
     else:
         logger.debug(f"{method} {url}")
 
-def log_data_processing(operation: str, records: int, duration: float = None):
+def log_data_processing(operation: str, records: int, duration: float = -1.0):
     """
     Log data processing operations.
     
@@ -155,15 +157,14 @@ def log_data_processing(operation: str, records: int, duration: float = None):
     """
     logger = get_logger('data')
     
-    if duration:
+    if duration> 0.0:
         logger.info(f"{operation}: {records} records in {duration:.2f}s ({records/duration:.0f} records/s)")
     else:
         logger.info(f"{operation}: {records} records")
 
 # Color support for console output (optional)
 try:
-    import colorlog
-    
+        
     def setup_color_logging():
         """Setup colored console logging if colorlog is available."""
         
