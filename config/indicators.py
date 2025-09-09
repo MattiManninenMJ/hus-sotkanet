@@ -1,6 +1,6 @@
 """
 Auto-generated indicator definitions from Sotkanet API.
-Generated: 2025-09-09T11:01:04.289645
+Generated: 2025-09-09T13:55:21.463722
 """
 
 INDICATORS = {
@@ -24,45 +24,55 @@ INDICATORS = {
         'decimals': 0,
         'last_updated': '2025-04-29'
     },
-    5527: {
-        'id': 5527,
-        'name_fi': 'Terveysliikuntasuosituksen mukaan liian vähän liikkuvien osuus (%)',
-        'name_sv': 'Andelen personer (%) som motionerar för lite enligt rekommendationen om hälsomotion',
-        'name_en': 'According to the recommendation on physical activity, the share of those with insufficient physical activity (%)',
+    5051: {
+        'id': 5051,
+        'name_fi': 'Lonkkamurtumapotilaiden 365 päivän kuolleisuus, vakioitu %',
+        'name_sv': 'Dödlighet inom 365 dagar för patienter med höftledsfraktur, standardiserad %',
+        'name_en': '365-day mortality in hip fracture patients, adjusted %',
         'unit': '%',
+        'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
+        'decimals': 1,
+        'last_updated': '2025-04-03'
+    },
+    5074: {
+        'id': 5074,
+        'name_fi': 'Kirurgisen ja muun lääketieteellisen hoidon komplikaatiot, % hoitojaksoista',
+        'name_sv': 'Komplikationer vid kirurgisk eller annan medicinsk behandling, % av behandlingsperioderna',
+        'name_en': 'Complications in surgical and other medical care, % of admissions',
+        'unit': '%',
+        'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
+        'decimals': 1,
+        'last_updated': '2025-05-07'
+    },
+    5034: {
+        'id': 5034,
+        'name_fi': 'Lonkan kokotekonivelen ensileikkaukset / 100 000 asukasta',
+        'name_sv': 'Primära operationer av total höftledsprotes / 100 000 invånare',
+        'name_en': 'Primary surgeries for total hip replacement per 100,000 inhabitants',
+        'unit': '/ 100 000',
         'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
         'decimals': 1,
         'last_updated': '2025-05-14'
     },
-    5529: {
-        'id': 5529,
-        'name_fi': 'Terveysliikuntasuosituksen mukaan liian vähän liikkuvien osuus (%), 65 vuotta täyttäneet',
-        'name_sv': 'Andelen personer (%) som motionerar för lite enligt rekommendationen om hälsomotion, 65 år och äldre',
-        'name_en': 'According to the recommendation on physical activity, the share of those with insufficient physical activity (%), age 65 and over',
+    5033: {
+        'id': 5033,
+        'name_fi': 'Erikoissairaanhoitoon saapuneet yli 21 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä ',
+        'name_sv': 'Antalet remisser som inkommit till den specialiserade sjukvården efter mer än 21 dagars behandling, % av inkomna remisser',
+        'name_en': 'Referrals for specialised health care received after processing for more than 21 days, % of the referrals received ',
         'unit': '%',
         'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
-        'decimals': 1,
-        'last_updated': '2025-05-14'
+        'decimals': 0,
+        'last_updated': '2025-02-17'
     },
-    4559: {
-        'id': 4559,
-        'name_fi': 'Terveydelle suotuisat elintavat (%), 20 - 69-vuotiaat',
-        'name_sv': 'Hälsosamma levnadsvanor (%), 20 - 69-åringar',
-        'name_en': 'Health promoting behaviors (%), age 20-69',
-        'unit': '%',
+    3336: {
+        'id': 3336,
+        'name_fi': 'Erikoissairaanhoitoa yli 6 kk odottaneet vuoden aikana / 10 000 asukasta ',
+        'name_sv': 'Antalet personer som väntat på specialiserad sjukvård under året i mer än 6 månader / 10 000 invånare ',
+        'name_en': 'Patients waiting over 6 months during the year for access to specialised health care per 10 000 inhabitants',
+        'unit': '/ 10 000',
         'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
         'decimals': 1,
-        'last_updated': '2025-05-30'
-    },
-    4461: {
-        'id': 4461,
-        'name_fi': 'Lihavien osuus (kehon painoindeksi BMI ≥ 30 kg/m2) (%), 65 vuotta täyttäneet',
-        'name_sv': 'Andelen feta personer (kroppsmasseindex BMI ≥ 30 kg/m2) (%), 65 år och äldre',
-        'name_en': 'Obesity (Body Mass Index BMI ≥ 30 kg/m2) (%), age 65 and over',
-        'unit': '%',
-        'organization': 'Terveyden ja hyvinvoinnin laitos (THL)',
-        'decimals': 1,
-        'last_updated': '2025-05-14'
+        'last_updated': '2025-04-10'
     },
 }
 

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-09-09T11:01:04.231695",
+  "generated_at": "2025-09-09T13:55:21.454857",
   "source": "Sotkanet REST API",
   "ids_file": "..\\config\\indicator_ids.txt",
-  "indicator_count": 6,
+  "indicator_count": 7,
   "indicators": {
     "186": {
       "id": 186,
@@ -257,32 +257,32 @@
       ],
       "indicator_id": 322
     },
-    "5527": {
-      "id": 5527,
-      "data-updated": "2025-05-14",
+    "5051": {
+      "id": 5051,
+      "data-updated": "2025-04-03",
       "range": {
-        "start": 2020,
-        "end": 2024
+        "start": 2001,
+        "end": 2023
       },
       "title": {
-        "fi": "Terveysliikuntasuosituksen mukaan liian vähän liikkuvien osuus (%)",
-        "en": "According to the recommendation on physical activity, the share of those with insufficient physical activity (%)",
-        "sv": "Andelen personer (%) som motionerar för lite enligt rekommendationen om hälsomotion"
+        "fi": "Lonkkamurtumapotilaiden 365 päivän kuolleisuus, vakioitu %",
+        "en": "365-day mortality in hip fracture patients, adjusted %",
+        "sv": "Dödlighet inom 365 dagar för patienter med höftledsfraktur, standardiserad %"
       },
       "description": {
-        "fi": "Indikaattori ilmaisee prosenttiosuuden 20 vuotta täyttäneistä, jotka eivät liiku viikoittain säännöllisesti terveysliikuntasuosituksen mukaisesti.<br /><br />Perustuu seuraaviin kahteen kysymyspatteriin ja niiden alakysymyksiin: K1) Kuinka paljon kaikkiaan liikut viikoittain työssä, työmatkalla ja vapaa-aikana? Ajattele 12 viime kuukautta. Ota huomioon kaikki säännöllisesti viikoittain toistuva liikunnallinen rasitus. Vastaa tarvittaessa useammalle riville. Ensimmäisenä alakohtana esitettiin: a) ei juurikaan mitään säännöllistä viikoittaista liikuntaa -> voit siirtyä seuraavaan kysymykseen. Seuraavissa 3:ssa alakohdassa kysyttiin viikottaisen liikunnan määrää seuraavasti: ____ päivänä viikossa, yhteensä ____ tuntia ja ____ minuuttia viikossa. Alakysymykset olivat: b) verkkaista ja rauhallista liikuntaa (=ei hikoilua tai hengityksen kiihtymistä, esim. rauhallinen kävely), c) ripeää ja reipasta liikuntaa (= jonkin verran hikoilua ja/tai hengityksen kiihtymistä, esim. reipas kävely), d) rasittavaa ja voimaperäistä liikuntaa (=voimakasta hikoilua ja/tai hengityksen kiihtymistä, esim. hölkkä tai juoksu). K2) Kuinka monena päivänä tavallisesti viikon aikana harrastat lihaskuntoa ylläpitävää tai kehittävää liikuntaa? Esim. kuntosaliharjoittelu, kotijumppa, ryhmäliikunta, pallo- ja mailapelit tai fyysisesti rasittavat askareet. Jos et lainkaan, vastaa 0. ____ kertaa. Terveysliikuntasuositus on: Vähintään 2 tuntia 30 minuuttia kohtuukuormitteista kestävyysliikuntaa, tai 1 tunti 15 minuuttia raskasta kestävyysliikuntaa viikossa. Lisäksi vähintään 2 kertaa lihaskuntoa ylläpitävää tai kehittävää liikuntaa viikossa. Tarkastelussa ovat ne, jotka eivät liiku terveysliikuntasuosituksen mukaisesti. ",
-        "en": "The indicator shows the percentage of people aged 20 or over who engage in less weekly physical activity than recommended for maintaining health.<br /><br />Based on the following two batteries of questions and their sub-questions: Q1) How much exercise do you get in a week in the course of your work, commute, and spare time? Think about the past 12 months. Take all regular, weekly physical exertion in consideration. You can write your answer on several lines if necessary. The first response alternative given was: a) hardly any regular weekly exercise &#8594; move on the next question. The following three sub-questions asked the respondents to specify their amount of weekly physical activity as follows: _______ on days per week, total _______ hours _______ and minutes per week. The sub-questions included: b) low-intensity aerobic exercise (= does not make you sweat or get out of breath, e.g. walking leisurely), c) moderate-intensity aerobic exercise (= makes you sweat a bit and/or get slightly out of breath, e.g. Walking briskly), d) high-intensity aerobic exercise (= makes you sweat a lot and/or get out of breath, e.g. jogging or running). Q2) On how many days during an ordinary week do you engage in exercise that maintains or develops muscle tone? E.g. exercising at a gym, home exercises, fitness classes, ball games and racked sports, or physically strenuous household chores. If you do not engage in any exercise, please write 0. ____ times. The recommendation for physical activity promoting health is: At least 2 hours 30 minutes of moderate-intensity endurance training, or 1 hour 15 minutes of high-intensity endurance training per week. Also at least 2 sessions of exercise maintaining or developing muscle health. The examination includes those do not engage in physical activity in accordance with the recommendation for physical activity promoting health.",
-        "sv": "Indikatorn visar procentandelen 20 år fyllda som inte motionerar regelbundet varje vecka enligt rekommendationen om hälsomotion.<br /><br />Grundar sig på följande två frågeuppsättningar och deras underfrågor: K1) Hur mycket motionerar du sammanlagt under en vecka på arbetet, vägen till och från arbetet samt på fritiden? Tänk på situationen de senaste 12 månaderna. Räkna in all fysisk ansträngning som upprepas varje vecka. Välj flera svar om det behövs. Alternativet i den första underpunkten var: a) motionerar i allmänhet inte regelbundet varje vecka -> gå vidare till följande fråga. I följande 3 underpunkter frågade man om mängden motion per vecka enligt följande: ____ dagar i veckan, sammanlagt ____ timmar och ____ minuter i veckan. Underfrågorna var: b) långsam och lugn motion (= svettas inte och blir inte andfådd, t.ex. lugna promenader), c) snabb och rask motion (= svettas något och/eller blir andfådd, t.ex. raska promenader), d) ansträngande och intensiv motion (= svettas kraftigt och/eller blir andfådd, t.ex. jogging eller löpning) K2) Hur många dagar per vecka brukar du utföra träning som upprätthåller eller förbättrar muskelkonditionen? T.ex. träning på gym, träning hemma, gruppträning, boll- och racketsporter eller fysiskt ansträngande sysslor. Om inga dagar alls, svara 0. ____ gånger. Rekommendation om hälsomotion: Minst 2 timmar 30 minuter måttligt ansträngande uthållighetsmotion, eller 1 timme 15 minuter tung uthållighetsmotion per vecka. Dessutom minst 2 gånger per vecka träning som upprätthåller eller förbättrar muskelkonditionen. Granskningen omfattar personer som inte motionerar regelbundet enligt rekommendationen om hälsomotion. "
+        "fi": "Indikaattori kuvaa niiden lonkkamurtumapotilaiden osuutta, jotka ovat kuolleet 365 päivän kuluessa seurannan alusta. Tietojen vertailukelpoisuuden parantamiseksi esitetyt % -osuudet on vakioitu sekoittavien tekijöiden suhteen. Vakioitavina tekijöinä on käytetty potilaan ikää, sukupuolta ja liitännäissairauksia sekä seurannan alkua edeltäneen 90 päivän aikaisia hoitopäiviä ja murtumatyyppiä.<br /><br><br><br />Aineisto koostuu kaksivuotisista kohorteista, joihin kuuluvat kaikki kyseisellä ajanjaksolla lonkkamurtuman vuoksi (pää- tai sivudiagnoosina S72.0, S72.1, S72.2) sairaalahoidossa olleet potilaat, joilta löytyy lonkkaleikkaustoimenpide (NFB20, NFB30, NFB40, NFB50, NFJ50, NFJ52, NFJ54). Aineistosta on lisäksi poistettu potilaat, jotka olivat olleet lonkkamurtuman takia edeltäneen 10 vuoden takia sairaalahoidossa, alle 50-vuotiaat potilaat, pitkäaikaispotilaat sekä potilaat, joiden kotikunta ei ole tiedossa tai sijaitsee lonkkamurtumahoitoilmoituksen mukaan ulkomailla tai Ahvenanmaalla. ",
+        "en": "The indicator shows the hip fracture patients who died within 365 days since the start of monitoring. The percentages presented to improve the comparability of the data have been adjusted in proportion to confounding factors. Standardised factors include the patient's age, gender and associated diseases, the days of treatment within the 90 days prior to the start of the follow-up, and fracture type.<br><br>The data comprise two-year cohorts which include all patients in hospital treatment due to a hip fracture within the period (main or additional diagnosis S72.0, S72.1, S72.2) who have undergone hip surgery (NFB20, NFB30, NFB40, NFB50, NFJ50, NFJ52, NFJ54). In addition, patient groups removed from the data include those who had been in hospital treatment due to a hip fracture within the previous 10 years, patients under 50 years old, long-term patients, and patients whose home municipality is unknown or is located abroad or in the Åland Islands based on the care notification on the hip fracture. ",
+        "sv": "Indikatorn anger andelen patienter med höftfraktur som avlidit inom 365 dagar efter att uppföljningen inleddes. Procentandelarna som angetts för att förbättra jämförbarheten hos uppgifterna har standardiserats med avseende på sammanblandande faktorer. Som standardiserande faktorer har patientens ålder, kön och associerade sjukdomar samt vårddagar under 90 dagar före uppföljningens början och frakturtyp använts.<br><br>Materialet består av tvååriga kohorter, till vilka hör alla patienter som varit i sjukhusvård under denna period på grund av höftfraktur (huvud- eller bidiagnos S72.0, S72.1, S72.2) och som har genomgått höftoperation (NFB20, NFB30, NFB40, NFB50, NFJ50, NFJ52, NFJ54). Från materialet har dessutom avlägsnats patienter som varit i sjukhusvård på grund av höftfraktur under de föregående 10 åren, patienter under 50 år, långvårdspatienter och patienter vars hemkommun är okänd eller belägen utomlands eller på Åland enligt vårdanmälan gällande höftfraktur. "
       },
       "interpretation": {
-        "fi": "<p>Liian vähäinen liikunta lisää riskiä sairastua keskeisiin kansantauteihin, kuten sydän- ja verisuonitauteihin, syöpiin, muistisairauksiin, verenpaineeseen ja tyypin 2 diabetekseen. Liikunta ja liikkuminen tukevat terveen painon ylläpitoa, mielen hyvinvointia sekä riittävää ja laadukasta unta. Liikunta ylläpitää arjen tarmokkuutta ja elämänlaatua. Liian vähäinen liikunta heikentää toimintakykyä ja fyysistä suorituskykyä kaikenikäisillä. <br><br>Kaikenlainen liikkuminen ja arkiaktiivisuus on suositeltavaa. Maailman terveysjärjestön (WHO) terveyttä edistävän fyysisen aktiivisuuden suositus 18 vuotta täyttäneille on moniportainen, jossa suositellaan 1) säännöllistä fyysistä aktiivisuutta eli liikkumista terveyshyötyjen saamiseksi, 2) vähintään 150-300 minuuttia kohtuutehoista liikkumista viikoittain tai 75-150 min raskastehoista liikkumista viikoittain tai edellisten yhdistelmä, 3) lihasvoimaa ylläpitävää tai lisäävää harjoittelua vähintään 2 kertaa viikossa. Lisäksi suositusten kohdassa 4) lisätään, että ylittämällä kohdan 2) liikkumisen minimimäärän (300 min/vko kohtuukuormitteinen, 150 min/vko raskastehoinen tai niiden yhdistelmä saavutetaan lisää terveyshyötyjä. <br><br>Ylläkuvattu WHO:n suositus on suunnattu ammattilaisille ja liikunta- terveyspolitiikkaa ohjaaville ja niistä päättäville tahoille. Suositus tulee jalkauttaa väestöön sopivilla viesteillä ja liikkumista lisäävillä toimenpiteillä. WHO:n ohjaamat keskeiset viestit käytännön työhön ovat: a) Vähäinenkin liikkuminen on hyväksi, b) Jos aikuiset eivät saavuta terveysliikunnan suosituksen mukaista liikkumisen määrää, niin pienikin määrä liikkumista edistää terveyttä, c) aikuisten tulee aloittaa liikkuminen pienellä liikkumisen määrällä ja asteittain lisätä liikkumiskertoja, tehoa ja kestoa. <BR><BR><b>Miten liikuntaan voidaan motivoida? </b><BR><BR>Yksilö- ja ryhmälähtöinen elintapaneuvonta, jossa hyödynnetään käyttäytymisen muutosmalleja. Erilaiset rakenteet ja keinot sosiaalisen tuen ja liikuntapystyvyyden lisäämiseksi. Kampanjat, tiedon ja osaamisen lisääminen. <BR><BR><b>Mitä kunnassa / alueella tulisi tehdä? </b><BR><BR>Terveydenhuollon toiminta esimerkiksi liikunnan palveluketjun avulla ja liian vähän liikkuvan tunnistamalla. Liikuntamahdollisuuksien kattava ja kohtuuhintainen tarjonta kaikille väestöryhmille ja niistä tiedottaminen. Kolmannen sektorin toimijoiden kanssa yhteinen kehittäminen ja liikkumismahdollisuuksien järjestäminen. Liikkumista tukeva maankäytön suunnittelu. Innovatiiviset keinot hyöty- ja matkaliikunnan lisäämiseksi sekä ilmastoystävällisyyttä painottaen. </p> ",
-        "en": " <p>Insufficient exercise increases the risk of developing significant chronic diseases, such as cardiovascular diseases, cancers, memory disorders, hypertension and type 2 diabetes. Physical activity and exercise support maintaining a healthy weight, mental wellbeing and sufficient sleep with good quality. Physical activity maintains energy in day-to-day life and contributes to good quality of life. Insufficient physical activity impairs functioning and physical performance in all age groups. <br><br>All kind of physical exercise and activity in day-to-day life is recommended. The World Health Organization's (WHO) recommendation for physical activity promoting health for people aged 18 or over consists of different steps and recommends 1) undertaking regular physical activity or exercise to obtain health benefits, 2) at least 150 to 300 minutes of moderate-intensity aerobic physical activity throughout the week or 75-150 of high-intensity physical activity or an equivalent combination, 3) activities maintaining or increasing muscle strength at least 2 times per week. Item 4) of the recommendations adds that exceeding the minimum amount of physical activity specified in item 2) (300 min/week moderate-intensity, 150 min/week high-intensity physical activity or an equivalent combination) brings additional health benefits. <br><br>The WHO recommendation described above has been aimed at professionals and policy-makers in physical activity and health. The recommendation must be implemented among the population using suitable messages and measures promoting physical activity. The key messages provided by WHO for practical work are: a) Even a small amount of physical activity is beneficial, b) If adults are not meeting the recommendations, doing some physical activity will benefit their health, c) Adults should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time. <BR><BR><b>How can people be motivated to engage in physical activity? </b><BR><BR>Individual- and group-based lifestyle counselling that makes use of the models for changing behaviour. Different structures and means to increase social support and physical ability. Campaigns, increasing knowledge and competence. <BR><BR><b>What should municipalities / regions do? </b><BR><BR>Health care activities, for instance, by using a physical activity service chain and identifying those with insufficient physical activity. Provision of a comprehensive and affordable range of physical activity for all population groups and providing information about these. Joint development activities with third-sector operators and providing opportunities for physical activity. Land use planning that supports physical activity. Innovative means to increase physical activity in performing daily tasks and during commuting and by emphasising climate-friendliness. </p> ",
-        "sv": "<p>För lite motion ökar risken för att insjukna i de största folksjukdomarna, såsom hjärt- och kärlsjukdomar, cancersjukdomar, minnessjukdomar, högt blodtryck och typ 2-diabetes. Motion och rörelse främjar upprätthållandet av hälsosam vikt, psykiskt välbefinnande samt tillräcklig och kvalitativ sömn. Motion upprätthåller handlingskraften i vardagen och livskvaliteten. För lite motion försämrar funktionsförmågan och den fysiska prestationsförmågan hos människor i alla åldrar. <br><br>All slags motion och aktivitet i vardagen rekommenderas. Världshälsoorganisationens (WHO) rekommendation om hälsofrämjande fysisk aktivitet för personer över 18 år är mångfasetterad, och innehåller rekommendationer om 1) regelbunden fysisk aktivitet dvs. motion för att uppnå hälsofördelar, 2) minst 150-300 minuter måttlig motion per vecka eller 75-150 minuter motion med hög intensitet per vecka eller en kombination av de föregående, 3) träning som upprätthåller eller ökar muskelstyrkan minst 2 gånger per vecka. I punkt 4) i rekommendationen tilläggs dessutom att genom att överskrida minimimängden motion i punkt 2) (300 min/vecka med måttlig intensitet, 150 min/vecka med hög intensitet eller en kombination av dem uppnås ytterligare hälsofördelar. <br><br>WHO:s rekommendation som beskrivs ovan riktar sig till yrkesutbildade personer och aktörer som styr och fattar beslut om motions- och hälsopolitiken. Rekommendationen bör förankras i befolkningen med lämplig kommunikation och åtgärder som ökar motionsutövandet. Centrala budskap i det praktiska arbetet är enligt WHO:s anvisningar a) Även en liten mängd motion är till nytta, b) Om vuxna inte uppnår den mängd motion som anges i rekommendationen om hälsomotion, främjar även en liten mängd motion hälsan c) vuxna ska inleda motionen med en liten mängd motion och stegvis öka antalet gånger, effekten och längden för motionen. <BR><BR><b>Hur kan man motivera till motion? </b><BR><BR>Livsstilsrådgivning individuellt eller i grupp, där man utnyttjar modeller för att förändra beteendet. Olika strukturer och metoder för att öka det sociala stödet och varaktig motion. Kampanjer, öka informationen och kunskapen. <BR><BR><b>Vad borde man göra i kommunen/området? </b><BR><BR>Verksamhet inom hälso- och sjukvården till exempel med hjälp av servicekedja för motion och identifiering av de som rör på sig för lite. Täckande utbud av motionsmöjligheter till rimligt pris för alla befolkningsgrupper och information om utbudet. Utveckling och ordnande av motionsmöjligheter tillsammans med aktörer inom tredje sektorn. Planläggning som främjar motion. Innovativa metoder för att öka nytto- och vardagsmotionen samt betoning på klimatvänlighet. </p> "
+        "fi": "Indikaattori mittaa lonkkamurtumapotilaiden hoitotuloksia ja vaikuttavuutta sairaanhoitopiireissä, hyvinvointialueilla, maakunnissa ja koko maan tasolla.<br><br><br />Sairaanhoitopiirit, hyvinvointialueet ja maakunnat voivat käyttää vertailutietoja hyväkseen edistäessään lonkkamurtumapotilaiden hoitoprosesseja sekä hoidon vaikuttavuutta. Tuloksia voidaan käyttää myös sairaanhoitopiirien välisessä vertaiskehittämisessä. ",
+        "en": "The indicator measures the care outcomes of hip fracture patients and related effectiveness in the hospital districts, the wellbeing services counties, the counties and at the level of the entire country.<br><br>Hospital districts, the wellbeing services counties and the counties can make use of the comparative data in promoting the care processes for hip fracture patients and the effectiveness of care. The results can also be used in benchmarking between hospital districts. ",
+        "sv": "Indikatorn mäter vårdresultaten och effekterna hos patienter med höftfraktur i sjukvårdsdistrikten, välfärdsområdet, landskapen och i hela landet.<br><br>Sjukvårdsdistrikten, välfärdsområdet och landskapen kan utnyttja referensuppgifterna i sitt främjande av vårdprocesserna för patienter med höftfraktur och vårdeffekterna. Resultaten kan också utnyttjas i utvecklingen av referensgrupper mellan sjukvårdsdistrikten. "
       },
       "limits": {
-        "fi": "<br /><p>Tuloksen varmuuteen vaikuttaa se, että aineisto on tuotettu otostutkimusaineistosta,<br />jossa esiintyy vastauskatoa. Vastauskatoa on korjattu tuloksista painokertoimien avulla. <br />Vuoden 2022 tiedonkeruussa vastausaktiivisuus oli 20 - 64-vuotiailla 37 %, <br />65 vuotta täyttäneillä 59 % ja 75 vuotta täyttäneillä 57 %.</p><br /><p><br />Indikaattorin tulkinnassa täytyy ottaa huomioon, että kyseessä on vastaajan itse ilmoittamat tiedot.<br />Lisätietoja: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Tilastoraportti</a></p>",
-        "en": "<br /><p>The confidence of the result is influenced by the fact that the data is based on survey sampling data,<br />which is affected by nonresponse. <br />In the results, nonresponse has been corrected by using weighting coefficients. <br />In the 2022 data collection, the response rate was 37 % for people aged 20 - 64, <br />59 % for people aged 65 and older, and 57 % for people aged 75 and older.</p><br /><p><br />When interpreting the indicator, it should be noted that this information was reported by <br />the respondents themselves.<br />More information: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistical Report</a> </p>",
-        "sv": "<br /><p>Resultatens tillförlitlighet påverkas av att materialet har inhämtats från urvalsundersökning där det <br />förekommer svarsbortfall. <br />Svarsbortfallet har korrigerats i resultaten med hjälp av viktkoefficienter. <br />I 2022 års datainsamling var svarsaktiviteten 37 % bland 20 - 64-åringar, <br />59 % bland personer som fyllt 65 år och 57 % bland personer som fyllt 75 år.</p><br /><p><br />Vid tolkning av indikatorn bör man beakta att det är fråga om uppgifter som lämnats av respondenten själv.<br />Mer information <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistikrapport</a> </p>"
+        "fi": "Indikaattorin laskennassa on käytetty hyväksi valtakunnallisia terveydenhuollon rekisteritietoja. Indikaattorin luotettavuus on riippuvainen näiden rekisteritietojen luotettavuudesta.<br><br><br />Satunnaisuudesta johtuvan vaihtelun vähentämiseksi luvut on esitetty kaksivuotiskohorteille. Esimerkiksi vuoden 2014 tiedot kattavat vuosien 2013 - 2014 lonkkamurtumapotilaat. ",
+        "en": "<p>Calculations for the indicator make use of national health care register data. The reliability of the indicator depends on the reliability of the register data used.<br /></p><p><br />To reduce variation caused by randomness, the numbers are presented for two-year cohorts. For example, the 2014 data covers patients who have received hospital treatment due to a cerebral infarction in 2013-2014.<br /></P>",
+        "sv": "<p>Vid beräkningen av indikatorn har även registeruppgifter om den riksomfattande hälso- och sjukvården använts. Indikatorns tillförlitlighet är beroende av tillförlitligheten av dessa registeruppgifter.<br /></p><p><br />För att minska variationen på grund av slumpmässighet har siffrorna angetts för tvåårskohorter. Till exempel täcker uppgifterna för 2014 patienter som fått sjukhusvård på grund av hjärninfarkt 2013 - 2014.<br /></P>"
       },
       "legislation": {
         "fi": "",
@@ -290,9 +290,9 @@
         "sv": ""
       },
       "notices": {
-        "fi": "",
-        "en": "",
-        "sv": ""
+        "fi": "Tutustu Perfect-hankkeen muihin indikaattoreihin <a href=\"https://thl.fi/fi/tutkimus-ja-kehittaminen/tutkimukset-ja-hankkeet/perfect\" TARGET=\"_blank\">hankkeen kotisivuilla</A>.<br /> ",
+        "en": "Get to know the other indicators of the Perfect project on the <a href=\"https://thl.fi/fi/tutkimus-ja-kehittaminen/tutkimukset-ja-hankkeet/perfect\" TARGET=\"_blank\">project's homepage</A>. ",
+        "sv": "Läs också om de övriga indikatorerna i projektet Perfect på <a href=\"https://thl.fi/fi/tutkimus-ja-kehittaminen/tutkimukset-ja-hankkeet/perfect\" TARGET=\"_blank\">projektets webbplats</A>. "
       },
       "primaryValueType": {
         "code": "PROS",
@@ -306,282 +306,14 @@
       "classifications": {
         "region": {
           "title": {
-            "fi": "Kunta, maakunta, hyvinvointialue, aluehallintoviraston alue, Manner-Suomi",
-            "en": "Municipality, region, the wellbeing services county, area for the regional state administrative agency, Mainland Finland",
-            "sv": "Kommun, landskap, välfärdsområde, området för regionförvaltningsverket, Fastlandsfinland"
-          },
-          "values": [
-            "Aluehallintovirasto",
-            "Nuts1",
-            "Kunta",
-            "Maakunta"
-          ]
-        },
-        "sex": {
-          "title": {
-            "fi": "Miehet, naiset, yhteensä",
-            "en": "Male, female, combined",
-            "sv": "Män, kvinnor, totalt"
-          },
-          "values": [
-            "male",
-            "female",
-            "total"
-          ]
-        }
-      },
-      "organization": {
-        "id": 2,
-        "title": {
-          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
-          "en": "Finnish institute for Health and Welfare (THL)",
-          "sv": "Institutet för hälsa och välfärd (THL)"
-        }
-      },
-      "subjects": [
-        {
-          "fi": "liikunta",
-          "sv": "motion",
-          "en": "physical activity",
-          "uri": "http://www.yso.fi/onto/yso/p916"
-        },
-        {
-          "fi": "fyysinen aktiivisuus",
-          "sv": "fysisk aktivitet",
-          "en": "physical activity",
-          "uri": ""
-        },
-        {
-          "fi": "elintavat",
-          "sv": "levnadsvanor",
-          "en": "living habits",
-          "uri": "http://www.yso.fi/onto/yso/p5530"
-        }
-      ],
-      "sources": [
-        {
-          "organization": {
-            "id": 2,
-            "title": {
-              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
-              "en": "Finnish institute for Health and Welfare (THL)",
-              "sv": "Institutet för hälsa och välfärd (THL)"
-            }
-          },
-          "title": {
-            "fi": "Terve Suomi -tutkimus (THL)",
-            "en": "Healthy Finland Survey (THL)",
-            "sv": "Undersökningen Hälsosamma Finland (THL)"
-          },
-          "description": {
-            "fi": "Terve Suomi -tutkimus tuottaa ajankohtaista tietoa Suomessa asuvien aikuisten terveydestä, hyvinvoinnista ja palveluista sekä niissä tapahtuneista muutoksista ja tulevasta kehityksestä. Tutkimuksessa yhdistyvät aiemmat kyselytutkimus FinSote sekä terveystarkastustutkimus FinTerveys.",
-            "en": "The Healthy Finland survey provides up-to-date information on the health, well-being and service use of adults living in Finland, as well as on changes and future developments in these areas. The survey brings together the FinSote questionnaire survey and the FinHealth health examination study.",
-            "sv": "Undersökningen Hälsosamma Finland producerar aktuell information om hälsa, välfärd och service för vuxna bosatta i Finland samt om förändringarna i dessa, och den framtida utvecklingen. I undersökningen kombineras den tidigare enkätundersökningen FinSote och undersökningen om hälsa, välfärd och social- och hälsovården FinHälsa."
-          }
-        }
-      ],
-      "groups": [
-        583
-      ],
-      "indicator_id": 5527
-    },
-    "5529": {
-      "id": 5529,
-      "data-updated": "2025-05-14",
-      "range": {
-        "start": 2020,
-        "end": 2024
-      },
-      "title": {
-        "fi": "Terveysliikuntasuosituksen mukaan liian vähän liikkuvien osuus (%), 65 vuotta täyttäneet",
-        "en": "According to the recommendation on physical activity, the share of those with insufficient physical activity (%), age 65 and over",
-        "sv": "Andelen personer (%) som motionerar för lite enligt rekommendationen om hälsomotion, 65 år och äldre"
-      },
-      "description": {
-        "fi": "Indikaattori ilmaisee prosenttiosuuden 65 vuotta täyttäneistä, jotka eivät liiku viikoittain säännöllisesti terveysliikuntasuosituksen mukaisesti.<br /><br />Perustuu seuraaviin kahteen kysymyspatteriin ja niiden alakysymyksiin: K1) Kuinka paljon kaikkiaan liikut viikoittain työssä, työmatkalla ja vapaa-aikana? Ajattele 12 viime kuukautta. Ota huomioon kaikki säännöllisesti viikoittain toistuva liikunnallinen rasitus. Vastaa tarvittaessa useammalle riville. Ensimmäisenä alakohtana esitettiin: a) ei juurikaan mitään säännöllistä viikoittaista liikuntaa -> voit siirtyä seuraavaan kysymykseen. Seuraavissa 3:ssa alakohdassa kysyttiin viikottaisen liikunnan määrää seuraavasti: ____ päivänä viikossa, yhteensä ____ tuntia ja ____ minuuttia viikossa. Alakysymykset olivat: b) verkkaista ja rauhallista liikuntaa (=ei hikoilua tai hengityksen kiihtymistä, esim. rauhallinen kävely), c) ripeää ja reipasta liikuntaa (= jonkin verran hikoilua ja/tai hengityksen kiihtymistä, esim. reipas kävely), d) rasittavaa ja voimaperäistä liikuntaa (=voimakasta hikoilua ja/tai hengityksen kiihtymistä, esim. hölkkä tai juoksu). K2) Kuinka monena päivänä tavallisesti viikon aikana harrastat lihaskuntoa ylläpitävää tai kehittävää liikuntaa? Esim. kuntosaliharjoittelu, kotijumppa, ryhmäliikunta, pallo- ja mailapelit tai fyysisesti rasittavat askareet. Jos et lainkaan, vastaa 0. ____ kertaa. Terveysliikuntasuositus on: Vähintään 2 tuntia 30 minuuttia kohtuukuormitteista kestävyysliikuntaa, tai 1 tunti 15 minuuttia raskasta kestävyysliikuntaa viikossa. Lisäksi vähintään 2 kertaa lihaskuntoa ylläpitävää tai kehittävää liikuntaa viikossa. Tarkastelussa ovat ne, jotka eivät liiku terveysliikuntasuosituksen mukaisesti. ",
-        "en": "The indicator shows the percentage of people aged 65 or over who engage in less weekly physical activity than recommended for maintaining health.<br /><br />Based on the following two batteries of questions and their sub-questions: Q1) How much exercise do you get in a week in the course of your work, commute, and spare time? Think about the past 12 months. Take all regular, weekly physical exertion in consideration. You can write your answer on several lines if necessary. The first response alternative given was: a) hardly any regular weekly exercise &#8594; move on the next question. The following three sub-questions asked the respondents to specify their amount of weekly physical activity as follows: _______ on days per week, total _______ hours _______ and minutes per week. The sub-questions included: b) low-intensity aerobic exercise (= does not make you sweat or get out of breath, e.g. walking leisurely), c) moderate-intensity aerobic exercise (= makes you sweat a bit and/or get slightly out of breath, e.g. Walking briskly), d) high-intensity aerobic exercise (= makes you sweat a lot and/or get out of breath, e.g. jogging or running). Q2) On how many days during an ordinary week do you engage in exercise that maintains or develops muscle tone? E.g. exercising at a gym, home exercises, fitness classes, ball games and racked sports, or physically strenuous household chores. If you do not engage in any exercise, please write 0. ____ times. The recommendation for physical activity promoting health is: At least 2 hours 30 minutes of moderate-intensity endurance training, or 1 hour 15 minutes of high-intensity endurance training per week. Also at least 2 sessions of exercise maintaining or developing muscle health. The examination includes those do not engage in physical activity in accordance with the recommendation for physical activity promoting health.",
-        "sv": "Indikatorn visar procentandelen 65 år fyllda som inte motionerar regelbundet varje vecka enligt rekommendationen om hälsomotion.<br /><br />Grundar sig på följande två frågeuppsättningar och deras underfrågor: K1) Hur mycket motionerar du sammanlagt under en vecka på arbetet, vägen till och från arbetet samt på fritiden? Tänk på situationen de senaste 12 månaderna. Räkna in all fysisk ansträngning som upprepas varje vecka. Välj flera svar om det behövs. Alternativet i den första underpunkten var: a) motionerar i allmänhet inte regelbundet varje vecka -> gå vidare till följande fråga. I följande 3 underpunkter frågade man om mängden motion per vecka enligt följande: ____ dagar i veckan, sammanlagt ____ timmar och ____ minuter i veckan. Underfrågorna var: b) långsam och lugn motion (= svettas inte och blir inte andfådd, t.ex. lugna promenader), c) snabb och rask motion (= svettas något och/eller blir andfådd, t.ex. raska promenader), d) ansträngande och intensiv motion (= svettas kraftigt och/eller blir andfådd, t.ex. jogging eller löpning) K2) Hur många dagar per vecka brukar du utföra träning som upprätthåller eller förbättrar muskelkonditionen? T.ex. träning på gym, träning hemma, gruppträning, boll- och racketsporter eller fysiskt ansträngande sysslor. Om inga dagar alls, svara 0. ____ gånger. Rekommendation om hälsomotion: Minst 2 timmar 30 minuter måttligt ansträngande uthållighetsmotion, eller 1 timme 15 minuter tung uthållighetsmotion per vecka. Dessutom minst 2 gånger per vecka träning som upprätthåller eller förbättrar muskelkonditionen. Granskningen omfattar personer som inte motionerar regelbundet enligt rekommendationen om hälsomotion. "
-      },
-      "interpretation": {
-        "fi": "<p>Liian vähäinen liikunta lisää riskiä sairastua keskeisiin kansantauteihin, kuten sydän- ja verisuonitauteihin, syöpiin, muistisairauksiin, verenpaineeseen ja tyypin 2 diabetekseen. Liikunta ja liikkuminen tukevat terveen painon ylläpitoa, mielen hyvinvointia sekä riittävää ja laadukasta unta. Liikunta ylläpitää arjen tarmokkuutta ja elämänlaatua. Liian vähäinen liikunta heikentää toimintakykyä ja fyysistä suorituskykyä kaikenikäisillä. <br><br>Kaikenlainen liikkuminen ja arkiaktiivisuus on suositeltavaa. Maailman terveysjärjestön (WHO) terveyttä edistävän fyysisen aktiivisuuden suositus 18 vuotta täyttäneille on moniportainen, jossa suositellaan 1) säännöllistä fyysistä aktiivisuutta eli liikkumista terveyshyötyjen saamiseksi, 2) vähintään 150-300 minuuttia kohtuutehoista liikkumista viikoittain tai 75-150 min raskastehoista liikkumista viikoittain tai edellisten yhdistelmä, 3) lihasvoimaa ylläpitävää tai lisäävää harjoittelua vähintään 2 kertaa viikossa. Lisäksi suositusten kohdassa 4) lisätään, että ylittämällä kohdan 2) liikkumisen minimimäärän (300 min/vko kohtuukuormitteinen, 150 min/vko raskastehoinen tai niiden yhdistelmä saavutetaan lisää terveyshyötyjä. <br><br>Ylläkuvattu WHO:n suositus on suunnattu ammattilaisille ja liikunta- terveyspolitiikkaa ohjaaville ja niistä päättäville tahoille. Suositus tulee jalkauttaa väestöön sopivilla viesteillä ja liikkumista lisäävillä toimenpiteillä. WHO:n ohjaamat keskeiset viestit käytännön työhön ovat: a) Vähäinenkin liikkuminen on hyväksi, b) Jos aikuiset eivät saavuta terveysliikunnan suosituksen mukaista liikkumisen määrää, niin pienikin määrä liikkumista edistää terveyttä, c) aikuisten tulee aloittaa liikkuminen pienellä liikkumisen määrällä ja asteittain lisätä liikkumiskertoja, tehoa ja kestoa. <BR><BR><b>Miten liikuntaan voidaan motivoida? </b><BR><BR>Yksilö- ja ryhmälähtöinen elintapaneuvonta, jossa hyödynnetään käyttäytymisen muutosmalleja. Erilaiset rakenteet ja keinot sosiaalisen tuen ja liikuntapystyvyyden lisäämiseksi. Kampanjat, tiedon ja osaamisen lisääminen. <BR><BR><b>Mitä kunnassa / alueella tulisi tehdä? </b><BR><BR>Terveydenhuollon toiminta esimerkiksi liikunnan palveluketjun avulla ja liian vähän liikkuvan tunnistamalla. Liikuntamahdollisuuksien kattava ja kohtuuhintainen tarjonta kaikille väestöryhmille ja niistä tiedottaminen. Kolmannen sektorin toimijoiden kanssa yhteinen kehittäminen ja liikkumismahdollisuuksien järjestäminen. Liikkumista tukeva maankäytön suunnittelu. Innovatiiviset keinot hyöty- ja matkaliikunnan lisäämiseksi sekä ilmastoystävällisyyttä painottaen. </p> ",
-        "en": "<p>Insufficient exercise increases the risk of developing significant chronic diseases, such as cardiovascular diseases, cancers, memory disorders, hypertension and type 2 diabetes. Physical activity and exercise support maintaining a healthy weight, mental wellbeing and sufficient sleep with good quality. Physical activity maintains energy in day-to-day life and contributes to good quality of life. Insufficient physical activity impairs functioning and physical performance in all age groups. <br><br>All kind of physical exercise and activity in day-to-day life is recommended. The World Health Organization's (WHO) recommendation for physical activity promoting health for people aged 18 or over consists of different steps and recommends 1) undertaking regular physical activity or exercise to obtain health benefits, 2) at least 150 to 300 minutes of moderate-intensity aerobic physical activity throughout the week or 75-150 of high-intensity physical activity or an equivalent combination, 3) activities maintaining or increasing muscle strength at least 2 times per week. Item 4) of the recommendations adds that exceeding the minimum amount of physical activity specified in item 2) (300 min/week moderate-intensity, 150 min/week high-intensity physical activity or an equivalent combination) brings additional health benefits. <br><br>The WHO recommendation described above has been aimed at professionals and policy-makers in physical activity and health. The recommendation must be implemented among the population using suitable messages and measures promoting physical activity. The key messages provided by WHO for practical work are: a) Even a small amount of physical activity is beneficial, b) If adults are not meeting the recommendations, doing some physical activity will benefit their health, c) Adults should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time. <BR><BR><b>How can people be motivated to engage in physical activity? </b><BR><BR>Individual- and group-based lifestyle counselling that makes use of the models for changing behaviour. Different structures and means to increase social support and physical ability. Campaigns, increasing knowledge and competence. <BR><BR><b>What should municipalities / regions do? </b><BR><BR>Health care activities, for instance, by using a physical activity service chain and identifying those with insufficient physical activity. Provision of a comprehensive and affordable range of physical activity for all population groups and providing information about these. Joint development activities with third-sector operators and providing opportunities for physical activity. Land use planning that supports physical activity. Innovative means to increase physical activity in performing daily tasks and during commuting and by emphasising climate-friendliness. </p> ",
-        "sv": "<p>För lite motion ökar risken för att insjukna i de största folksjukdomarna, såsom hjärt- och kärlsjukdomar, cancersjukdomar, minnessjukdomar, högt blodtryck och typ 2-diabetes. Motion och rörelse främjar upprätthållandet av hälsosam vikt, psykiskt välbefinnande samt tillräcklig och kvalitativ sömn. Motion upprätthåller handlingskraften i vardagen och livskvaliteten. För lite motion försämrar funktionsförmågan och den fysiska prestationsförmågan hos människor i alla åldrar. <br><br>All slags motion och aktivitet i vardagen rekommenderas. Världshälsoorganisationens (WHO) rekommendation om hälsofrämjande fysisk aktivitet för personer över 18 år är mångfasetterad, och innehåller rekommendationer om 1) regelbunden fysisk aktivitet dvs. motion för att uppnå hälsofördelar, 2) minst 150-300 minuter måttlig motion per vecka eller 75-150 minuter motion med hög intensitet per vecka eller en kombination av de föregående, 3) träning som upprätthåller eller ökar muskelstyrkan minst 2 gånger per vecka. I punkt 4) i rekommendationen tilläggs dessutom att genom att överskrida minimimängden motion i punkt 2) (300 min/vecka med måttlig intensitet, 150 min/vecka med hög intensitet eller en kombination av dem uppnås ytterligare hälsofördelar. <br><br>WHO:s rekommendation som beskrivs ovan riktar sig till yrkesutbildade personer och aktörer som styr och fattar beslut om motions- och hälsopolitiken. Rekommendationen bör förankras i befolkningen med lämplig kommunikation och åtgärder som ökar motionsutövandet. Centrala budskap i det praktiska arbetet är enligt WHO:s anvisningar a) Även en liten mängd motion är till nytta, b) Om vuxna inte uppnår den mängd motion som anges i rekommendationen om hälsomotion, främjar även en liten mängd motion hälsan c) vuxna ska inleda motionen med en liten mängd motion och stegvis öka antalet gånger, effekten och längden för motionen. <BR><BR><b>Hur kan man motivera till motion? </b><BR><BR>Livsstilsrådgivning individuellt eller i grupp, där man utnyttjar modeller för att förändra beteendet. Olika strukturer och metoder för att öka det sociala stödet och varaktig motion. Kampanjer, öka informationen och kunskapen. <BR><BR><b>Vad borde man göra i kommunen/området? </b><BR><BR>Verksamhet inom hälso- och sjukvården till exempel med hjälp av servicekedja för motion och identifiering av de som rör på sig för lite. Täckande utbud av motionsmöjligheter till rimligt pris för alla befolkningsgrupper och information om utbudet. Utveckling och ordnande av motionsmöjligheter tillsammans med aktörer inom tredje sektorn. Planläggning som främjar motion. Innovativa metoder för att öka nytto- och vardagsmotionen samt betoning på klimatvänlighet. </p> "
-      },
-      "limits": {
-        "fi": "<br /><p>Tuloksen varmuuteen vaikuttaa se, että aineisto on tuotettu otostutkimusaineistosta,<br />jossa esiintyy vastauskatoa. Vastauskatoa on korjattu tuloksista painokertoimien avulla. <br />Vuoden 2022 tiedonkeruussa vastausaktiivisuus oli 20 - 64-vuotiailla 37 %, <br />65 vuotta täyttäneillä 59 % ja 75 vuotta täyttäneillä 57 %.</p><br /><p><br />Indikaattorin tulkinnassa täytyy ottaa huomioon, että kyseessä on vastaajan itse ilmoittamat tiedot.<br />Lisätietoja: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Tilastoraportti</a></p>",
-        "en": "<br /><p>The confidence of the result is influenced by the fact that the data is based on survey sampling data,<br />which is affected by nonresponse. <br />In the results, nonresponse has been corrected by using weighting coefficients. <br />In the 2022 data collection, the response rate was 37 % for people aged 20 - 64, <br />59 % for people aged 65 and older, and 57 % for people aged 75 and older.</p><br /><p><br />When interpreting the indicator, it should be noted that this information was reported by <br />the respondents themselves.<br />More information: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistical Report</a> </p>",
-        "sv": "<br /><p>Resultatens tillförlitlighet påverkas av att materialet har inhämtats från urvalsundersökning där det <br />förekommer svarsbortfall. <br />Svarsbortfallet har korrigerats i resultaten med hjälp av viktkoefficienter. <br />I 2022 års datainsamling var svarsaktiviteten 37 % bland 20 - 64-åringar, <br />59 % bland personer som fyllt 65 år och 57 % bland personer som fyllt 75 år.</p><br /><p><br />Vid tolkning av indikatorn bör man beakta att det är fråga om uppgifter som lämnats av respondenten själv.<br />Mer information <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistikrapport</a> </p>"
-      },
-      "legislation": {
-        "fi": "",
-        "en": "",
-        "sv": ""
-      },
-      "notices": {
-        "fi": "",
-        "en": "",
-        "sv": ""
-      },
-      "primaryValueType": {
-        "code": "PROS",
-        "title": {
-          "fi": "Prosenttia",
-          "en": "Percent",
-          "sv": "Procent"
-        }
-      },
-      "decimals": 1,
-      "classifications": {
-        "region": {
-          "title": {
-            "fi": "Kunta, maakunta, hyvinvointialue, aluehallintoviraston alue, Manner-Suomi",
-            "en": "Municipality, region, the wellbeing services county, area for the regional state administrative agency, Mainland Finland",
-            "sv": "Kommun, landskap, välfärdsområde, området för regionförvaltningsverket, Fastlandsfinland"
-          },
-          "values": [
-            "Aluehallintovirasto",
-            "Nuts1",
-            "Kunta",
-            "Maakunta"
-          ]
-        },
-        "sex": {
-          "title": {
-            "fi": "Miehet, naiset, yhteensä",
-            "en": "Male, female, combined",
-            "sv": "Män, kvinnor, totalt"
-          },
-          "values": [
-            "male",
-            "female",
-            "total"
-          ]
-        }
-      },
-      "organization": {
-        "id": 2,
-        "title": {
-          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
-          "en": "Finnish institute for Health and Welfare (THL)",
-          "sv": "Institutet för hälsa och välfärd (THL)"
-        }
-      },
-      "subjects": [
-        {
-          "fi": "liikunta",
-          "sv": "motion",
-          "en": "physical activity",
-          "uri": "http://www.yso.fi/onto/yso/p916"
-        },
-        {
-          "fi": "fyysinen aktiivisuus",
-          "sv": "fysisk aktivitet",
-          "en": "physical activity",
-          "uri": ""
-        },
-        {
-          "fi": "elintavat",
-          "sv": "levnadsvanor",
-          "en": "living habits",
-          "uri": "http://www.yso.fi/onto/yso/p5530"
-        }
-      ],
-      "sources": [
-        {
-          "organization": {
-            "id": 2,
-            "title": {
-              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
-              "en": "Finnish institute for Health and Welfare (THL)",
-              "sv": "Institutet för hälsa och välfärd (THL)"
-            }
-          },
-          "title": {
-            "fi": "Terve Suomi -tutkimus (THL)",
-            "en": "Healthy Finland Survey (THL)",
-            "sv": "Undersökningen Hälsosamma Finland (THL)"
-          },
-          "description": {
-            "fi": "Terve Suomi -tutkimus tuottaa ajankohtaista tietoa Suomessa asuvien aikuisten terveydestä, hyvinvoinnista ja palveluista sekä niissä tapahtuneista muutoksista ja tulevasta kehityksestä. Tutkimuksessa yhdistyvät aiemmat kyselytutkimus FinSote sekä terveystarkastustutkimus FinTerveys.",
-            "en": "The Healthy Finland survey provides up-to-date information on the health, well-being and service use of adults living in Finland, as well as on changes and future developments in these areas. The survey brings together the FinSote questionnaire survey and the FinHealth health examination study.",
-            "sv": "Undersökningen Hälsosamma Finland producerar aktuell information om hälsa, välfärd och service för vuxna bosatta i Finland samt om förändringarna i dessa, och den framtida utvecklingen. I undersökningen kombineras den tidigare enkätundersökningen FinSote och undersökningen om hälsa, välfärd och social- och hälsovården FinHälsa."
-          }
-        }
-      ],
-      "groups": [
-        918,
-        583
-      ],
-      "indicator_id": 5529
-    },
-    "4559": {
-      "id": 4559,
-      "data-updated": "2025-05-30",
-      "range": {
-        "start": 2022,
-        "end": 2024
-      },
-      "title": {
-        "fi": "Terveydelle suotuisat elintavat (%), 20 - 69-vuotiaat",
-        "en": "Health promoting behaviors (%), age 20-69",
-        "sv": "Hälsosamma levnadsvanor (%), 20 - 69-åringar"
-      },
-      "description": {
-        "fi": "Summaindikaattori on laskettu neljästä elintapamuuttujasta sen mukaan, kuinka monta terveydelle suotuisaa elintapaa henkilö saavutti. Indikaattori ilmaisee prosenttiosuuden 20 - 69-vuotiaista, joilla toteutuu vähintään kolme seuraavista neljästä terveydelle suotuisasta elintavasta: 1) syö useita kertoja päivässä kasviksia sekä hedelmiä ja marjoja, 2) saavuttaa terveysliikuntasuosituksen, 3) ei käytä päivittäin tupakka- eikä nikotiinituotteita, 4) ei ole alkoholin riskikäyttäjiä AUDIT-C-kyselymittarin mukaan.",
-        "en": "The summary indicator has been calculated based on four lifestyle variables, according to how many health-promoting behaviors a person adopts. The indicator expresses the percentage (%) of persons aged 20 to 69 who achieve at least three of the following four health promoting behaviors: 1) eats vegetables, fruits, and berries several times a day, 2) meets the recommended level of health-promoting physical activity, 3) does not use tobacco or nicotine products daily, 4) is not classified as an at-risk alcohol user according to the AUDIT-C questionnaire.",
-        "sv": "Summaindikatorn har beräknats utifrån fyra livsstilsvariabler baserat på hur många hälsosamma levnadsvanor en person uppnår. Indikatorn anger den procentuella andelen 20-69 åringar som uppfyller minst tre av följande fyra hälsosamma levnadsvanor: 1) äter flera gånger om dagen grönsaker samt frukt och bär, 2) uppnår rekommendationen för hälsofrämjande fysisk aktivitet, 3) använder inte dagligen tobak eller nikotinprodukter, 4) är inte riskbrukare av alkohol enligt AUDIT-C-frågeformuläret."
-      },
-      "interpretation": {
-        "fi": "Keskeiset kansantaudit, kuten sydän- ja verisuonitaudit, diabetes, krooniset keuhkosairaudet, syöpäsairaudet muistisairaudet, tuki- ja liikuntaelimistön sairaudet ja mielenterveyden ongelmat ovat yleisiä väestössä. Ne aiheuttavat ennenaikaisia kuolemia, vaikuttavat elämänlaatuun ja työkykyyn, ja niiden hoito vaatii terveydenhuollon palveluita ja aiheuttaa kustannuksia. Erittäin suuri osa työikäisten kroonisista sairauksista voidaan ehkäistä. Tärkeimmät keinot ovat terveellinen ruokavalio, liikunta, tupakoinnin välttäminen, vähäinen alkoholinkäyttö ja lihavuuden ehkäiseminen. Myös lääkehoitoa tarvitsee käyttää, jos henkilöllä on suuri riski sairastua kansantauteihin. <br /><br /><br /><br />",
-        "en": "Chronic diseases, such as cardiovascular diseases, diabetes, chronic respiratory diseases, cancers, memory disorders, musculoskeletal disorders, and mental health problems, are common in the population. They cause premature deaths, affect quality of life and work ability, and require healthcare services, leading to significant costs. A very large proportion of chronic diseases in working-age population can be prevented. Very often, chronic diseases in the working-age population could be prevented by adopting a healthier diet and a non-smoking lifestyle, by engaging in physical activity, by avoiding excessive consumption of alcohol and by preventing obesity. Drug therapy is recommended for people who are at high risk.",
-        "sv": "Kroniska folksjukdomar, såsom hjärt- och kärlsjukdomar, diabetes, kroniska lungsjukdomar, cancersjukdomar, demens, sjukdomar i stöd- och rörelseorganen samt psykiska promlem är vanliga i befolkningen. De orsakar förtida dödsfall, påverkar livskvaliteten och arbetsförmågan samt kräver vårdtjänster och medför kostnader. En betydande del av de kroniska sjukdomarna för personer i förvärvsaktiv ålder kan förebyggas genom hälsosam kost, motion, undvikande av rökning och riklig alkoholanvändning samt förebyggande av fetma. För personer med hög risk krävs en effektivt genomförd läkarvård."
-      },
-      "limits": {
-        "fi": "<p>Tuloksen varmuuteen vaikuttaa se, että aineisto on tuotettu otostutkimusaineistosta, jossa esiintyy vastauskatoa. Vastauskatoa on korjattu tuloksista painokertoimien avulla. Vuoden 2024 tiedonkeruussa vastausaktiivisuus oli 20 - 64-vuotiailla 32 %, 65 vuotta täyttäneillä 61 % ja 75 vuotta täyttäneillä 61 %.</p><br /><p>Indikaattorin tulkinnassa täytyy ottaa huomioon, että kyseessä on vastaajan itse ilmoittamat tiedot. Lisätietoja: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Tilastoraportti</a></p>",
-        "en": "<p>The confidence of the result is influenced by the fact that the data is based on survey sampling data, which is affected by nonresponse. In the results, nonresponse has been corrected by using weighting coefficients. In the 2024 data collection, the response rate was 32% for people aged 20 - 64, 61% for people aged 65 and older, and 61% for people aged 75 and older.</p><br /><p>When interpreting the indicator, it should be noted that this information was reported by the respondents themselves. More information: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistical Report</a> </p>",
-        "sv": "<p>Resultatens tillförlitlighet påverkas av att materialet har inhämtats från urvalsundersökning där det förekommer svarsbortfall. Svarsbortfallet har korrigerats i resultaten med hjälp av viktkoefficienter. I 2024 års datainsamling var svarsaktiviteten 32 % bland 20 - 64-åringar, 61 % bland personer som fyllt 65 år och 61 % bland personer som fyllt 75 år.</p><br /><p>Vid tolkning av indikatorn bör man beakta att det är fråga om uppgifter som lämnats av respondenten själv. Mer information <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistikrapport</a> </p>"
-      },
-      "legislation": {
-        "fi": " ",
-        "en": " ",
-        "sv": " "
-      },
-      "notices": {
-        "fi": " ",
-        "en": " ",
-        "sv": " "
-      },
-      "primaryValueType": {
-        "code": "INDEKSI",
-        "title": {
-          "fi": "Indeksi",
-          "en": "Index",
-          "sv": "Index"
-        }
-      },
-      "decimals": 1,
-      "classifications": {
-        "region": {
-          "title": {
-            "fi": "Maakunta, hyvinvointialue, koko maa",
-            "en": "Region, university hospital special responsibility area, whole country",
-            "sv": "Landskap, specialupptagningsområde, hela landet"
+            "fi": "Maakunta, hyvinvointialue, sairaanhoitopiiri, koko maa",
+            "en": "Region, the wellbeing services county, hospital district, whole country",
+            "sv": "Landskap, välfärdsområde, sjukvårdsdistrikt, hela landet"
           },
           "values": [
             "Maa",
+            "Sairaanhoitopiiri",
             "Maakunta"
-          ]
-        },
-        "sex": {
-          "title": {
-            "fi": "Miehet, naiset, yhteensä",
-            "en": "Male, female, combined",
-            "sv": "Män, kvinnor, totalt"
-          },
-          "values": [
-            "male",
-            "female",
-            "total"
           ]
         }
       },
@@ -595,46 +327,28 @@
       },
       "subjects": [
         {
-          "fi": "liikunta",
-          "sv": "motion",
-          "en": "physical activity",
-          "uri": "http://www.yso.fi/onto/yso/p916"
-        },
-        {
-          "fi": "ravitsemus",
-          "sv": "näring",
-          "en": "nutrition",
+          "fi": "perfect-hanke",
+          "sv": "perfect",
+          "en": "perfect",
           "uri": ""
         },
         {
-          "fi": "alkoholinkäyttö",
-          "sv": "alkoholanvändning ",
-          "en": "drinking",
+          "fi": "hoidon vaikuttavuus",
+          "sv": "vårdens effektivitet",
+          "en": "health outcomes",
+          "uri": "http://www.yso.fi/onto/tero/T00514"
+        },
+        {
+          "fi": "lonkkamurtuma",
+          "sv": "höftfrakturer",
+          "en": "hip fractures",
+          "uri": "http://www.yso.fi/onto/tero/D006620"
+        },
+        {
+          "fi": "kuolinsyy",
+          "sv": "dödsorsaker",
+          "en": "cause of death",
           "uri": ""
-        },
-        {
-          "fi": "elintavat",
-          "sv": "levnadsvanor",
-          "en": "living habits",
-          "uri": "http://www.yso.fi/onto/yso/p5530"
-        },
-        {
-          "fi": "tupakointi",
-          "sv": "rökning",
-          "en": "smoking",
-          "uri": ""
-        },
-        {
-          "fi": "ruokatottumukset",
-          "sv": "matvanor",
-          "en": "eating habits",
-          "uri": ""
-        },
-        {
-          "fi": "nikotiinituotteet",
-          "sv": "nikotinprodukter",
-          "en": "nicotine products",
-          "uri": "http://www.yso.fi/onto/yso/p38256"
         }
       ],
       "sources": [
@@ -648,51 +362,50 @@
             }
           },
           "title": {
-            "fi": "Terve Suomi -tutkimus (THL)",
-            "en": "Healthy Finland Survey (THL)",
-            "sv": "Undersökningen Hälsosamma Finland (THL)"
+            "fi": "Perfect eli Hoitoketjun toimivuus, vaikuttavuus ja kustannukset -hanke (THL)",
+            "en": "PERFECT - PERFormance, Effectiveness and Cost of Treatment episodes (THL)",
+            "sv": "PERFEC - PERFormance, Effectiveness and Cost of Treatment episodes (THL)"
           },
           "description": {
-            "fi": "Terve Suomi -tutkimus tuottaa ajankohtaista tietoa Suomessa asuvien aikuisten terveydestä, hyvinvoinnista ja palveluista sekä niissä tapahtuneista muutoksista ja tulevasta kehityksestä. Tutkimuksessa yhdistyvät aiemmat kyselytutkimus FinSote sekä terveystarkastustutkimus FinTerveys.",
-            "en": "The Healthy Finland survey provides up-to-date information on the health, well-being and service use of adults living in Finland, as well as on changes and future developments in these areas. The survey brings together the FinSote questionnaire survey and the FinHealth health examination study.",
-            "sv": "Undersökningen Hälsosamma Finland producerar aktuell information om hälsa, välfärd och service för vuxna bosatta i Finland samt om förändringarna i dessa, och den framtida utvecklingen. I undersökningen kombineras den tidigare enkätundersökningen FinSote och undersökningen om hälsa, välfärd och social- och hälsovården FinHälsa."
+            "fi": "Tutkimusaineiston muodostamisessa käytettävät rekisterit ovat:<br /><UL><br /><LI>THL: sairaaloiden poistoilmoitusrekisteri, sosiaali- ja terveydenhuollon hoitoilmoitusrekisteri (ml. erikoissairaanhoidon avokäynnit), perusterveydenhuollon avohoidon hoitoilmoitusrekisteri, Endoproteesirekisteri<br /><LI>Kelan etuusrekisteri: korvausoikeuksien tietokanta, sairaanhoitokorvaustietokanta (Kelan korvaamat yksityisen sektorin avopalvelut, matkat, kliiniset ravintovalmisteet ja lääkkeet)<br /><LI>Tilastokeskus: kuolemansyytilasto, työssäkäyntitilasto<br /><LI>Digi- ja väestötietoviraston väestötietojärjestelmästä mm. kuolinpäivää ja siviilisäätyä koskevat tiedot</UL>",
+            "en": "The research data are based on the following registers:<br /><UL><br /><LI>THL: Hospital discharge registers, Finnish Care Register (incl. data in supplements on cerebral infarction patients), Register of primary health care visits, Endoprosthesis register<br /><LI>Social Insurance Institution: entitlements to special refunds on medicine (free-of-charge), medicine reimbursements, private examinations and treatments, visits to private practitioners<br /><LI>Statistics Finland: Causes of Death Register<br /><LI>Digital anc population data services agency, Populatio information system: date of death and marital status",
+            "sv": "De register som används för att bilda forskningsunderlaget är: <br /><UL><br /><LI>THL: Vårdanmälningsregistret inom social- och hälsovården, Vårdanmälningar inom den öppna primärvården, Endoproteser register<br /><LI>FPA's Förmånsregistret: specialersättnings rätter, läkemedelsersättningar, privata undersökningar och behandling, privatläkarbesök <br /><LI>Statistikcentralen: dödsorsaksregistret<br /><LI>Myndigheten för digitaliserin och beflokninsdata, Befolkningsdatasystemet: dödsdagen och civilstånd<br /></UL>"
           }
         }
       ],
       "groups": [
-        579,
-        560,
-        583,
-        581
+        662,
+        665,
+        663
       ],
-      "indicator_id": 4559
+      "indicator_id": 5051
     },
-    "4461": {
-      "id": 4461,
-      "data-updated": "2025-05-14",
+    "5074": {
+      "id": 5074,
+      "data-updated": "2025-05-07",
       "range": {
-        "start": 2013,
+        "start": 2006,
         "end": 2024
       },
       "title": {
-        "fi": "Lihavien osuus (kehon painoindeksi BMI ≥ 30 kg/m2) (%), 65 vuotta täyttäneet",
-        "en": "Obesity (Body Mass Index BMI ≥ 30 kg/m2) (%), age 65 and over",
-        "sv": "Andelen feta personer (kroppsmasseindex BMI ≥ 30 kg/m2) (%), 65 år och äldre"
+        "fi": "Kirurgisen ja muun lääketieteellisen hoidon komplikaatiot, % hoitojaksoista",
+        "en": "Complications in surgical and other medical care, % of admissions",
+        "sv": "Komplikationer vid kirurgisk eller annan medicinsk behandling, % av behandlingsperioderna"
       },
       "description": {
-        "fi": "<p>Indikaattori ilmaisee lihavien (kehon painoindeksi BMI ≥ 30 kg/m2) osuuden 65 vuotta täyttäneistä. <br><br>Laskeminen: Pituutta kysyttiin kysymyksellä: \"Kuinka pitkä olette?\". Painoa kysyttiin kysymyksellä: \"Miten paljon painatte kevyissä vaatteissa punnittuna?\". Pituudesta ja painosta on laskettu kehon painoindeksi (BMI) jakamalla paino (kiloina) pituuden (neliöllä), kg/m2. Kehon painoindeksi on yleisimmin käytetty menetelmä lihavuuden asteen määrittämiseksi. Painoindeksi ≥ 30 kg/m2 on kansainvälisesti hyväksytty raja-arvo lihavuudelle. Tarkastelussa ovat painoindeksin arvon vähintään 30 kg/m2 saaneiden osuus. </p> ",
-        "en": "<p>The indicator gives the percentage (%) of overweight persons (body mass index BMI ≥ 30 kg/m2) among persons aged 65 and over. <br><br><br />Calculation: Height was gauged with the question: \"How tall are you?\" Weight was gauged with the question: \"How much do you weigh when wearing light clothing?\" The body mass index (BMI) is calculated from height and weight by dividing weight (in kg) by the square of height (in m), kg/m2. BMI is the most common indicator used as a measure of obesity. A BMI of 30 kg/m2 is internationally accepted as the threshold for obesity. This indicator gives the percentage of respondents with a BMI of 30 kg/m2 or more.</p> ",
-        "sv": "<p>Indikatorn anger de feta personernas (kroppens viktindex BMI ≥ 30 kg/m2) andel av 65-åringar och äldre.<br><br><br />Beräkning: Längden frågades med frågan: \"Hur lång är ni?\". Vikten frågades med frågan: \"Hur mycket väger ni då ni vägs iklädd lätta kläder?\". Längden och vikten har använts för att räkna ut kroppens viktindex (BMI) genom att dividera vikten (i kilogram) med längden (i kvadrat), kg/m2. En uträkning av kroppens viktindex är den vanligaste metoden för att fastställa graden av fetma. Viktindex >= 30 kg/m2 är ett internationellt godkänt gränsvärde för fetma. I granskningen ingår andelen personer vars viktindexvärde är minst 30 kg/m2.</p> "
+        "fi": "Indikaattori ilmaisee kirurgisen ja muun lääketieteellisen sairaalahoidon komplikaatioiden (ICD-10 tautiluokituksen T80-T88 koodein mitattuina) osuuden kaikista hoitojaksoista. ",
+        "en": "The indicator represents the percentage of complications from other medical in-patient care (measured with codes T80-T88 of the ICD-10 classification of diseases) compared to all treatment periods. ",
+        "sv": "Indikatorn visar andelen komplikationer vid kirurgisk eller annan medicinsk behandling (mätt i koderna T80T88 i klassifikationen av sjukdomar ICD-10) av alla behandlingsperioder. "
       },
       "interpretation": {
-        "fi": "<p>Lihavuus lisää huomattavasti riskiä sairastua muun muassa sydän- ja verisuonitauteihin, tyypin 2 diabetekseen sekä tuki- ja liikuntaelinsairauksiin. Merkittävä lihavuus aiheuttaa myös liikkumisrajoitteita. Lihavien osuus Suomessa on kasvanut ja lihavuus on merkittävä kansanterveysongelma. Lihavuuden ehkäisy onkin erittäin tärkeää pyrittäessä ehkäisemään kroonisia sairauksia ja toimintakyvyn alenemista. Lihavuudella on yhteys myös koettuun hyvinvointiin. Lihavuutta voidaan vähentää terveellisillä ruokatottumuksilla ja lisäämällä liikuntaa. <BR><BR>Painoindeksi 30 kg/m2 on kansainvälisesti hyväksytty terveyden kannalta merkittävän lihavuuden raja-arvo. Raja-arvoa 25 kg/m2 käytetään ylipainoisuuden kriteerinä, mutta näin matalan rajan käyttäminen johtaa siihen, että ylipainoisiksi luokitellaan myös rotevarakenteisia ihmisiä, joilla ei ole terveyden kannalta merkittävää ylipainoa. <BR><BR><b>Vaikutus väestön hyvinvointiin</b><BR><BR>Lihavuus on yksi tärkeimmistä kansanterveysongelmista Suomessa. Jopa 60 prosenttia työikäisistä miehistä ja noin puolet naisista on vähintään ylipainoisia, joka viides aikuinen on lihava. Aikuisväestön painoindeksi on noussut 70-80-luvuilta lähtien, erityisesti miehillä. Kehitys on hidastunut ja jopa tasaantunut viimeisen vuosikymmenen aikana, mutta liian korkealle tasolle. Lihavuus on merkittävä riskitekijä monille pitkäaikaissairauksille kuten sydän- ja verisuonitaudille, tyypin 2 diabetekselle ja tuki- ja liikuntaelinsairauksille. Lihavuudella on yhteys myös koettuun hyvinvointiin. Lihavuuden ehkäisy onkin kansanterveystyössä yhä keskeisempää ehkäistäessä kroonisten sairauksien syntyä. Väestötasolla tulisi pyrkiä lihavuuden ehkäisyyn vaikuttamalla ruoka- ja liikuntatottumuksiin. Erityisesti nuoren aikuisväestön lihominen on huolestuttavaa. Iäkkäillä (75+) lihavuuden yhteys mm. kuolleisuuteen ei ole niin selvä. Iäkkäille onkin olemassa omat ylipainoisuuden ja lihavuuden kriteerit ja myös ravitsemussuositukset. Lihavuus on, etenkin naisilla, yleisintä alemmissa sosiaaliryhmissä. <BR><BR><b>Taloudellinen merkitys</b><BR><BR>Lihavuuden kustannuksista esitettyjen arvioiden mukaan lihavuus maksaa valtiolle ja kunnille yhteensä yli 300 miljoonaa euroa vuodessa. Lihavuus keskeisimpänä kroonisten kansansairauksien aiheuttajana aiheuttaa vuodessa jopa liki 350 000 poissaolopäivää töistä. Lihavien kuntoutukseen vastaavasti käytetään vuosittain hieman alle miljoona euroa. Lihavuudesta kertyvät kustannukset ovat jopa suuremmat kuin tupakasta aiheutuvat.<BR><BR><b>Miten ilmiöön kyetään vaikuttamaan? </b><BR><BR>Lihavuuden aiheuttamia sairauksia voidaan tehokkaasti ehkäistä ja hoitaa laihduttamalla ja ehkäisemällä väestön lihomista. Erityisesti on syytä kiinnittää huomiota energiatasapainoon eli energiansaantiin ravinnosta ja toisaalta sen kulutukseen liikkumalla. Ruumiillisen työn ja arkiliikunnan väheneminen on yksi merkittävä tekijä lihavuuden lisääntymisen taustalla. Myös napostelu ja muu epäsäännöllinen ruokailurytmi lisää lihomisen riskiä. Terveydenhuollossa tavoitteena on lihavuuden hoidon tehostaminen erityisesti perusterveydenhuollossa sekä vaikean ja sairaalloisen lihavuuden osalta myös erikoissairaanhoidossa.<BR><BR><b>Mitä kunnassa / alueella tulisi tehdä? </b><BR><BR>Terveydenhuollon toiminta, lihavuuden tunnistaminen ja varhainen puuttuminen. Ravitsemukseen ja liikuntaan liittyvä terveyttä edistävä elintapaneuvonta ja tiedottaminen. Liikuntamahdollisuuksien kattava tarjonta kaikille väestöryhmille. Työpaikkaruokailun tarjonta aikuisväestölle ja terveellisen koulu- ja opiskelijaruokailun mahdollistaminen lapsille ja nuorille. </p> ",
-        "en": "<p>Obesity substantially increases the risk of cardiovascular diseases, type 2 diabetes and musculoskeletal disorders. Severe obesity also causes mobility impairment. The percentage of obese persons in the Finnish population has been increasing, and obesity is a significant public health issue. Preventing obesity is very important in preventing chronic illnesses and impaired functional capacity. Obesity is also linked to perceived wellbeing. Obesity can be reduced with a healthy diet and added physical activity.<br><br><br />A BMI of 30 kg/m2 is internationally accepted as the threshold for obesity with health implications. Persons with a BMI of 25 kg/m2 or more are defined as being overweight, but setting this threshold so low has the effect that individuals with a robust body structure but no significant excess weight are also classified as being overweight.<br><br><br /><b>Impact on the wellbeing of the population</b><br><br><br />Obesity is one of Finland's major public health issues. Up to 60% of men of working age and about half of women of working age are at least overweight, and one in five adults are obese. The average BMI of the population has been steadily increasing since the 1970s or 1980s, particularly for men. While this trend has slowed down and even plateaued in the last decade, the average is now too high. Obesity is a significant risk factor for a number of chronic diseases such as cardiovascular diseases, type 2 diabetes and musculoskeletal disorders. Obesity is also linked to perceived wellbeing. Preventing obesity is of key importance in public health for the purpose of preventing chronic diseases. Obesity prevention at the population level should involve influencing public opinion about dietary habits and physical activity. Increasing obesity among young adults is particularly worrying. For the elderly (75 or older), however, the link between obesity and mortality, for instance, is not so straightforward. Indeed, there are now separate criteria for overweight and obesity for the elderly, and also separate dietary recommendations. Obesity is the most common in the lowest social groups, particularly for women.<br><br><br /><b>Financial impact</b><br><br><br />Estimates show that the costs of obesity for central and local government total more than EUR 300 million a year. Obesity is the most important contributing factor in chronic national diseases and causes absences from work amounting to as much as 350,000 days per year. Almost EUR 1 million is spent on rehabilitation of the obese every year. In fact, the costs of obesity are higher than those of smoking.<br><br><br /><b>How can this phenomenon be addressed?</b><br><br><br />Conditions caused by obesity can be efficiently prevented and treated through weight loss and by preventing weight gain in the population. Maintaining energy balance is the principal consideration: balancing the energy gained from nutrition with the use of energy in physical activity. The steady decrease in manual labour and everyday exercise in society is a key factor in the growth of obesity. Snacking and other irregular dietary habits also add to the risk of gaining weight. In health care, the aim is to enhance obesity treatment particularly in primary health care, and for severe and pathological obesity also in specialist medical care.<br><br><br /><b>What should be done in the municipality/region?</b><br><br><br />Actions in health care: identification of and early intervention in obesity. Lifestyle counselling and publicity focusing on healthy nutrition and physical exercise. Opportunities for exercise should be offered comprehensively to all population groups. Workplace meals for the adult population and healthy meals at school and other educational institutions for children and adolescents.</p> ",
-        "sv": "<p>Fetma medför en betydligt större risk för att drabbas av bland annat hjärt- och kärlsjukdomar, typ 2 diabetes och muskuloskeletala sjukdomar. Betydande fetma orsakar också rörelsebegränsningar. I Finland har andelen feta personer ökat, och fetma är ett betydande folkhälsoproblem. Förebyggande av fetma är mycket viktigt då man försöker förebygga kroniska sjukdomar och nedsatt funktionsförmåga. Fetma har också en koppling till det upplevda välbefinnandet. Fetma kan minskas med sunda kostvanor och ökad motion.<br><br><br />Viktindexet 30 kg/m2 är ett internationellt godkänt gränsvärde för fetma som är betydande med tanke på hälsan. Gränsvärdet 25 kg/m2 används som ett kriterium för övervikt, men om en så låg gräns används leder det till att även kraftigt byggda människor som inte har någon övervikt som är betydande med tanke på hälsan klassificeras som överviktiga. <br><br><br /><b>Konsekvenser för befolkningens välfärd</b><br><br><br />Fetma är ett av de mest betydande folkhälsoproblemen i Finland. Upp till 60 procent av männen i arbetsför ålder och cirka hälften av kvinnorna är minst överviktiga, var femte vuxen är fet. Den vuxna befolkningens viktindex har ökat sedan 70-80-talen, i synnerhet bland män. Utvecklingen har stannat upp och till och med jämnats ut under det senaste decenniet, men på en alltför hög nivå. Fetma är en betydande riskfaktor då det gäller många långvariga sjukdomar, till exempel hjärt- och kärlsjukdomar, typ 2 diabetes och muskuloskeletala sjukdomar. Fetma har också en koppling till det upplevda välbefinnandet. Förebyggande av fetma är också något av det viktigaste i folkhälsoarbetet då det gäller att förebygga uppkomsten av kroniska sjukdomar. På befolkningsnivå bör man sträva efter att förebygga fetma genom att påverka kost- och motionsvanorna. I synnerhet bland den unga vuxna befolkningen är utvecklingen då det gäller fetma oroväckande. Bland de äldre (75+) är fetmans koppling till bland annat dödligheten inte så klar. För de äldre finns det också separata kriterier för övervikt och fetma och även nutritionsrekommendationer. I synnerhet bland kvinnor är fetma vanligast i de lägsta sociala grupperna. <br><br><br /><b>Ekonomisk betydelse</b><br><br><br />Enligt uppskattningar som lagts fram om fetma kostar fetma totalt mer än 300 miljoner euro per år för staten och kommunerna. Fetman som den största orsaken till uppkomsten av kroniska folksjukdomar ger årligen upphov till närmare 350 000 dagar med frånvaro från jobbet. För feta personers rehabilitering av används på motsvarande sätt knappt en miljon euro årligen. De kostnader som fetma orsakar är till och med högre än de som rökning ger upphov till.<br><br><br /><b>Hur kan man påverka fenomenet?</b><br><br><br />Sjukdomar som orsakas av fetma kan effektivt förebyggas och skötas genom bantning och förebyggande av att fetma utvecklas bland befolkningen. Särskilt finns det skäl att fästa uppmärksamhet vid energibalansen, dvs. att få energi genom födan, och å andra sidan vid förbrukning av denna genom motion. Det fysiska arbetet och vardagsmotionen minskar vilket är en betydande bakomliggande faktor då det gäller den alltmer utbredda fetman. Också småätande och annan oregelbunden måltidsrytm ökar risken för att bli fet. Inom hälso- och sjukvården är målet att effektivisera behandlingen av fetma i synnerhet inom primärvården samt i fråga om svår och sjuklig fetma även inom den specialiserade sjukvården.<br><br><br /><b>Vad bör man göra i kommunen/området?</b><br><br><br />Hälso- och sjukvårdens verksamhet, identifiering av fetma och tidigt ingripande. Rådgivning om levnadsvanor och information som främjar hälsa i anslutning till nutrition och motion. Ett täckande utbud av motionsmöjligheter för alla befolkningsgrupper. Tillhandahållande av måltider på arbetsplatsen för den vuxna befolkningen och möjliggörande av skol- och studerandemåltider för barn och unga.</p> "
+        "fi": "",
+        "en": "",
+        "sv": ""
       },
       "limits": {
-        "fi": "<br /><p>Tuloksen varmuuteen vaikuttaa se, että aineisto on tuotettu otostutkimusaineistosta,<br />jossa esiintyy vastauskatoa. Vastauskatoa on korjattu tuloksista painokertoimien avulla. <br />Vuoden 2022 tiedonkeruussa vastausaktiivisuus oli 20 - 64-vuotiailla 37 %, <br />65 vuotta täyttäneillä 59 % ja 75 vuotta täyttäneillä 57 %.</p><br /><p><br />Indikaattorin tulkinnassa täytyy ottaa huomioon, että kyseessä on vastaajan itse ilmoittamat tiedot.<br />Lisätietoja: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Tilastoraportti</a></p>",
-        "en": "<br /><p>The confidence of the result is influenced by the fact that the data is based on survey sampling data,<br />which is affected by nonresponse. <br />In the results, nonresponse has been corrected by using weighting coefficients. <br />In the 2022 data collection, the response rate was 37 % for people aged 20 - 64, <br />59 % for people aged 65 and older, and 57 % for people aged 75 and older.</p><br /><p><br />When interpreting the indicator, it should be noted that this information was reported by <br />the respondents themselves.<br />More information: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistical Report</a> </p>",
-        "sv": "<br /><p>Resultatens tillförlitlighet påverkas av att materialet har inhämtats från urvalsundersökning där det <br />förekommer svarsbortfall. <br />Svarsbortfallet har korrigerats i resultaten med hjälp av viktkoefficienter. <br />I 2022 års datainsamling var svarsaktiviteten 37 % bland 20 - 64-åringar, <br />59 % bland personer som fyllt 65 år och 57 % bland personer som fyllt 75 år.</p><br /><p><br />Vid tolkning av indikatorn bör man beakta att det är fråga om uppgifter som lämnats av respondenten själv.<br />Mer information <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistikrapport</a> </p>"
+        "fi": "Indikaattorin laskentaan on toteutettu muutos. Aiemmin päiväkirurgian hoitojaksot on laskettu hoitojaksoihin mukaan. Nykyisessä laskennassa päiväkirurgian hoitojaksot lasketaan käynneiksi vuodesta 2018 alkaen, jonka vuoksi ne eivät ole mukana indikaattorin tiedoissa. Tämä laskee indikaattorin arvoa vuodesta 2018 alkaen.",
+        "en": " ",
+        "sv": " "
       },
       "legislation": {
         "fi": "",
@@ -700,9 +413,9 @@
         "sv": ""
       },
       "notices": {
-        "fi": "<p>Vuoden 2016 tiedot saatavissa aluetasoilla koko maa ja erityisvastuualue. Koko maan tieto esitetään sekä miehille että naisille. Vuoden 2016 otos on ollut huomattavasti pienempi (N=5000) kuin aikaisempien vuosien otokset.</p><p>Sairaanhoitopiirien vuoden 2018 tietoina esitetään vastaavien maakuntien tiedot. Itä-Savon ja Länsi-Pohjan sairaanhoitopiirien tiedot jäävät puuttuviksi. Kuntakohtainen tieto vuodelta 2018 näytetään lisäotoksen tilanneille kunnille.<p> <br /> ",
-        "en": "<p>The data for 2016 is available at the regional levels of the whole country and University hospital special responsibility areas. The sample for 2016 was considerably smaller (N=5,000) than the samples for previous years.</p><p>The indicator presents the data on region for hospital districts. The data of two hospital districts, North Savo and Länsi-Pohja, the results are not shown. Results for the year 2018 are shown only for the municipalities that ordered an extra sample of the FinSote survey.</p> ",
-        "sv": "<p>För år 2016 finns det regionala uppgifter endast för specialupptagningsområde och hela landet. År 2016 var urvalet mycket mindre (N=5000) än tidigare. </p> <br /><p>För sjukvårdsdistrikt visas i indikationen information från landskapet. Uppgifterna om två sjukvårdsdistrikt, Östra Savolax och sydvästra Lapplands, visas inte. Resultat för året 2018 visas bara för kommuner som hade beställt ett extra urval av FinSote undersökningen.</p> "
+        "fi": "Terveyspalveluja koskevat tilastoraportit sisältävät laatuselosteen sekä kuvaukset tilastojen erityispiirteistä. ",
+        "en": "Statistical reports on health services include a quality report and descriptions of the special features of the statistics. ",
+        "sv": "Statistikrapporterna om hälso- och sjukvårdstjänsterna innehåller en kvalitetsbeskrivning och beskrivningar av statistikens särdrag. "
       },
       "primaryValueType": {
         "code": "PROS",
@@ -714,25 +427,159 @@
       },
       "decimals": 1,
       "classifications": {
-        "age": {
+        "sex": {
           "title": {
-            "fi": "65 vuotta täyttäneet",
-            "en": "65 years and older",
-            "sv": "65 år och över"
+            "fi": "Sukupuolet yhteensä",
+            "en": "Gender total",
+            "sv": "Kön totalt"
           },
-          "values": []
+          "values": [
+            "total"
+          ]
         },
         "region": {
           "title": {
-            "fi": "Kunta, maakunta, hyvinvointialue, aluehallintoviraston alue, erityisvastuualue, Manner-Suomi",
-            "en": "Municipality, region, the wellbeing services county, area for the regional state administrative agency, university hospital special responsibility area, Mainland Finland",
-            "sv": "Kommun, landskap, välfärdsområde, området för regionförvaltningsverket, specialupptagningsområde, Fastlandsfinland"
+            "fi": "Kunta, seutukunta, maakunta, hyvinvointialue, sairaanhoitopiiri, aluehallintoviraston alue, suuralue, Manner-Suomi/Ahvenanmaa, erityisvastuualue, koko maa",
+            "en": "Municipality, sub-region, region, the wellbeing services county, hospital district, area for the regional state administrative agency, major region, university hospital special responsibility area, Mainland Finland/Åland, whole country",
+            "sv": "Kommun, ekonomisk region, landskap, välfärdsområde, sjukvårdsdistrikt, området för regionförvaltningsverket, storområde, specialupptagningsområde, Fastlandsfinland/Åland, hela landet"
           },
           "values": [
+            "Suuralue",
+            "Maa",
+            "Sairaanhoitopiiri",
             "Aluehallintovirasto",
             "Nuts1",
             "Kunta",
             "Erva",
+            "Seutukunta",
+            "Maakunta"
+          ]
+        }
+      },
+      "organization": {
+        "id": 2,
+        "title": {
+          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+          "en": "Finnish institute for Health and Welfare (THL)",
+          "sv": "Institutet för hälsa och välfärd (THL)"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "erikoissairaanhoito",
+          "sv": "specialiserad sjukvård",
+          "en": "specialised health care",
+          "uri": "http://www.yso.fi/onto/yso/p2806"
+        },
+        {
+          "fi": "kirurgia",
+          "sv": "kirurgi",
+          "en": "surgery",
+          "uri": ""
+        },
+        {
+          "fi": "komplikaatiot",
+          "sv": "komplikationer",
+          "en": "complications",
+          "uri": ""
+        },
+        {
+          "fi": "somaattinen erikoissairaanhoito",
+          "sv": "specialiserad somatisk vård",
+          "en": "specialised somatic health care",
+          "uri": ""
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 2,
+            "title": {
+              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+              "en": "Finnish institute for Health and Welfare (THL)",
+              "sv": "Institutet för hälsa och välfärd (THL)"
+            }
+          },
+          "title": {
+            "fi": "Erikoissairaanhoitotilasto (THL)",
+            "en": "Specialised health care (THL)",
+            "sv": "Specialiserade sjukvården (THL)"
+          },
+          "description": {
+            "fi": "<p>Erikoissairaanhoidon tilasto perustuu vuosittain terveydenhuollon toimintayksiköistä henkilötunnuksella kerättäviin hoitoilmoituksiin. Ne sisältävät tiedot palvelun tuottajasta, potilaan kotikunnasta, hoitoon tulon tiedot, hoitoon liittyvät tiedot toimenpiteineen sekä hoidon päättymiseen liittyviä tietoja. Psykiatrian erikoisalojen potilaista ilmoitetaan näiden tietojen lisäksi psykiatrian erikoisalojen lisätiedot, jotka käsittelevät lääkehoitoa, pakkotoimia ja psyykkisen tilan arviointia. Lisäksi vuoden viimeisenä päivänä sairaalassa vuodeosastoilla olevista potilaista tehdään potilaslaskenta. </p><p><br />Terveyden ja hyvinvoinnin laitos kerää vuosittain terveydenhuollon palveluntuottajilta hoitoilmoitukset (Hilmo) päättyneistä vuodeosastohoidon hoitojaksoista ja avohoitokäynneistä. Hilmoon on kerätty tietoja kaikista kuntien, kuntayhtymien ja valtion sairaaloista sekä suurimmista yksityissairaaloista. Nykyisen kaltainen tiedonkeruu laitoshoidosta alkoi terveydenhuollossa vuonna 1994. Julkisen erikoissairaanhoidon avohoidosta tietoja on kerätty vuodesta 1998 alkaen, mutta vertailukelpoisia tiedot ovat vuodesta 2006 lähtien. Jo ennen tätä, vuodesta 1969 lähtien, kerättiin ns. poistoilmoitusrekisteriin tietoja sairaaloiden ja terveyskeskusten vuodeosastoilta poistuneista potilaista.</p>",
+            "en": "<p>The statistics on specialised health care are based on care notifications submitted by health care units and retrieved on the basis of the unique personal identity number. Care notifications contain data on service provider and patient's municipality of residence as well as information on admission, treatment, procedures and discharge. For psychiatric patients, the data also include additional data on psychiatric specialties, including data on drug therapies, coercive measures and psychiatric evaluations. Also, a count is taken of patients in hospital wards on the last day of the year. <br /></p><p><br />The National Institute for Health and Welfare collects care notifications (Hilmo data) from health service providers concerning concluded periods of inpatient health care and outpatient visits. The statistics on specialised health care include data on all municipalities, joint municipal authorities, state hospitals and largest private hospitals. In its current form, the data collection on inpatient health care started in 1994. Data on specialised outpatient care in the public sector have been collected since 1998, but the figures are comparable only from 2006 onwards. Even before that, since 1969, data on patients discharged from hospital and health-centre wards were collected for a hospital discharge register.</p>",
+            "sv": "<p>Statistiken över den specialiserade sjukvården bygger på de vårdanmälningar som årligen samlas in från verksamhetsenheterna inom hälso- och sjukvården utifrån personbeteckningen. Vårdanmälningarna innehåller uppgifter om serviceproducenten, patientens hemkommun, information om intagningen för vård, uppgifter om vården och åtgärderna samt information om utskrivningen. Beträffande patienterna inom de psykiatriska specialiteterna lämnas utöver dessa uppgifter även tilläggsuppgifter gällande de psykiatriska specialiteterna. Dessa uppgifter gäller läkemedelsbehandling, tvångsåtgärder och patientens psykiska tillstånd. Dessutom genomförs en inventering av alla patienter som finns på vårdavdelningarna på sjukhuset på årets sista dag. <br /></p><p><br />Institutet för hälsa och välfärd samlar varje år in vårdanmälningar (Hilmo) av hälso-och sjukvårdsproducenterna. Vårdanmälningarna innehåller uppgifter om avslutade vårdperioder på vårdavdelningar och öppenvårdsbesök. Till statistiken över den specialiserade sjukvården har man samlat in data från alla kommuners och samkommuners sjukhus, de statliga sjukhusen och de största privata sjukhusen. En datainsamling gällande institutionsvården som motsvarar den nuvarande påbörjades inom hälso- och sjukvården år 1994. Uppgifter om öppenvården inom den specialiserade sjukvården inom offentliga sektorn har samlats in sedan år 1998, men uppgifterna är jämförbara från och med år 2006. Redan dessförinnan, med början år 1969, insamlades för det s.k. utskrivningsregistret uppgifter om patienter som skrivits ut från sjukhusens och hälsovårdscentralens vårdavdelningar.</p>"
+          }
+        }
+      ],
+      "groups": [
+        662,
+        926
+      ],
+      "indicator_id": 5074
+    },
+    "5034": {
+      "id": 5034,
+      "data-updated": "2025-05-14",
+      "range": {
+        "start": 1990,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Lonkan kokotekonivelen ensileikkaukset / 100 000 asukasta",
+        "en": "Primary surgeries for total hip replacement per 100,000 inhabitants",
+        "sv": "Primära operationer av total höftledsprotes / 100 000 invånare"
+      },
+      "description": {
+        "fi": "Indikaattori ilmaisee lonkan kokotekonivelen ensiasennusten lukumäärän suhteutettuna alueella asuvaan väestön keskiväkilukuun leikkausvuonna. Lonkan kokotekonivelen ensi-ilmoitus tulee lain mukaan tehdä niistä kirurgisista toimenpiteistä, joiden toimenpidekoodi on NFB30, NFB40, NFB50, NFB60, NFB62 tai NFB99. <br><br />Aluejako perustuu potilaan asuinkuntaan leikkausajankohtana. ",
+        "en": "The indicator shows the number of first total hip replacements proportioned to the average number of population living in the region in the year of the surgery. According to legislation, the first notification of a total hip replacement must be filed for the surgical procedures with the codes FB30, NFB40, NFB50, NFB60, NFB62 and NFB99. <br>The division of regions is based on the patient's municipality of residence at the time of the surgery. ",
+        "sv": "Indikatorn visar antalet primära insättningar av totalprotes i höftleden i förhållande till den genomsnittliga befolkningsmängden bosatt i området under året för operation. En första anmälan om totalprotes i höftleden ska enligt lagen göras i fråga om de kirurgiska ingrepp som har åtgärdskoden NFB30, NFB40, NFB50, NFB60, NFB62 eller NFB99. <br>Områdesindelningen baserar sig på patientens bosättningsort vid tidpunkten för operationen. "
+      },
+      "interpretation": {
+        "fi": "Tekonivelrekisterin kattavuus lonkan kokotekonivelen ensiasennusten suhteen on hyvä, kun vertailukohteena käytetään terveydenhuollon hoitoilmoitusjärjestelmää: käytännössä kaikki sairaalat ilmoittavat tekemistään leikkauksista, ja ilmoituskattavuus on vähintään 95 % (<a href=\"https://thl.fi/far/#data/cphd\" TARGET=\"_blank\">Lonkan primaari- ja uusintaleikkausilmoitusten kattavuus</A>.)<br><br />Suurin osa ilmoituksista tulee päivittäin automaattisesti BCB Medicalin ImplantDB- ja Tekonivelsairaala Coxan Tekoset-järjestelmistä. Ruotsinkielisen Ahvenanmaan tekemiä ilmoituksia ei ole pystytty päivittämään vuonna 2016 eikä vuonna 2017.<br><br />Lonkan ja polven tekonivelet -tilaston <a href=\"https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/tilastojen-laatu-ja-periaatteet/laatuselosteet/lonkka-ja-polviproteesit\" TARGET=\"_blank\">laatuseloste</A>.<br /><br /><br /> ",
+        "en": "The hip replacement register relating to first total hip replacements has good coverage when using the care notification system of health care as a point of comparison: practically all hospitals file notifications of the surgery they perform, making the coverage of notifications at least 95% (<a href=\"https://thl.fi/far/#data/cphd\" TARGET=\"_blank\">The coverage of primary and repeat hip operations</A>.)<br>The majority of the notifications are submitted automatically every day from the Implant DB system of BDB Medical and Tekoset system of Coxa hospital for joint replacement. It has not been possible to update notifications filed in Swedish-speaking Åland Islands in 2016 and 2017.<br><a href=\"https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/tilastojen-laatu-ja-periaatteet/laatuselosteet/lonkka-ja-polviproteesit\" TARGET=\"_blank\">Quality description (only in Finnish)</A>. ",
+        "sv": "Ledprotesregistret har bra täckning med avseende på primära insättningar av totalprotes i höftleden, när man som referens använder systemet för vårdanmälan inom social- och hälsovården: i praktiken anmäler alla sjukhus de utförda operationerna, och täckningen är minst 95 procent (<a href=\"https://thl.fi/far/#data/cphd\" TARGET=\"_blank\">Lonkan primaari- ja uusintaleikkausilmoitusten kattavuus</A>.)<br><br />Största delen av anmälningarna kommer dagligen automatiskt från systemen ImplantDB hos BCB Medical och Tekoset hos Ledprotessjukhuset Coxa. Anmälningarna från det svenskspråkiga Åland har inte kunnat uppdateras vare sig 2016 eller 2017.<br><br />Statistikens Höft- och knäproteser <a href=\"https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/tilastojen-laatu-ja-periaatteet/laatuselosteet/lonkka-ja-polviproteesit\" TARGET=\"_blank\">kvalitetsbeskrivning</A>.<br /><br /><br /> "
+      },
+      "limits": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "legislation": {
+        "fi": "Laki terveydenhuollon valtakunnallisista henkilörekistereistä (556/89) 3 §<br><br />Asetus terveydenhuollon valtakunnallisista henkilörekistereistä (774/89) 1 ja 2 §, siten kuin ne ovat 30.12.1993/1671 muutetussa asetuksessa.<br><br />Laki Terveyden ja hyvinvoinnin laitoksesta (668/2008) 2 §. ",
+        "en": " ",
+        "sv": " "
+      },
+      "notices": {
+        "fi": "<p>Indikaattori ei sisällä puolitekonivelen asennuksia.<br><br />Lonkan ja polven tekonivelleikkaustilastoja myös <a href=\"https://thl.fi/far\" TARGET=\"_blank\">ENDOnet-raportteina</A>. ENDOnetissä kohdeväestö, johon tekonivelten asennukset suhteutetaan, koostuu 40 vuotta täyttäneistä. </p><br /><p> Indikaattori sisältää Manner-Suomen tiedot. </p>",
+        "en": " ",
+        "sv": " "
+      },
+      "primaryValueType": {
+        "code": "PER100000",
+        "title": {
+          "fi": "Sataa tuhatta asukasta kohden",
+          "en": "Per 100 000 inhabitants",
+          "sv": "Per hundratusen invånare"
+        }
+      },
+      "decimals": 1,
+      "classifications": {
+        "region": {
+          "title": {
+            "fi": "Kunta, seutukunta, maakunta, hyvinvointialue, sairaanhoitopiiri, aluehallintoviraston alue, suuralue, Manner-Suomi/Ahvenanmaa, erityisvastuualue, koko maa",
+            "en": "Municipality, sub-region, region, the wellbeing services county, hospital district, area for the regional state administrative agency, major region, university hospital special responsibility area, Mainland Finland/Åland, whole country",
+            "sv": "Kommun, ekonomisk region, landskap, välfärdsområde, sjukvårdsdistrikt, området för regionförvaltningsverket, storområde, specialupptagningsområde, Fastlandsfinland/Åland, hela landet"
+          },
+          "values": [
+            "Suuralue",
+            "Maa",
+            "Sairaanhoitopiiri",
+            "Aluehallintovirasto",
+            "Nuts1",
+            "Kunta",
+            "Erva",
+            "Seutukunta",
             "Maakunta"
           ]
         },
@@ -759,28 +606,40 @@
       },
       "subjects": [
         {
-          "fi": "lihavuus",
-          "sv": "fetma",
-          "en": "obesity",
-          "uri": "http://www.yso.fi/onto/yso/p823"
-        },
-        {
-          "fi": "BMI",
-          "sv": "BMI",
-          "en": "BMI",
+          "fi": "tekonivelkirurgia",
+          "sv": "proteskirurgi",
+          "en": "joint replacement surgery",
           "uri": ""
         },
         {
-          "fi": "painoindeksi",
-          "sv": "kroppsmasseindex",
-          "en": "body mass index",
+          "fi": "implantit",
+          "sv": "implantat",
+          "en": "implants",
+          "uri": "http://www.yso.fi/onto/yso/p20281"
+        },
+        {
+          "fi": "lonkan tekonivelleikkaus",
+          "sv": "höftledsprotesoperation",
+          "en": "hip-replacement surgery",
+          "uri": "http://www.yso.fi/onto/mesh/D019644"
+        },
+        {
+          "fi": "nivelrikko (artroosi)",
+          "sv": "artros",
+          "en": "arthrosis",
+          "uri": "http://www.yso.fi/onto/ysa/Y105787"
+        },
+        {
+          "fi": "tekonivelet",
+          "sv": "konstgjorda leder",
+          "en": "synthetic joints",
           "uri": ""
         },
         {
-          "fi": "elintavat",
-          "sv": "levnadsvanor",
-          "en": "living habits",
-          "uri": "http://www.yso.fi/onto/yso/p5530"
+          "fi": "tekonivelleikkaus",
+          "sv": "protesoperation",
+          "en": "joint replacement surgery",
+          "uri": ""
         }
       ],
       "sources": [
@@ -794,22 +653,279 @@
             }
           },
           "title": {
-            "fi": "Terve Suomi -tutkimus (THL)",
-            "en": "Healthy Finland Survey (THL)",
-            "sv": "Undersökningen Hälsosamma Finland (THL)"
+            "fi": "Implanttirekisteri (THL)",
+            "en": "Finnish Arthroplasty Register (THL)",
+            "sv": "Implantatregister (THL)"
           },
           "description": {
-            "fi": "Terve Suomi -tutkimus tuottaa ajankohtaista tietoa Suomessa asuvien aikuisten terveydestä, hyvinvoinnista ja palveluista sekä niissä tapahtuneista muutoksista ja tulevasta kehityksestä. Tutkimuksessa yhdistyvät aiemmat kyselytutkimus FinSote sekä terveystarkastustutkimus FinTerveys.",
-            "en": "The Healthy Finland survey provides up-to-date information on the health, well-being and service use of adults living in Finland, as well as on changes and future developments in these areas. The survey brings together the FinSote questionnaire survey and the FinHealth health examination study.",
-            "sv": "Undersökningen Hälsosamma Finland producerar aktuell information om hälsa, välfärd och service för vuxna bosatta i Finland samt om förändringarna i dessa, och den framtida utvecklingen. I undersökningen kombineras den tidigare enkätundersökningen FinSote och undersökningen om hälsa, välfärd och social- och hälsovården FinHälsa."
+            "fi": "Implanttirekisteriin kerätään ihmiseen asetettavista nivelproteeseista (ortopediset endoproteesit) turvallisuuden kannalta tarpeelliset tiedot tilastointia, tutkimusta ja seurantaa varten. Kerättävät tiedot käsittävät potilaan henkilötiedot, terveydenhuollon yksikköä koskevat tiedot sekä sairautta, leikkausta ja implanttia koskevat tiedot.",
+            "en": "The implant register collects the necessary safety information on joint prosthetics implanted into people (orthopaedic endoprosthesis) for the purpose of statistics, research and monitoring. The data collected relates to the patients personal details, to the healthcare unit involved, and to the condition, surgical operation and implant in question.",
+            "sv": "Implantatregistret innehåller sådana uppgifter om inopererade ledproteser (ortopediska endoproteser) och tandimplantat som med tanke på säkerheten är nödvändiga för statistikföring, forskning och uppföljning. Dessa uppgifter omfattar patientens personuppgifter, uppgifter om hälso- och sjukvårdsenheten och uppgifter om sjukdomen, operationen och implantatet."
           }
         }
       ],
       "groups": [
-        425,
-        584
+        230,
+        659
       ],
-      "indicator_id": 4461
+      "indicator_id": 5034
+    },
+    "5033": {
+      "id": 5033,
+      "data-updated": "2025-02-17",
+      "range": {
+        "start": 2017,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Erikoissairaanhoitoon saapuneet yli 21 vrk:ssa käsitellyt lähetteet, % saapuneista lähetteistä ",
+        "en": "Referrals for specialised health care received after processing for more than 21 days, % of the referrals received ",
+        "sv": "Antalet remisser som inkommit till den specialiserade sjukvården efter mer än 21 dagars behandling, % av inkomna remisser"
+      },
+      "description": {
+        "fi": "<p>Indeksi kuvaa erikoissairaanhoidon hoitoonpääsyn arvioinnin aloittamisen odotusaikaa lähetteen saapumispäivästä lähetteen käsittelypäivään. Terveydenhuoltolain mukaan (2010/1326/52§ - 53§) hoidon tarpeen arviointi kiireettömässä hoidossa on aloitettava kolmen viikon kuluessa siitä, kun lähete on saapunet kuntayhtymän sairaalaan tai muuhun erikoissairaanhoitoa tuottavaan yksikköön. <br /></p><p>Käsitellyllä lähetteellä tarkoitetaan lähetettä, johon lääkäri on ottanut kantaa ja jonka perusteella hän on tehnyt suunnitelman jatkotoimenpiteistä. </p>Indeksi kuvaa tuottajakohtaista tietoa. Pääsääntöisesti sairaanhoitopiirin sairaaloihin tulevat lähetteet koskevat kyseisen sairaanhoitopiirin asukkaita. Tietoihin ei sisälly päivystyslähetteitä eikä lähetetietoja perusterveydenhuollon tuottamiin erikoissairaanhoidon palveluihin.<p> ",
+        "en": "<p> The index describes the waiting time for commencing assessment of the need for specialised medical care, from the date a referral is received to the date a referral is processed. According to section 52 and 53 of the Health Care Act, an assessment of the need for non-urgent treatment must begin within three weeks of the hospital or other specialised medical care unit run by the joint municipal authority receiving notification that a patient has been referred. </p><br /><p> A processed referral is a referral that has been evaluated by a physician and on the basis of which the physician has drawn up a plan for further measures. </p><br /><p> The index describes provider-based data. As a rule, referrals received by hospitals in a hospital district concern the clientele of a given hospital district. The data does not include emergency room referrals or referral data for specialised medical services provided in primary health care. </p> ",
+        "sv": "<p> Indexet beskriver inledandet av bedömningen av väntetiden till den specialiserade sjukvården från remissens ankomstdatum till remissens behandlingsdatum. Enligt hälso- och sjukvårdslagen (2010/1326/52§ - 53§) ska bedömningen av vårdbehovet inledas inom tre veckor från det att remissen anlände till ett sjukhus eller någon annan enhet för specialiserad sjukvård som samkommunen ansvarar för. </p><br /><p> Med en behandlad remiss avses en remiss som en läkare har tagit ställning till och utgående från vilken han eller hon har gjort en plan för fortsatta åtgärder. </p><br /><p> Indexet beskriver producentspecifik information. I regel gäller remisserna som kommer till sjukvårdsdistriktets sjukhus invånarna i sjukvårdsdistriktet i fråga. I informationen ingår inga jourremisser eller remissinformation om tjänster inom den specialiserade sjukvården som produceras av primärvården. </p> "
+      },
+      "interpretation": {
+        "fi": "",
+        "en": " ",
+        "sv": " "
+      },
+      "limits": {
+        "fi": "",
+        "en": " ",
+        "sv": " "
+      },
+      "legislation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "notices": {
+        "fi": "<p>Tietojen tulkinnassa on otettava huomioon, että hoitoa odottavien tiedot on kerätty ensisijaisesti valvontaa varten. Tietojen avulla on pyritty kuvaamaan, miten terveydenhuoltolain erikoissairaanhoidon hoitoonpääsyä koskevat aikarajat ovat toteutuneet julkisessa terveydenhuollossa (sairaanhoitopiirit ja perusterveydenhuollon erikoissairaanhoitoyksiköt). Tietojen keruu pohjautuu tuottajakohtaisiin tietoihin eikä väestön asuinpaikan mukaisiin tietoihin. </p> ",
+        "en": "In interpreting data, attention must be given to the fact that data on patients awaiting access to treatment is primarily collected for monitoring purposes. The data is used in an effort to describe how the time limits concerning access to specialised medical care under the Health Care Act have been realised in public health care (hospital districts and specialised medical care units in primary health care). The collection of data is based on data specific to each provider, not data specific to the place of residence. ",
+        "sv": "Vid tolkningen av information måste man beakta att uppgifterna om dem som väntar på vård har i första hand samlats för tillsyn. Med hjälp av informationen har man strävat att beskriva hur tidsgränserna gällande tillgången till specialiserad sjukvård enligt hälso- och sjukvårdslagen har uppfyllts inom den offentliga hälso- och sjukvården (sjukvårdsdistrikten och den specialiserade sjukvården inom primärvården). Datainsamlingen grundar sig på vårdgivarspecifik information och inte på information enligt befolkningens bostadsort. "
+      },
+      "primaryValueType": {
+        "code": "PROS",
+        "title": {
+          "fi": "Prosenttia",
+          "en": "Percent",
+          "sv": "Procent"
+        }
+      },
+      "decimals": 0,
+      "classifications": {
+        "region": {
+          "title": {
+            "fi": "Hyvinvointialue, sairaanhoitopiiri, koko maa",
+            "en": "The wellbeing services county, hospital district, whole country",
+            "sv": "Välfärdsområde, sjukvårdsdistrikt, hela landet"
+          },
+          "values": [
+            "Maa",
+            "Sairaanhoitopiiri"
+          ]
+        }
+      },
+      "organization": {
+        "id": 2,
+        "title": {
+          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+          "en": "Finnish institute for Health and Welfare (THL)",
+          "sv": "Institutet för hälsa och välfärd (THL)"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "lähetteet",
+          "sv": "remisser",
+          "en": "referrals",
+          "uri": "http://www.yso.fi/onto/yso/p10313"
+        },
+        {
+          "fi": "erikoissairaanhoito",
+          "sv": "specialiserad sjukvård",
+          "en": "specialised health care",
+          "uri": "http://www.yso.fi/onto/yso/p2806"
+        },
+        {
+          "fi": "hoitoonpääsy",
+          "sv": "tillgång till vård",
+          "en": "access to care",
+          "uri": ""
+        },
+        {
+          "fi": "hoitotakuu",
+          "sv": "vårdgaranti",
+          "en": "guaranteed health care",
+          "uri": ""
+        },
+        {
+          "fi": "hoidontarpeen arviointi",
+          "sv": "bedömning av vårdbehov",
+          "en": "assessment of care needs",
+          "uri": ""
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 2,
+            "title": {
+              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+              "en": "Finnish institute for Health and Welfare (THL)",
+              "sv": "Institutet för hälsa och välfärd (THL)"
+            }
+          },
+          "title": {
+            "fi": "Erikoissairaanhoidon hoitoonpääsy (THL)",
+            "en": "Access to specialised health care (THL)",
+            "sv": "Tillgången till vård inom den specialiserade sjukvården (THL)"
+          },
+          "description": {
+            "fi": "<p>Tilasto sisältää erikoisalakohtaista tietoa lähetteen käsittelyajoista, hoidon tarpeen arvioinnin odotusajoista sekä kiireettömään hoitoon pääsyn odotusajoista hyvinvointialueilla, HUSin alueella sekä Helsingissä. Lisäksi tilasto sisältää tietoja yleisimpien jonoryhmien odotusajoista. Tiedot kerätään kuukausittain ja ne julkaistaan sähköisinä tietokantaraportteina. Tiedot on kerätty sairaanhoitopiireistä joulukuun lopusta 2007 lähtien ja perusterveydenhuollon erikoissairaanhoidon yksiköistä joulukuun lopusta 2008 lähtien. Tiedot on kerätty hyvinvointialueittain vuodesta 2023 alkaen. Hoidon tarpeen arviointia ja yleisimpiä jonoryhmätietoja on kerätty vuodesta 2013 lähtien. Silloin tiedonkeruusisältöä on muutettu siten, että se vastaa terveydenhuoltolain erikoissairaanhoidon kiireettömään hoitoon pääsyn säädöksiä. Tiedonkeruusisältöä päivitettiin vuonna 2021 erikoisalojen osalta.<br /></p><p>Tietojen toimittamisessa ollaan siirtymässä uuteen tiedontoimitustapaan. Vanhalla tiedontoimitus tavalla tiedot tulevat aggregaattitasolla ja uudella yksilötasolla. Uuteen tiedontoimitustapaan siirrytään siirtymäajalla. Uudella tiedontoimitustavalla lähetetään yksilötasolla tiedot kaikista poikkileikkauspäivänä jonossa olevista potilaista, joiden jonottamisen syy on 0 (sairaalan resurssi) tai A (hoidon tarpeen arviointi). Poikkileikkauspäivä on jokaisen kuun viimeinen päivä. Seurantapisteet (aikaleimat) ovat edelleen samat kuin vanhassa aggregaattitason tiedontoimituksessa.<br /></p>",
+            "en": "The statistics contain specialty-specific data about referral processing times, waiting times for the assessment of the need for treatment and waiting times for admission to non-urgent medical care in hospital districts and in specialised medical care units in primary health care. In addition, the statistics contain information about the waiting times of the most common queue groups. The data is collected monthly and published as electronic database reports. The data has been collected from hospital districts starting from the end of December 2007 and from specialised medical care units in primary health care starting from the end of December 2008. The data pertaining to the assessment of the need for treatment and most common queue groups has been collected since 2013. At the same time, the data collection content has been changed to make it consistent with the provisions of the Health Care Act concerning access to non-urgent specialised medical care.",
+            "sv": "Statistiken innehåller specialiteternas uppgifter om remissernas behandlingstider, väntetiderna för bedömning av vårdbehovet samt väntetiderna för att nå icke-brådskande vård inom sjukvårdsdistrikten och primärhälsovårdens enheter för specialiserad sjukvård. Dessutom innehåller statistiken information om väntetiderna i de vanligaste kögrupperna. Uppgifterna samlas in månadsvis och de publiceras som elektroniska databasrapporter. Uppgifterna har samlats in från sjukvårdsdistrikten från slutet december 2007 och för primärvårdens specialiteter från slutet av december 2008. Bedömningen av vårdbehovet och uppgifterna om de vanligaste kögrupperna har samlats sedan 2013. Samtidigt har man ändrat datainsamlingsinnehållet så att det motsvarar bestämmelserna om tillgången till den specialiserade sjukvårdens icke-brådskande vård i hälso- och sjukvårdslagen."
+          }
+        }
+      ],
+      "groups": [
+        906,
+        660
+      ],
+      "indicator_id": 5033
+    },
+    "3336": {
+      "id": 3336,
+      "data-updated": "2025-04-10",
+      "range": {
+        "start": 2023,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Erikoissairaanhoitoa yli 6 kk odottaneet vuoden aikana / 10 000 asukasta ",
+        "en": "Patients waiting over 6 months during the year for access to specialised health care per 10 000 inhabitants",
+        "sv": "Antalet personer som väntat på specialiserad sjukvård under året i mer än 6 månader / 10 000 invånare "
+      },
+      "description": {
+        "fi": "<p>Indikaattori ilmaisee yli 6 kk erikoissairaanhoitoa vuoden aikana odottaneiden osuuden 10 000 asukasta kohti. Indikaattori lasketaan keskiarvona hyvinvointialueiden kuukausittain ilmoittamista tiedoista. Väestösuhteutus on tehty THL:ssä käyttäen Tilastokeskuksen väestötilaston tietoja.<br /></p><p><br />Hoitoa odottavaksi lasketaan potilas, jonka lääkäri tai muu terveydenhuollon ammattihenkilö on hoidon tarpeen arvioinnin perusteella päättänyt ottaa hoitoon ja joka on asetettu sairaalasta johtuvista syistä (resurssit) hoitojonoon tai hänelle on varattu aika polikliiniseen hoitoon. Hoitoa odottaviin sisältyy leikkausta, toimenpidettä tai muuta hoitoa odottavat.<br /></p><p>Hoitojonoon asettamispäivä on se päivä, jolloin potilas asetetaan hoito-, leikkaus- tai toimenpidejonoon. Hoitojonoon asettamispäivän tulisi olla sama, jolloin lääkäri on tehnyt päätöksen hoitoon ottamisesta. Poimintaan otetaan mukaan sekä jo hoitoajan saaneet potilaat että ne potilaat, jotka eivät ole vielä saaneet hoitoaikaa, vaikka hoitopäätös tarvittavasta hoidosta on tehty. Poimintaan otetaan mukaan potilaat, joiden jonottamisen syyluokka on sairaalan resurssit tai kiireellinen hoito pois lukien päivystyspotilaat.</p><br /><p>Hoitoa odottaviin ei sisällytetä lääketieteellisistä syistä tiettyyn ajankohtaan esim. vuoden päähän sovittuja hoitoja. Hoitoa odottaviin ei sisällytetä myöskään toistuvaa hoitoa tai sairauden seurantaa tietyin määräajoin.</p><br />",
+        "en": "<p>The indicator gives the number of patients waiting over 6 months for access to specialised health care per ten thousand inhabitants in a given year. The indicator is calculated as an average of the data reported monthly by the wellbeing services counties. Population proportions are calculated at THL based on the Population Statistics of Statistics Finland.<br /></p><p><br />A patient is considered to be waiting for treatment when a physician or another health care professional has, based on an assessment of the need for treatment, made a treatment decision and placed the patient on a waiting list for treatment (the reason for queueing is hospital resources) or booked an appointment in outpatient care for the patient. Patients queuing for treatment include patients who are waiting for an operation, procedure or other treatment.<br /></p><p><br />The date of placement in the treatment queue is the date when the patient is placed in the queue for treatment, operation or procedure. The date of placement in the treatment queue should be the same date when the physician has decided on treatment. The extraction includes patients who have a scheduled appointment and patients who do not have a scheduled appointment even when the required treatment has been decided on. The extraction includes patients whose reason for queuing belongs to the category of hospital resources or urgent care, excluding emergency room patients.<br /></p><p><br />The patients waiting for treatment do not include those waiting for treatment to be provided at a specific point in time, such as one year later, due to medical reasons. The patients waiting for treatment also do not include those receiving recurring treatment or monitoring of illness at specific intervals.<br /></p>",
+        "sv": "<p>Indikatorn visar andelen personer som väntat på specialiserad sjukvård i mer än 6 månader per tio tusen invånare. Indikatorn är beräknad som ett genomsnitt av de uppgifter som rapporteras månadsvis av välfärdsrområderna.<br /><br />Med en person som väntar på vård och behandling avses en patient som en läkare eller annan yrkesutbildad person inom hälso- och sjukvården utgående från en vårdbedömning har beslutat ta in för vård och som av orsaker som beror på sjukhuset (resurser) placerats i vårdkö eller reserverats tid för poliklinisk behandling. Till dem som väntar på vård och behandling räknas patienter som väntar på en operation, ett ingrepp eller någon annan behandling. THL har relaterat uppgifterna till befolkningen på basis av uppgifterna i statistikcentralens befolkningsstatistik.<br /></p><p><br /></p><p>IDatumet för placering i vårdkö är det datum då patienten placeras i kö till behandling, operation eller ingrepp. Datumet för placering i vårdkö bör vara det datum då läkaren fattat beslut om intagning för vård. I urvalet upptas både patienter som redan fått tid för vård och behandling och de patienter som inte har fått en tid trots att vårdbeslut om den nödvändiga vården redan har fattats. I urvalet upptas patienter för vilka köandets orsaksklass är sjukhusets resurser eller brådskande I gymnasiet vård exklusive jourpatienter.<br /><p><p>ITill personer som väntar på vård och behandling räknas inte personer som väntar på vård eller behandling som av medicinska skäl har inbokats t.ex. ett år senare. Till personer som väntar på vård och behandling räknas inte heller upprepad vård eller behandling eller regelbunden uppföljning av en sjukdom.</p>"
+      },
+      "interpretation": {
+        "fi": " ",
+        "en": " ",
+        "sv": " "
+      },
+      "limits": {
+        "fi": "<p>HUS ilmoittaa koko Uudenmaan hyvinvointialueiden kiireettömän erikoissairaanhoidon hoitoonpääsyn tiedot ja tiedot on katsottavissa tietokantakuutiosta. (kts. kohta Suositukset)<br /></p><p>Helsingin kaupungin tiedot erikoissairaanhoidon toiminnan hoitoonpääsystä puuttuvat vuoteen 2024, potilastietojärjestelmän haasteiden vuoksi.<br /></p>",
+        "en": "<p>HUS reports information on access to non-urgent specialized medical care in the entire Uusimaa welfare areas, and the information can be viewed in the database cube. (see recomendations)</p><p><br />The City of Helsinki's data on access to specialized medical care is missing from may 2021, due to challenges in the patient information system. Data transmission has resumed at the beginning of 2025 after the challenges were resolved.</p>",
+        "sv": "<p>HNS rapporterar information om tillgång till icke akut specialiserad sjukvård i hela Nylands välfärdsområde och informationen kan ses i databaskuben.(se rekommendation)</p><p><br />Helsingfors stads uppgifter om tillgång till specialiserad sjukvård saknas från maj 2021, på grund av utmaningar i patientinformationssystemet.</p>"
+      },
+      "legislation": {
+        "fi": " ",
+        "en": " ",
+        "sv": " "
+      },
+      "notices": {
+        "fi": " ",
+        "en": " ",
+        "sv": " "
+      },
+      "primaryValueType": {
+        "code": "PER10000",
+        "title": {
+          "fi": "Kymmentä tuhatta asukasta kohden",
+          "en": "Per 10 000 inhabitants",
+          "sv": "Per tio tusen invånare"
+        }
+      },
+      "decimals": 1,
+      "classifications": {
+        "sex": {
+          "title": {
+            "fi": "Sukupuolet yhteensä",
+            "en": "Gender total",
+            "sv": "Kön totalt"
+          },
+          "values": [
+            "total"
+          ]
+        },
+        "region": {
+          "title": {
+            "fi": "Hyvinvointialue, koko maa",
+            "en": "The wellbeing services county, whole country",
+            "sv": "Välfärdsområde, hela landet"
+          },
+          "values": [
+            "Maa"
+          ]
+        }
+      },
+      "organization": {
+        "id": 2,
+        "title": {
+          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+          "en": "Finnish institute for Health and Welfare (THL)",
+          "sv": "Institutet för hälsa och välfärd (THL)"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "erikoissairaanhoito",
+          "sv": "specialiserad sjukvård",
+          "en": "specialised health care",
+          "uri": "http://www.yso.fi/onto/yso/p2806"
+        },
+        {
+          "fi": "jonotilanne",
+          "sv": "kösituation",
+          "en": "queueing situation",
+          "uri": ""
+        },
+        {
+          "fi": "hoitoonpääsy",
+          "sv": "tillgång till vård",
+          "en": "access to care",
+          "uri": ""
+        },
+        {
+          "fi": "hoitojonot",
+          "sv": "vårdköer",
+          "en": "hospital queues",
+          "uri": ""
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 2,
+            "title": {
+              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+              "en": "Finnish institute for Health and Welfare (THL)",
+              "sv": "Institutet för hälsa och välfärd (THL)"
+            }
+          },
+          "title": {
+            "fi": "Erikoissairaanhoidon hoitoonpääsy (THL)",
+            "en": "Access to specialised health care (THL)",
+            "sv": "Tillgången till vård inom den specialiserade sjukvården (THL)"
+          },
+          "description": {
+            "fi": "<p>Tilasto sisältää erikoisalakohtaista tietoa lähetteen käsittelyajoista, hoidon tarpeen arvioinnin odotusajoista sekä kiireettömään hoitoon pääsyn odotusajoista hyvinvointialueilla, HUSin alueella sekä Helsingissä. Lisäksi tilasto sisältää tietoja yleisimpien jonoryhmien odotusajoista. Tiedot kerätään kuukausittain ja ne julkaistaan sähköisinä tietokantaraportteina. Tiedot on kerätty sairaanhoitopiireistä joulukuun lopusta 2007 lähtien ja perusterveydenhuollon erikoissairaanhoidon yksiköistä joulukuun lopusta 2008 lähtien. Tiedot on kerätty hyvinvointialueittain vuodesta 2023 alkaen. Hoidon tarpeen arviointia ja yleisimpiä jonoryhmätietoja on kerätty vuodesta 2013 lähtien. Silloin tiedonkeruusisältöä on muutettu siten, että se vastaa terveydenhuoltolain erikoissairaanhoidon kiireettömään hoitoon pääsyn säädöksiä. Tiedonkeruusisältöä päivitettiin vuonna 2021 erikoisalojen osalta.<br /></p><p>Tietojen toimittamisessa ollaan siirtymässä uuteen tiedontoimitustapaan. Vanhalla tiedontoimitus tavalla tiedot tulevat aggregaattitasolla ja uudella yksilötasolla. Uuteen tiedontoimitustapaan siirrytään siirtymäajalla. Uudella tiedontoimitustavalla lähetetään yksilötasolla tiedot kaikista poikkileikkauspäivänä jonossa olevista potilaista, joiden jonottamisen syy on 0 (sairaalan resurssi) tai A (hoidon tarpeen arviointi). Poikkileikkauspäivä on jokaisen kuun viimeinen päivä. Seurantapisteet (aikaleimat) ovat edelleen samat kuin vanhassa aggregaattitason tiedontoimituksessa.<br /></p>",
+            "en": "The statistics contain specialty-specific data about referral processing times, waiting times for the assessment of the need for treatment and waiting times for admission to non-urgent medical care in hospital districts and in specialised medical care units in primary health care. In addition, the statistics contain information about the waiting times of the most common queue groups. The data is collected monthly and published as electronic database reports. The data has been collected from hospital districts starting from the end of December 2007 and from specialised medical care units in primary health care starting from the end of December 2008. The data pertaining to the assessment of the need for treatment and most common queue groups has been collected since 2013. At the same time, the data collection content has been changed to make it consistent with the provisions of the Health Care Act concerning access to non-urgent specialised medical care.",
+            "sv": "Statistiken innehåller specialiteternas uppgifter om remissernas behandlingstider, väntetiderna för bedömning av vårdbehovet samt väntetiderna för att nå icke-brådskande vård inom sjukvårdsdistrikten och primärhälsovårdens enheter för specialiserad sjukvård. Dessutom innehåller statistiken information om väntetiderna i de vanligaste kögrupperna. Uppgifterna samlas in månadsvis och de publiceras som elektroniska databasrapporter. Uppgifterna har samlats in från sjukvårdsdistrikten från slutet december 2007 och för primärvårdens specialiteter från slutet av december 2008. Bedömningen av vårdbehovet och uppgifterna om de vanligaste kögrupperna har samlats sedan 2013. Samtidigt har man ändrat datainsamlingsinnehållet så att det motsvarar bestämmelserna om tillgången till den specialiserade sjukvårdens icke-brådskande vård i hälso- och sjukvårdslagen."
+          }
+        }
+      ],
+      "groups": [
+        906,
+        660
+      ],
+      "indicator_id": 3336
     }
   }
 }
