@@ -40,7 +40,7 @@ class SotkanetDataFetcher:
     def fetch_indicator_data(self, 
                            indicator_id: int, 
                            years: Optional[List[int]] = None,
-                           gender: str = 'total') -> pd.DataFrame:
+                           gender: Optional[List[str]] = None) -> pd.DataFrame:
         """
         Fetch indicator data from Sotkanet API.
         
@@ -54,10 +54,14 @@ class SotkanetDataFetcher:
         """
         if years is None:
             years = DEFAULT_YEARS
+
+        if gender is None:
+            gender = ['male', 'female', 'total']
             
         # Build URL with year parameters
         year_params = "&".join([f"years={year}" for year in years])
-        url = f"{self.base_url}/json?indicator={indicator_id}&{year_params}&genders={gender}&regions={self.region_id}"
+        gender_params = "&".join([f"genders={g}" for g in gender])
+        url = f"{self.base_url}/json?indicator={indicator_id}&{year_params}&{gender_params}"
         
         logger.info(f"Fetching data for indicator {indicator_id}, years: {min(years)}-{max(years)}")
         

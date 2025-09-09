@@ -53,9 +53,9 @@ class SotkanetAPI:
     
     def get_indicator_data(self,
                           indicator_id: int,
-                          years: Optional[List[int]] = None,
-                          region_id: Optional[int] = None,
-                          genders: Optional[List[str]] = None) -> List[Dict]:
+                          region_id: int = 629,
+                          years: List[int] = [2024],
+                          genders: List[str] = ['totals']) -> List[Dict]:
         """
         Fetch data for a single indicator.
         
@@ -178,7 +178,7 @@ class SotkanetAPI:
         logger.warning(f"Max retries exceeded for indicator {indicator_id}")
         return []
     
-    def _fetch_years_individually(self, indicator_id: int, years: List[int], region_id: Optional[int], genders: List[str]) -> List[Dict]:
+    def _fetch_years_individually(self, indicator_id: int, years: List[int], region_id: List[int], genders: List[str]) -> List[Dict]:
         """
         Fallback method to fetch years individually if batch fetch fails.
         
@@ -234,9 +234,9 @@ class SotkanetAPI:
     
     def get_multiple_indicators(self,
                                indicator_ids: List[int],
-                               years: Optional[List[int]] = None,
-                               region_id: Optional[int] = None,
-                               genders: Optional[List[str]] = None) -> Dict[int, List[Dict]]:
+                               years: List[int] = [2024],
+                               region_id: int = 629,
+                               genders: List[str] = ['total']) -> Dict[int, List[Dict]]:
         """
         Fetch data for multiple indicators.
         
@@ -254,7 +254,7 @@ class SotkanetAPI:
         
         for ind_id in indicator_ids:
             try:
-                data = self.get_indicator_data(ind_id, years, region_id, genders)
+                data = self.get_indicator_data(ind_id, region_id, years, genders)
                 results[ind_id] = data
             except Exception as e:
                 logger.error(f"Failed to fetch indicator {ind_id}: {e}")
@@ -308,8 +308,8 @@ class SotkanetAPI:
                        indicator_id: int,
                        start_year: int,
                        end_year: int,
-                       region_id: Optional[int] = None,
-                       genders: Optional[List[str]] = None) -> Dict[int, float]:
+                       region_id: int = 629,
+                       genders: List[str] = ['total']) -> Dict[int, float]:
         """
         Get time series data for an indicator.
         
@@ -325,7 +325,7 @@ class SotkanetAPI:
         """
         years = list(range(start_year, end_year + 1))
         genders = genders or ['total']
-        data = self.get_indicator_data(indicator_id, years, region_id, genders)
+        data = self.get_indicator_data(indicator_id, region_id, years, genders)
         
         # Create time series dictionary
         if len(genders) == 1:

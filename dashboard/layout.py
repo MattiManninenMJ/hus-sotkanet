@@ -42,7 +42,7 @@ class DashboardLayout:
     @staticmethod
     def create_year_selector(min_year: int = 2015, 
                            max_year: int = 2024,
-                           default_range: List[int] = [2018, 2023]) -> html.Div:
+                           default_range: List[int] = [2022, 2025]) -> html.Div:
         """
         Create year range selector.
         
