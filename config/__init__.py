@@ -1,38 +1,49 @@
-"""Configuration package for Sotkanet Health Dashboard."""
+"""Configuration module for the Sotkanet Health Dashboard."""
 
-from pathlib import Path
-import json
-
-# Package directory
-CONFIG_DIR = Path(__file__).parent
-
-# Load settings
 from .settings import (
+    ENV,
+    INDICATOR_IDS,
     HUS_REGION_ID,
     DEFAULT_YEARS,
     DEFAULT_LANGUAGE,
     SOTKANET_BASE_URL,
-    INDICATORS
+    API_TIMEOUT,
+    API_RETRY_COUNT,
+    API_RETRY_DELAY,
+    CACHE_ENABLED,
+    CACHE_TTL,
+    CACHE_DIR,
+    LOG_LEVEL,
+    LOG_DIR,
+    METADATA_FILE,
+    VALIDATION_RESULTS_FILE,
+    INDICATORS_METADATA,
+    get_indicator_metadata,
+    get_all_indicator_ids,
+    get_environment,
+    require_metadata,
 )
 
-# Try to load indicators if the file exists
-try:
-    from .indicators import INDICATORS as INDICATORS_METADATA, get_indicator_by_id, get_all_ids
-except ImportError:
-    INDICATORS_METADATA = {}
-    def get_indicator_by_id(indicator_id):
-        return {}
-    def get_all_ids():
-        return []
-
 __all__ = [
+    'ENV',
+    'INDICATOR_IDS',
     'HUS_REGION_ID',
     'DEFAULT_YEARS',
     'DEFAULT_LANGUAGE',
     'SOTKANET_BASE_URL',
-    'INDICATORS',
+    'API_TIMEOUT',
+    'API_RETRY_COUNT',
+    'API_RETRY_DELAY',
+    'CACHE_ENABLED',
+    'CACHE_TTL',
+    'CACHE_DIR',
+    'LOG_LEVEL',
+    'LOG_DIR',
+    'METADATA_FILE',
+    'VALIDATION_RESULTS_FILE',
     'INDICATORS_METADATA',
-    'get_indicator_by_id',
-    'get_all_ids',
-    'CONFIG_DIR'
+    'get_indicator_metadata',
+    'get_all_indicator_ids',
+    'get_environment',
+    'require_metadata',
 ]
