@@ -20,200 +20,185 @@ class DashboardLayout:
         ], id="header")
     
     @staticmethod
-    def create_indicator_selector(options: List[Dict[str, Any]]) -> html.Div:
-        """
-        Create indicator selection dropdown.
-        
-        Args:
-            options: List of dropdown options
-        """
-        return html.Div([
-            html.Label("Select Indicator:", className="control-label"),
-            dcc.Dropdown(
-                id='indicator-selector',
-                options=options,  # type: ignore
-                value=options[0]['value'] if options else None,
-                clearable=False,
-                searchable=True,
-                placeholder="Select an indicator..."
-            )
-        ], className="control-group")
-    
-    @staticmethod
-    def create_year_selector(min_year: int = 2015, 
-                           max_year: int = 2024,
-                           default_range: List[int] = [2022, 2025]) -> html.Div:
-        """
-        Create year range selector.
-        
-        Args:
-            min_year: Minimum year
-            max_year: Maximum year
-            default_range: Default selected range [start, end]
-        """
-            
-        return html.Div([
-            html.Label("Select Years:", className="control-label"),
-            dcc.RangeSlider(
-                id='year-slider',
-                min=min_year,
-                max=max_year,
-                step=1,
-                marks={year: str(year) for year in range(min_year, max_year + 1, 2)},
-                value=default_range,
-                tooltip={"placement": "bottom", "always_visible": False}
-            )
-        ], className="control-group")
-    
-    @staticmethod
-    def create_chart_type_selector() -> html.Div:
-        """Create chart type selector."""
-        return html.Div([
-            html.Label("Chart Type:", className="control-label"),
-            dcc.RadioItems(
-                id='chart-type-selector',
-                options=[
-                    {'label': 'Line Chart', 'value': 'line'},
-                    {'label': 'Bar Chart', 'value': 'bar'},
-                    {'label': 'Area Chart', 'value': 'area'},
-                    {'label': 'Scatter Plot', 'value': 'scatter'}
-                ],
-                value='line',
-                inline=True,
-                className="radio-items"
-            )
-        ], className="control-group")
-    
-    @staticmethod
-    def create_controls_panel(indicator_options: List[Dict[str, Any]]) -> html.Div:
-        """
-        Create controls panel.
-        
-        Args:
-            indicator_options: Options for indicator dropdown
-        """
+    def create_controls_panel() -> html.Div:
+        """Create global controls panel."""
         return html.Div([
             html.H3("Controls", className="panel-title"),
-            DashboardLayout.create_indicator_selector(indicator_options),
-            DashboardLayout.create_year_selector(),
-            DashboardLayout.create_chart_type_selector(),
+            
+            # Year selector - full width
+            html.Div([
+                html.Label("Select Years:", className="control-label"),
+                dcc.RangeSlider(
+                    id='year-slider',
+                    min=2015,
+                    max=2024,
+                    step=1,
+                    marks={year: str(year) for year in range(2015, 2025, 2)},
+                    value=[2018, 2023],
+                    tooltip={"placement": "bottom", "always_visible": False}
+                )
+            ], className="control-group year-selector"),
+            
+            # Options row
+            html.Div([
+                # Chart type selector
+                html.Div([
+                    html.Label("Chart Type:", className="control-label"),
+                    dcc.RadioItems(
+                        id='chart-type-selector',
+                        options=[
+                            {'label': 'Line Chart', 'value': 'line'},
+                            {'label': 'Bar Chart', 'value': 'bar'}
+                        ],
+                        value='line',
+                        inline=True,
+                        className="radio-items"
+                    )
+                ], className="control-group"),
+                
+                # Gender selector
+                html.Div([
+                    html.Label("Gender:", className="control-label"),
+                    dcc.RadioItems(
+                        id='gender-selector',
+                        options=[
+                            {'label': 'Total', 'value': 'total'},
+                            {'label': 'Male', 'value': 'male'},
+                            {'label': 'Female', 'value': 'female'}
+                        ],
+                        value='total',
+                        inline=True,
+                        className="radio-items"
+                    )
+                ], className="control-group"),
+                
+                # Language selector
+                html.Div([
+                    html.Label("Language:", className="control-label"),
+                    dcc.RadioItems(
+                        id='language-selector',
+                        options=[
+                            {'label': 'Suomi', 'value': 'fi'},
+                            {'label': 'English', 'value': 'en'},
+                            {'label': 'Svenska', 'value': 'sv'}
+                        ],
+                        value='fi',
+                        inline=True,
+                        className="radio-items"
+                    )
+                ], className="control-group"),
+            ], className="options-row"),
+            
+            # Buttons
             html.Div([
                 html.Button(
-                    "Refresh Data", 
+                    "Refresh All Data", 
                     id="refresh-button", 
                     className="btn btn-primary"
                 ),
                 html.Button(
-                    "Download Data", 
-                    id="download-button", 
+                    "Download All Data", 
+                    id="download-all-button", 
                     className="btn btn-secondary"
                 ),
-            ], className="button-group"),
-            html.Div([
-                html.Label("Additional Options:", className="control-label"),
-                dcc.Checklist(
-                    id='options-checklist',
-                    options=[
-                        {'label': 'Show Moving Average', 'value': 'moving_avg'},
-                        {'label': 'Show Trend Line', 'value': 'trend'},
-                        {'label': 'Highlight Outliers', 'value': 'outliers'}
-                    ],
-                    value=[],
-                    className="checklist"
-                )
-            ], className="control-group")
+            ], className="button-group")
         ], id="controls-panel")
     
     @staticmethod
-    def create_indicator_info_card() -> html.Div:
-        """Create placeholder for indicator information card."""
-        return html.Div(
-            id='indicator-info-content',
-            className="info-card"
-        )
-    
-    @staticmethod
-    def create_statistics_cards() -> html.Div:
-        """Create placeholder for statistics cards."""
-        return html.Div(
-            id='statistics-content',
-            className="statistics-row"
-        )
-    
-    @staticmethod
-    def create_main_chart() -> html.Div:
-        """Create main chart container."""
+    def create_indicator_card(indicator_id: int, metadata: Dict) -> html.Div:
+        """
+        Create a card for a single indicator with its chart and info.
+        
+        Args:
+            indicator_id: The indicator ID
+            metadata: Indicator metadata dictionary
+        """
+        # Default to Finnish title if metadata is available
+        title = metadata.get('title', {}).get('fi', f'Indicator {indicator_id}')
+        
+        # Truncate long titles
+        if len(title) > 100:
+            title = title[:97] + "..."
+        
         return html.Div([
-            dcc.Graph(id='main-chart', className="chart"),
-            dcc.Loading(
-                id="loading-main-chart",
-                type="default",
-                children=html.Div(id="loading-output-main")
-            )
-        ], className="chart-container")
-    
-    @staticmethod
-    def create_comparison_chart() -> html.Div:
-        """Create comparison chart container."""
-        return html.Div([
-            html.H3("Comparison View", className="section-title"),
+            # Indicator header with title
             html.Div([
-                html.Label("Compare with:", className="control-label"),
-                dcc.Dropdown(
-                    id='comparison-selector',
-                    options=[],
-                    multi=True,
-                    placeholder="Select indicators to compare...",
-                    className="comparison-dropdown"
+                html.H4(f"[{indicator_id}] {title}", className="indicator-title"),
+                
+                # Info button that shows/hides metadata
+                html.Button(
+                    "ℹ", 
+                    id={'type': 'info-button', 'index': indicator_id},
+                    className="info-button",
+                    title="Show/hide information"
                 )
-            ]),
-            dcc.Graph(id='comparison-chart', className="chart")
-        ], className="chart-container")
+            ], className="indicator-header"),
+            
+            # Collapsible info section
+            html.Div(
+                id={'type': 'info-content', 'index': indicator_id},
+                className="indicator-info-content",
+                style={'display': 'none'}
+            ),
+            
+            # Chart container
+            dcc.Loading(
+                dcc.Graph(
+                    id={'type': 'indicator-chart', 'index': indicator_id},
+                    className="indicator-chart"
+                ),
+                type="default"
+            )
+        ], className="indicator-card", id=f"indicator-card-{indicator_id}")
     
     @staticmethod
-    def create_data_table() -> html.Div:
-        """Create data table container."""
-        return html.Div([
-            html.H3("Data Table", className="section-title"),
-            html.Div(id='data-table-content')
-        ], id="data-table-section")
+    def create_indicators_grid(indicators_metadata: Dict) -> html.Div:
+        """
+        Create a grid of all indicator cards.
+        
+        Args:
+            indicators_metadata: Dictionary of all indicators metadata
+        """
+        # Sort indicators by ID for consistent ordering
+        sorted_indicators = sorted(indicators_metadata.items(), key=lambda x: int(x[0]))
+        
+        indicator_cards = []
+        for ind_id_str, metadata in sorted_indicators:
+            ind_id = int(ind_id_str)
+            card = DashboardLayout.create_indicator_card(ind_id, metadata)
+            indicator_cards.append(card)
+        
+        return html.Div(
+            indicator_cards,
+            id="indicators-grid",
+            className="indicators-grid"
+        )
     
     @staticmethod
-    def create_layout(indicator_options: List[Dict[str, Any]]) -> html.Div:
+    def create_layout(indicators_metadata: Dict) -> html.Div:
         """
         Create complete dashboard layout.
         
         Args:
-            indicator_options: Options for indicator dropdown
+            indicators_metadata: Dictionary of all indicators metadata
         """
         return html.Div([
+            # Header
             DashboardLayout.create_header(),
             
+            # Global controls
+            DashboardLayout.create_controls_panel(),
+            
+            # Main content - grid of all indicators
             html.Div([
-                # Left sidebar
-                html.Div([
-                    DashboardLayout.create_controls_panel(indicator_options),
-                    DashboardLayout.create_indicator_info_card()
-                ], id="sidebar"),
-                
-                # Main content area
-                html.Div([
-                    DashboardLayout.create_statistics_cards(),
-                    
-                    html.Div([
-                        DashboardLayout.create_main_chart(),
-                        DashboardLayout.create_comparison_chart()
-                    ], id="charts-row"),
-                    
-                    DashboardLayout.create_data_table()
-                ], id="main-content")
-            ], id="dashboard-container"),
+                DashboardLayout.create_indicators_grid(indicators_metadata)
+            ], id="main-content"),
             
             # Hidden stores for data
-            dcc.Store(id='indicator-data-store'),
-            dcc.Store(id='comparison-data-store'),
+            dcc.Store(id='all-indicators-data-store'),
+            dcc.Store(id='ui-settings-store'),
             
             # Download component
-            dcc.Download(id="download-dataframe-csv")
+            dcc.Download(id="download-all-data-csv")
             
         ], id="app-container")

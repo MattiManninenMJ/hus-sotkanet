@@ -48,6 +48,33 @@ class MetadataManager:
         metadata = self._load_cached_metadata()
         
         if metadata:
+            # Check if metadata is for the current environment
+            if not self._is_metadata_for_current_env(metadata):
+                logger.warning(f"Metadata is for different environment or indicator set")
+                logger.info(f"Current environment: {settings.ENV} with {len(settings.INDICATOR_IDS)} indicators")
+                logger.info(f"Metadata environment: {metadata.get('environment')} with {metadata.get('indicator_count')} indicators")
+                
+                if self.auto_refresh:
+                    logger.info("Auto-refreshing metadata due to environment change...")
+                    try:
+                        new_metadata = self._fetch_fresh_metadata()
+                        if new_metadata:
+                            self._save_metadata(new_metadata)
+                            return new_metadata
+                    except Exception as e:
+                        logger.warning(f"Failed to refresh metadata: {e}")
+                        if self.fallback_to_cache:
+                            logger.info("Using cached metadata as fallback (may not match environment)")
+                            return metadata
+                        raise
+                else:
+                    logger.error(
+                        f"Metadata doesn't match current environment. "
+                        f"Run 'python scripts/fetch_metadata.py' to update."
+                    )
+                    # Return empty if not auto-refreshing and mismatch
+                    return {}
+            
             # Check if metadata is stale
             if self._is_metadata_stale(metadata):
                 logger.info("Metadata is stale, considering refresh...")
@@ -96,6 +123,28 @@ class MetadataManager:
                 
         return {}
     
+    def _is_metadata_for_current_env(self, metadata: Dict) -> bool:
+        """Check if metadata matches current environment and indicator set."""
+        # Check environment
+        if metadata.get('environment') != settings.ENV:
+            return False
+        
+        # Check indicator IDs match
+        metadata_ids = set(metadata.get('indicator_ids', []))
+        current_ids = set(settings.INDICATOR_IDS)
+        
+        if metadata_ids != current_ids:
+            logger.debug(f"Metadata IDs: {metadata_ids}")
+            logger.debug(f"Current IDs: {current_ids}")
+            return False
+        
+        # Check indicator count matches
+        indicator_count = metadata.get('indicator_count', 0)
+        if indicator_count != len(settings.INDICATOR_IDS):
+            return False
+        
+        return True
+    
     def _load_cached_metadata(self) -> Optional[Dict]:
         """Load metadata from cache file."""
         if self.metadata_file.exists():
@@ -140,7 +189,7 @@ class MetadataManager:
             self.api = SotkanetAPI()
             
         indicator_ids = settings.INDICATOR_IDS
-        logger.info(f"Fetching metadata for {len(indicator_ids)} indicators")
+        logger.info(f"Fetching metadata for {len(indicator_ids)} indicators in {settings.ENV} environment")
         
         metadata = self.api.get_all_metadata(indicator_ids)
         
@@ -161,6 +210,10 @@ class MetadataManager:
             json.dump(metadata, f, ensure_ascii=False, indent=2)
         
         logger.info(f"Saved metadata to {self.metadata_file}")
+        
+        # Also update the settings to reload metadata
+        import importlib
+        importlib.reload(settings)
     
     def force_refresh(self) -> Dict:
         """Force refresh metadata regardless of age."""
@@ -178,6 +231,7 @@ class MetadataManager:
                 'exists': False,
                 'age_days': None,
                 'is_stale': True,
+                'matches_environment': False,
                 'indicator_count': 0,
                 'environment': None
             }
@@ -186,6 +240,7 @@ class MetadataManager:
             'exists': True,
             'age_days': self._get_age_days(metadata),
             'is_stale': self._is_metadata_stale(metadata),
+            'matches_environment': self._is_metadata_for_current_env(metadata),
             'indicator_count': metadata.get('indicator_count', 0),
             'environment': metadata.get('environment'),
             'generated_at': metadata.get('generated_at')
@@ -204,7 +259,12 @@ def get_metadata_manager(auto_refresh: bool = False) -> MetadataManager:
     """
     global _manager_instance
     if _manager_instance is None:
-        _manager_instance = MetadataManager(auto_refresh=auto_refresh)
+        # Use setting from environment if available
+        auto_refresh = auto_refresh or settings.METADATA_AUTO_REFRESH
+        _manager_instance = MetadataManager(
+            auto_refresh=auto_refresh,
+            max_age_days=settings.METADATA_MAX_AGE_DAYS
+        )
     return _manager_instance
 
 

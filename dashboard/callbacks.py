@@ -1,11 +1,11 @@
 """Dashboard callbacks."""
 
-from dash import Input, Output, State, callback, dcc, html
+from dash import Input, Output, State, callback, ALL, MATCH, html
+from dash.exceptions import PreventUpdate
 import plotly.graph_objs as go
-import plotly.express as px
 import pandas as pd
 import numpy as np
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 from utils.logger import get_logger
 
 logger = get_logger('dashboard.callbacks')
@@ -29,295 +29,268 @@ class DashboardCallbacks:
         """Register all callbacks with the app."""
         
         @app.callback(
-            Output('indicator-data-store', 'data'),
-            [Input('indicator-selector', 'value'),
-             Input('year-slider', 'value'),
-             Input('refresh-button', 'n_clicks')]
+            Output('all-indicators-data-store', 'data'),
+            [Input('year-slider', 'value'),
+             Input('gender-selector', 'value'),
+             Input('refresh-button', 'n_clicks')],
+            prevent_initial_call=False
         )
-        def update_data_store(indicator_id, year_range, n_clicks):
-            """Fetch and store indicator data."""
-            if not indicator_id:
-                return {}
-            
+        def update_all_data(year_range, gender, n_clicks):
+            """Fetch data for all indicators."""
             years = list(range(year_range[0], year_range[1] + 1))
-            df = self.fetcher.fetch_indicator_data(int(indicator_id), years)
             
-            if df.empty:
-                logger.warning(f"No data retrieved for indicator {indicator_id}")
-                return {}
+            # Get all indicator IDs from metadata
+            all_indicators = self.fetcher.get_all_indicators()
+            indicator_ids = [int(ind_id) for ind_id in all_indicators.keys()]
             
-            # Process data
-            df = self.processor.calculate_growth_rate(df)
-            df = self.processor.calculate_moving_average(df)
-            stats = self.processor.calculate_statistics(df)
+            logger.info(f"Fetching data for {len(indicator_ids)} indicators, years: {min(years)}-{max(years)}, displaying gender: {gender}")
             
-            return {
-                'indicator_id': indicator_id,
-                'years': years,
-                'data': df.to_dict('records'),
-                'statistics': stats
-            }
+            # Fetch data for all indicators with all genders
+            all_data = {}
+            for ind_id in indicator_ids:
+                try:
+                    # IMPORTANT: Always fetch all genders for better caching and quick switching
+                    all_genders = ['male', 'female', 'total']
+                    logger.info(f"Fetching indicator {ind_id} with all genders: {all_genders}")
+                    
+                    # This should call fetch_indicator_data with all three genders
+                    df = self.fetcher.fetch_indicator_data(
+                        indicator_id=ind_id, 
+                        years=years, 
+                        genders=all_genders,
+                        return_dataframe=True
+                    )
+                    
+                    if not df.empty:
+                        # Log what we got
+                        logger.debug(f"Got {len(df)} total data points for indicator {ind_id}")
+                        unique_genders = df['gender'].unique() if 'gender' in df.columns else []
+                        logger.debug(f"Available genders in data: {list(unique_genders)}")
+                        
+                        # Filter by selected gender
+                        df_filtered = df[df['gender'] == gender].copy()
+                        
+                        if not df_filtered.empty:
+                            logger.debug(f"After filtering for {gender}: {len(df_filtered)} data points")
+                            
+                            # Sort by year to ensure proper ordering
+                            df_filtered = df_filtered.sort_values('year')
+                            
+                            # Process data
+                            df_filtered = self.processor.calculate_growth_rate(df_filtered)
+                            df_filtered = self.processor.calculate_moving_average(df_filtered)
+                            
+                            all_data[str(ind_id)] = {
+                                'data': df_filtered.to_dict('records'),
+                                'years': years,
+                                'gender': gender
+                            }
+                        else:
+                            logger.warning(f"No data for indicator {ind_id} with gender {gender}")
+                            all_data[str(ind_id)] = {'data': [], 'years': years, 'gender': gender}
+                    else:
+                        logger.warning(f"No data for indicator {ind_id} in years {min(years)}-{max(years)}")
+                        # Try to get metadata to understand data availability
+                        metadata = self.fetcher.get_indicator_metadata(ind_id)
+                        if metadata:
+                            data_range = metadata.get('range', {})
+                            logger.info(f"Indicator {ind_id} data range: {data_range.get('start')}-{data_range.get('end')}")
+                        all_data[str(ind_id)] = {'data': [], 'years': years, 'gender': gender}
+                except Exception as e:
+                    logger.error(f"Error fetching indicator {ind_id}: {e}")
+                    all_data[str(ind_id)] = {'data': [], 'years': years, 'gender': gender}
+            
+            return all_data
         
         @app.callback(
-            Output('indicator-info-content', 'children'),
-            Input('indicator-selector', 'value')
+            Output({'type': 'indicator-chart', 'index': ALL}, 'figure'),
+            [Input('all-indicators-data-store', 'data'),
+             Input('chart-type-selector', 'value'),
+             Input('language-selector', 'value')],
+            prevent_initial_call=False
         )
-        def update_indicator_info(indicator_id):
-            """Update indicator information card."""
-            if not indicator_id:
-                return html.Div("Select an indicator", className="info-message")
+        def update_all_charts(stored_data, chart_type, language):
+            """Update all indicator charts."""
+            if not stored_data:
+                # Return empty figures for all indicators
+                all_indicators = self.fetcher.get_all_indicators()
+                return [self._create_empty_figure("Loading...") for _ in all_indicators]
             
-            info = self.fetcher.get_indicator_metadata(str(indicator_id))
+            figures = []
             
-            if not info:
-                return html.Div("No metadata available", className="info-message")
+            # Get all indicators in sorted order to match the layout
+            all_indicators = self.fetcher.get_all_indicators()
+            sorted_indicators = sorted(all_indicators.items(), key=lambda x: int(x[0]))
             
-            title = info.get('title', {})
+            for ind_id_str, metadata in sorted_indicators:
+                ind_data = stored_data.get(ind_id_str, {})
+                
+                if not ind_data or not ind_data.get('data'):
+                    figures.append(self._create_empty_figure("No data available"))
+                    continue
+                
+                df = pd.DataFrame(ind_data['data'])
+                
+                # Get title in selected language
+                title = metadata.get('title', {}).get(language, 
+                        metadata.get('title', {}).get('fi', f"Indicator {ind_id_str}"))
+                
+                # Truncate long titles for chart
+                if len(title) > 80:
+                    title = title[:77] + "..."
+                
+                # Create figure based on chart type
+                fig = self._create_chart(df, title, chart_type)
+                figures.append(fig)
             
-            return html.Div([
-                html.H4("Indicator Information"),
-                html.Div([
+            return figures
+        
+        @app.callback(
+            Output({'type': 'info-content', 'index': MATCH}, 'children'),
+            Output({'type': 'info-content', 'index': MATCH}, 'style'),
+            [Input({'type': 'info-button', 'index': MATCH}, 'n_clicks'),
+             Input('language-selector', 'value')],
+            [State({'type': 'info-content', 'index': MATCH}, 'style'),
+             State({'type': 'info-button', 'index': MATCH}, 'id')],
+            prevent_initial_call=True
+        )
+        def toggle_info(n_clicks, language, current_style, button_id):
+            """Toggle indicator information visibility."""
+            if n_clicks is None:
+                raise PreventUpdate
+            
+            # Get indicator ID from button
+            ind_id = str(button_id['index'])
+            
+            # Toggle visibility
+            if current_style is None or current_style.get('display') == 'none':
+                # Show info
+                metadata = self.fetcher.get_indicator_metadata(ind_id)
+                
+                if not metadata:
+                    return html.Div("No metadata available"), {'display': 'block'}
+                
+                # Get organization name
+                org = metadata.get('organization', {}).get('title', {}).get(language,
+                      metadata.get('organization', {}).get('title', {}).get('fi', 'N/A'))
+                
+                # Create info content
+                info_content = html.Div([
                     html.P([
-                        html.Strong("Finnish: "),
-                        html.Span(title.get('fi', 'N/A'))
-                    ]),
-                    html.P([
-                        html.Strong("English: "),
-                        html.Span(title.get('en', 'N/A'))
-                    ]),
-                    html.P([
-                        html.Strong("Swedish: "),
-                        html.Span(title.get('sv', 'N/A'))
-                    ]),
-                    html.Hr(),
-                    html.P([
-                        html.Strong("Organization: "),
-                        html.Span(info.get('organization', {}).get('title', {}).get('fi', 'N/A'))
+                        html.Strong("Source: "),
+                        html.Span(org)
                     ]),
                     html.P([
                         html.Strong("Last Updated: "),
-                        html.Span(info.get('data-updated', 'N/A'))
-                    ]),
-                    html.P([
-                        html.Strong("Decimals: "),
-                        html.Span(str(info.get('decimals', 1)))
+                        html.Span(metadata.get('data-updated', 'N/A'))
                     ])
                 ])
-            ])
-        
-        @app.callback(
-            Output('main-chart', 'figure'),
-            [Input('indicator-data-store', 'data'),
-             Input('chart-type-selector', 'value'),
-             Input('options-checklist', 'value')]
-        )
-        def update_main_chart(stored_data, chart_type, options):
-            """Update main chart."""
-            if not stored_data or 'data' not in stored_data:
-                return self._create_empty_figure("No data available")
-            
-            df = pd.DataFrame(stored_data['data'])
-            info = self.fetcher.get_indicator_metadata(stored_data['indicator_id'])
-            title = info.get('title', {}).get('fi', f"Indicator {stored_data['indicator_id']}")
-            
-            fig = go.Figure()
-            
-            # Main data trace
-            if chart_type == 'line':
-                fig.add_trace(go.Scatter(
-                    x=df['year'],
-                    y=df['value'],
-                    mode='lines+markers',
-                    name='Value',
-                    line=dict(color='#0066CC', width=2),
-                    marker=dict(size=8)
-                ))
-            elif chart_type == 'bar':
-                fig.add_trace(go.Bar(
-                    x=df['year'],
-                    y=df['value'],
-                    name='Value',
-                    marker_color='#00AA88'
-                ))
-            elif chart_type == 'area':
-                fig.add_trace(go.Scatter(
-                    x=df['year'],
-                    y=df['value'],
-                    mode='lines',
-                    name='Value',
-                    fill='tozeroy',
-                    line=dict(color='#0066CC')
-                ))
-            elif chart_type == 'scatter':
-                fig.add_trace(go.Scatter(
-                    x=df['year'],
-                    y=df['value'],
-                    mode='markers',
-                    name='Value',
-                    marker=dict(size=10, color='#0066CC')
-                ))
-            
-            # Add optional features
-            if options and 'moving_avg' in options and 'moving_avg' in df.columns:
-                fig.add_trace(go.Scatter(
-                    x=df['year'],
-                    y=df['moving_avg'],
-                    mode='lines',
-                    name='3-Year Moving Avg',
-                    line=dict(color='orange', dash='dash')
-                ))
-            
-            if options and 'trend' in options:
-                # Add trend line
-                z = np.polyfit(df['year'], df['value'], 1)
-                p = np.poly1d(z)
-                fig.add_trace(go.Scatter(
-                    x=df['year'],
-                    y=p(df['year']),
-                    mode='lines',
-                    name='Trend',
-                    line=dict(color='red', dash='dot')
-                ))
-            
-            if options and 'outliers' in options:
-                df_outliers = self.processor.detect_outliers(df)
-                outliers = df_outliers[df_outliers['is_outlier']]
-                if not outliers.empty:
-                    fig.add_trace(go.Scatter(
-                        x=outliers['year'],
-                        y=outliers['value'],
-                        mode='markers',
-                        name='Outliers',
-                        marker=dict(size=12, color='red', symbol='x')
-                    ))
-            
-            # Update layout
-            fig.update_layout(
-                title=title[:80],
-                xaxis_title="Year",
-                yaxis_title="Value",
-                hovermode='x unified',
-                template='plotly_white',
-                showlegend=True,
-                height=400
-            )
-            
-            return fig
-        
-        @app.callback(
-            Output('statistics-content', 'children'),
-            Input('indicator-data-store', 'data')
-        )
-        def update_statistics(stored_data):
-            """Update statistics cards."""
-            if not stored_data or 'statistics' not in stored_data:
-                return html.Div("No statistics available", className="statistics-empty")
-            
-            stats = stored_data['statistics']
-            
-            # Determine trend class
-            if stats['trend_pct'] is not None:
-                if stats['trend_pct'] > 0:
-                    trend_class = "trend-up"
-                    trend_icon = "↑"
-                elif stats['trend_pct'] < 0:
-                    trend_class = "trend-down"
-                    trend_icon = "↓"
-                else:
-                    trend_class = "trend-neutral"
-                    trend_icon = "→"
-                trend_text = f"{trend_icon} {stats['trend_pct']:+.1f}%"
+                
+                return info_content, {'display': 'block'}
             else:
-                trend_text = "N/A"
-                trend_class = "trend-neutral"
-            
-            return html.Div([
-                html.Div([
-                    html.H4("Latest Value"),
-                    html.P(f"{stats['latest_value']:.1f}", className="stat-value"),
-                    html.P(f"Year: {stats['latest_year']}", className="stat-label")
-                ], className="stat-card"),
-                
-                html.Div([
-                    html.H4("Trend"),
-                    html.P(trend_text, className=f"stat-value {trend_class}"),
-                    html.P("Year-over-year", className="stat-label")
-                ], className="stat-card"),
-                
-                html.Div([
-                    html.H4("Average"),
-                    html.P(f"{stats['mean_value']:.1f}", className="stat-value"),
-                    html.P(f"σ = {stats['std_value']:.2f}", className="stat-label")
-                ], className="stat-card"),
-                
-                html.Div([
-                    html.H4("Range"),
-                    html.P(f"{stats['min_value']:.1f} - {stats['max_value']:.1f}", 
-                          className="stat-value"),
-                    html.P("Min - Max", className="stat-label")
-                ], className="stat-card"),
-            ])
+                # Hide info
+                return html.Div(), {'display': 'none'}
         
         @app.callback(
-            Output('data-table-content', 'children'),
-            Input('indicator-data-store', 'data')
-        )
-        def update_data_table(stored_data):
-            """Update data table."""
-            if not stored_data or 'data' not in stored_data:
-                return html.Div("No data to display", className="table-empty")
-            
-            df = pd.DataFrame(stored_data['data'])
-            
-            # Select columns to display
-            columns_to_show = ['year', 'value', 'absValue']
-            if 'growth_rate' in df.columns:
-                columns_to_show.append('growth_rate')
-            
-            df_display = df[columns_to_show].copy()
-            
-            # Format columns
-            if 'growth_rate' in df_display.columns:
-                df_display['growth_rate'] = df_display['growth_rate'].apply(
-                    lambda x: f"{x:+.1f}%" if pd.notna(x) else "-"
-                )
-            
-            return html.Table([
-                html.Thead([
-                    html.Tr([
-                        html.Th("Year"),
-                        html.Th("Value"),
-                        html.Th("Absolute Value"),
-                        html.Th("Growth Rate") if 'growth_rate' in columns_to_show else None
-                    ])
-                ]),
-                html.Tbody([
-                    html.Tr([
-                        html.Td(row['year']),
-                        html.Td(f"{row['value']:.2f}"),
-                        html.Td(f"{row.get('absValue', 'N/A')}"),
-                        html.Td(row.get('growth_rate', '')) if 'growth_rate' in columns_to_show else None
-                    ]) for _, row in df_display.iterrows()
-                ])
-            ], className="data-table")
-        
-        @app.callback(
-            Output("download-dataframe-csv", "data"),
-            Input("download-button", "n_clicks"),
-            State('indicator-data-store', 'data'),
+            Output("download-all-data-csv", "data"),
+            Input("download-all-button", "n_clicks"),
+            State('all-indicators-data-store', 'data'),
+            State('language-selector', 'value'),
             prevent_initial_call=True
         )
-        def download_data(n_clicks, stored_data):
-            """Download data as CSV."""
-            if not stored_data or 'data' not in stored_data:
+        def download_all_data(n_clicks, stored_data, language):
+            """Download all data as CSV."""
+            if not stored_data:
                 return None
             
-            df = pd.DataFrame(stored_data['data'])
-            info = self.fetcher.get_indicator_metadata(stored_data['indicator_id'])
-            filename = f"indicator_{stored_data['indicator_id']}_data.csv"
+            # Combine all data into one DataFrame
+            all_dfs = []
             
-            # Use dict format for download
-            return dict(content=df.to_csv(index=False), filename=filename)
+            for ind_id_str, ind_data in stored_data.items():
+                if ind_data and ind_data.get('data'):
+                    df = pd.DataFrame(ind_data['data'])
+                    df['indicator_id'] = ind_id_str
+                    
+                    # Add indicator name
+                    metadata = self.fetcher.get_indicator_metadata(ind_id_str)
+                    if metadata:
+                        name = metadata.get('title', {}).get(language,
+                               metadata.get('title', {}).get('fi', f"Indicator {ind_id_str}"))
+                        df['indicator_name'] = name
+                    
+                    all_dfs.append(df)
+            
+            if all_dfs:
+                combined_df = pd.concat(all_dfs, ignore_index=True)
+                
+                # Reorder columns
+                cols = ['indicator_id', 'indicator_name', 'year', 'value']
+                if 'absValue' in combined_df.columns:
+                    cols.append('absValue')
+                if 'growth_rate' in combined_df.columns:
+                    cols.append('growth_rate')
+                if 'gender' in combined_df.columns:
+                    cols.append('gender')
+                
+                combined_df = combined_df[[col for col in cols if col in combined_df.columns]]
+                
+                # Sort by indicator and year
+                combined_df = combined_df.sort_values(['indicator_id', 'year'])
+                
+                filename = f"hus_sotkanet_all_indicators_data.csv"
+                return dict(content=combined_df.to_csv(index=False), filename=filename)
+            
+            return None
+    
+    def _create_chart(self, df: pd.DataFrame, title: str, chart_type: str) -> go.Figure:
+        """Create a chart for an indicator."""
+        # Ensure data is sorted by year
+        df = df.sort_values('year')
+        
+        fig = go.Figure()
+        
+        if chart_type == 'line':
+            fig.add_trace(go.Scatter(
+                x=df['year'],
+                y=df['value'],
+                mode='lines+markers',
+                name='Value',
+                line=dict(color='#0066CC', width=2),
+                marker=dict(size=6),
+                hovertemplate='Year: %{x}<br>Value: %{y:.2f}<extra></extra>'
+            ))
+        elif chart_type == 'bar':
+            fig.add_trace(go.Bar(
+                x=df['year'],
+                y=df['value'],
+                name='Value',
+                marker_color='#0066CC',
+                hovertemplate='Year: %{x}<br>Value: %{y:.2f}<extra></extra>'
+            ))
+        
+        # Update layout with x-axis formatting
+        fig.update_layout(
+            title={
+                'text': title,
+                'font': {'size': 14},
+                'x': 0,
+                'xanchor': 'left'
+            },
+            xaxis_title="Year",
+            yaxis_title="Value",
+            hovermode='x unified',
+            template='plotly_white',
+            showlegend=False,
+            height=350,
+            margin=dict(l=50, r=20, t=40, b=40),
+            xaxis=dict(
+                tickmode='linear',
+                tick0=df['year'].min(),
+                dtick=1 if len(df) <= 10 else 2
+            )
+        )
+        
+        return fig
     
     def _create_empty_figure(self, message: str) -> go.Figure:
         """Create empty figure with message."""
@@ -327,12 +300,13 @@ class DashboardCallbacks:
             xref="paper", yref="paper",
             x=0.5, y=0.5,
             showarrow=False,
-            font=dict(size=16, color="gray")
+            font=dict(size=14, color="gray")
         )
         fig.update_layout(
             xaxis=dict(showgrid=False, showticklabels=False),
             yaxis=dict(showgrid=False, showticklabels=False),
             template='plotly_white',
-            height=400
+            height=350,
+            margin=dict(l=50, r=20, t=40, b=40)
         )
         return fig

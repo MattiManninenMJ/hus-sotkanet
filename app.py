@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 HUS Sotkanet Health Dashboard - Main Application
-Modular Dash application for visualizing health indicators.
+Simplified version that fetches metadata on startup.
 """
 
 import dash
@@ -17,6 +17,8 @@ from data.fetcher import SotkanetDataFetcher
 from data.processor import DataProcessor
 from dashboard.layout import DashboardLayout
 from dashboard.callbacks import DashboardCallbacks
+from api.sotkanet_api import SotkanetAPI
+from config import settings
 from utils.logger import setup_logging, get_logger
 
 # Setup logging
@@ -30,9 +32,36 @@ class HUSDashboardApp:
     def __init__(self):
         """Initialize the dashboard application."""
         logger.info("Initializing HUS Dashboard Application")
+        logger.info(f"Environment: {settings.ENV}")
+        logger.info(f"Configured indicators: {settings.INDICATOR_IDS}")
         
-        # Initialize data handlers
+        # Fetch metadata for configured indicators on startup
+        logger.info(f"Fetching metadata for {len(settings.INDICATOR_IDS)} indicators...")
+        api = SotkanetAPI()
+        metadata = {}
+        
+        for ind_id in settings.INDICATOR_IDS:
+            try:
+                logger.info(f"  Fetching metadata for indicator {ind_id}...")
+                ind_metadata = api.get_indicator_metadata(ind_id)
+                metadata[str(ind_id)] = ind_metadata
+            except Exception as e:
+                logger.error(f"  Failed to fetch metadata for {ind_id}: {e}")
+        
+        logger.info(f"✓ Fetched metadata for {len(metadata)} indicators")
+        
+        # Store metadata in memory
+        self.indicators_metadata = metadata
+        
+        # Initialize data fetcher with our in-memory metadata
         self.data_fetcher = SotkanetDataFetcher()
+        # Override the fetcher's metadata with our fresh data
+        self.data_fetcher.metadata = self.indicators_metadata
+        
+        # Clear cache to ensure fresh data
+        logger.info("Clearing cache to ensure fresh data")
+        self.data_fetcher.clear_cache()
+        
         self.data_processor = DataProcessor()
         
         # Initialize Dash app
@@ -46,7 +75,7 @@ class HUSDashboardApp:
         
         self.app.title = "HUS Sotkanet Health Dashboard"
         
-        # Setup layout
+        # Setup layout with fresh metadata
         self._setup_layout()
         
         # Setup callbacks
@@ -58,20 +87,18 @@ class HUSDashboardApp:
         """Setup the dashboard layout."""
         logger.info("Setting up dashboard layout")
         
-        # Get indicator options
-        indicator_options = self.data_fetcher.get_indicator_options()
+        # Use our in-memory metadata
+        if not self.indicators_metadata:
+            logger.warning("No indicators metadata available")
         
-        if not indicator_options:
-            logger.warning("No indicators available - check metadata")
-        
-        # Create and set layout
-        self.app.layout = DashboardLayout.create_layout(indicator_options)
+        # Create and set layout with metadata
+        self.app.layout = DashboardLayout.create_layout(self.indicators_metadata)
     
     def _setup_callbacks(self):
         """Setup dashboard callbacks."""
         logger.info("Setting up dashboard callbacks")
         
-        # Initialize callbacks handler
+        # Initialize callbacks handler with our fetcher that has fresh metadata
         callbacks_handler = DashboardCallbacks(
             self.data_fetcher,
             self.data_processor

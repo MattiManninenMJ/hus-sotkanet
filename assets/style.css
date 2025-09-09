@@ -21,7 +21,7 @@ body {
    Layout Containers
    ======================================== */
 #app-container {
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -45,52 +45,106 @@ body {
     font-size: 1.1rem;
 }
 
-#dashboard-container {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 20px;
-}
-
-#sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 /* ========================================
-   Panels and Cards
+   Controls Panel
    ======================================== */
-#controls-panel, 
-.info-card {
+#controls-panel {
     background: white;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
-.panel-title {
-    color: #0066CC;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
+.controls-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 20px;
+    align-items: end;
 }
 
-.section-title {
+/* ========================================
+   Indicators Grid
+   ======================================== */
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.indicator-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indicator-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.indicator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.indicator-title {
     color: #0066CC;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.info-button {
+    background: #0066CC;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.info-button:hover {
+    background: #0052A3;
+}
+
+.indicator-info-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.indicator-info-content p {
+    margin: 5px 0;
+}
+
+.indicator-info-content strong {
+    color: #333;
+}
+
+.indicator-chart {
+    height: 350px;
 }
 
 /* ========================================
    Form Controls
    ======================================== */
 .control-group {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .control-label {
@@ -99,21 +153,6 @@ body {
     font-weight: 600;
     color: #444;
     font-size: 0.95rem;
-}
-
-/* Dropdowns */
-.Select-control {
-    border-radius: 6px !important;
-    border-color: #ddd !important;
-}
-
-.Select-control:hover {
-    border-color: #0066CC !important;
-}
-
-.Select-focused .Select-control {
-    border-color: #0066CC !important;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1) !important;
 }
 
 /* Range Slider */
@@ -153,31 +192,12 @@ body {
     font-weight: 500;
 }
 
-/* Checklist */
-.checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.checklist label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.checklist input[type="checkbox"] {
-    accent-color: #0066CC;
-}
-
 /* ========================================
    Buttons
    ======================================== */
 .button-group {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .btn {
@@ -217,155 +237,6 @@ body {
 }
 
 /* ========================================
-   Statistics Cards
-   ======================================== */
-.statistics-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.stat-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.stat-card h4 {
-    color: #666;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.stat-value {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.stat-label {
-    color: #999;
-    font-size: 0.85rem;
-}
-
-/* Trend indicators */
-.trend-up { 
-    color: #00AA88; 
-}
-
-.trend-down { 
-    color: #FF4444; 
-}
-
-.trend-neutral { 
-    color: #666; 
-}
-
-/* ========================================
-   Charts
-   ======================================== */
-#charts-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.chart-container {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.chart {
-    width: 100%;
-    height: 100%;
-}
-
-/* ========================================
-   Data Table
-   ======================================== */
-#data-table-section {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-.data-table th,
-.data-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.data-table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-    color: #444;
-    position: sticky;
-    top: 0;
-}
-
-.data-table tbody tr {
-    transition: background-color 0.2s ease;
-}
-
-.data-table tbody tr:hover {
-    background-color: #f8f9fa;
-}
-
-.data-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-/* ========================================
-   Info Card
-   ======================================== */
-.info-card h4 {
-    color: #0066CC;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.info-card p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.info-card strong {
-    color: #444;
-    font-weight: 600;
-}
-
-.info-card hr {
-    margin: 15px 0;
-    border: none;
-    border-top: 1px solid #e0e0e0;
-}
-
-.info-card span {
-    color: #666;
-}
-
-/* ========================================
    Loading States
    ======================================== */
 ._dash-loading {
@@ -373,48 +244,19 @@ body {
     color: #0066CC;
 }
 
-.statistics-empty,
-.table-empty,
-.info-message {
-    text-align: center;
-    color: #999;
-    padding: 20px;
-    font-style: italic;
-}
-
-/* ========================================
-   Utility Classes
-   ======================================== */
-.text-center {
-    text-align: center;
-}
-
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 1.5rem; }
-
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 1rem; }
-.mb-4 { margin-bottom: 1.5rem; }
-
 /* ========================================
    Responsive Design
    ======================================== */
-@media (max-width: 1200px) {
-    #dashboard-container {
+@media (max-width: 1400px) {
+    .indicators-grid {
         grid-template-columns: 1fr;
     }
-    
-    #sidebar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 992px) {
+    .options-row {
+        grid-template-columns: 1fr;
         gap: 20px;
-    }
-    
-    #charts-row {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -435,16 +277,8 @@ body {
         font-size: 1rem;
     }
     
-    #sidebar {
+    .indicators-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .statistics-row {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .stat-value {
-        font-size: 1.5rem;
     }
     
     .button-group {
@@ -457,21 +291,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .statistics-row {
-        grid-template-columns: 1fr;
-    }
-    
     #dashboard-title {
         font-size: 1.5rem;
     }
     
-    .data-table {
+    .indicator-title {
         font-size: 0.9rem;
     }
     
-    .data-table th,
-    .data-table td {
-        padding: 8px;
+    .indicator-chart {
+        height: 300px;
     }
 }
 
@@ -493,9 +322,7 @@ body {
         display: none !important;
     }
     
-    .stat-card,
-    .chart-container,
-    #data-table-section {
+    .indicator-card {
         box-shadow: none;
         page-break-inside: avoid;
     }

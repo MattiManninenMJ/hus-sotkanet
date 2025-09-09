@@ -1,7 +1,7 @@
 """
 Auto-generated indicator definitions from Sotkanet API.
-Generated: 2025-09-09T17:56:45.684481
-Environment: development
+Generated: 2025-09-09T21:20:13.917414
+Environment: production 
 """
 
 INDICATORS = {

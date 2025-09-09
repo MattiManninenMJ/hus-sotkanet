@@ -9,6 +9,10 @@ import sys
 from pathlib import Path
 from datetime import datetime
 from typing import Dict
+from dotenv import load_dotenv
+
+# Load environment variables from .env file BEFORE importing settings
+load_dotenv()
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -174,7 +178,7 @@ def main():
     parser.add_argument(
         '--env',
         choices=['development', 'production', 'testing'],
-        help='Override environment (default: from APP_ENV or development)'
+        help='Override environment (default: from .env file or APP_ENV)'
     )
     parser.add_argument(
         '--output',
@@ -189,13 +193,18 @@ def main():
     
     args = parser.parse_args()
     
-    # Override environment if specified
+    # Override environment if specified via command line
     if args.env:
         import os
         os.environ['APP_ENV'] = args.env
         # Reload settings to pick up new environment
         import importlib
         importlib.reload(settings)
+        logger.info(f"Overriding environment to: {args.env}")
+    
+    # Log current configuration
+    logger.info(f"Using environment: {settings.ENV}")
+    logger.info(f"Expected indicators: {settings.INDICATOR_IDS}")
     
     # Fetch metadata
     fetcher = MetadataFetcher()

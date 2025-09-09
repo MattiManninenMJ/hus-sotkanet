@@ -133,6 +133,30 @@ class SotkanetDataFetcher:
         years = years or settings.DEFAULT_YEARS
         genders = genders or ['male', 'female', 'total']
         
+        #logger.info(f"Fetching data for indicator  {indicator_id}, years: {years}, genders: {genders} in fetcher.py")
+        
+        # Check metadata for data availability
+        metadata = self.get_indicator_metadata(indicator_id)
+        if metadata:
+            data_range = metadata.get('range', {})
+            start_year = data_range.get('start')
+            end_year = data_range.get('end')
+            
+            if start_year and end_year:
+                # Filter years to only those available
+                available_years = [y for y in years if start_year <= y <= end_year]
+                
+                if not available_years:
+                    logger.warning(f"Indicator {indicator_id} has no data for requested years {min(years)}-{max(years)}")
+                    logger.info(f"Available range for indicator {indicator_id}: {start_year}-{end_year}")
+                    if return_dataframe:
+                        return pd.DataFrame()
+                    return []
+                
+                if len(available_years) < len(years):
+                    logger.info(f"Indicator {indicator_id}: Adjusting years from {min(years)}-{max(years)} to available {min(available_years)}-{max(available_years)}")
+                    years = available_years
+
         # Check cache first
         if self.cache:
             cache_params = {
@@ -159,8 +183,22 @@ class SotkanetDataFetcher:
                 genders
             )
             
-            # Cache the data
-            if self.cache and data:
+            # Debug logging for empty responses
+            if not data:
+                logger.warning(f"API returned empty data for indicator {indicator_id}")
+                logger.debug(f"  Request params: region={self.region_id}, years={years}, genders={genders}")
+                # Check if it's a data availability issue
+                metadata = self.get_indicator_metadata(indicator_id)
+                if metadata:
+                    logger.info(f"  Indicator {indicator_id} metadata says: range {metadata.get('range', {})}")
+                    # Check if this indicator has gender-specific data
+                    classifications = metadata.get('classifications', {})
+                    if 'sex' in classifications:
+                        available_genders = classifications['sex'].get('values', [])
+                        logger.info(f"  Available genders in metadata: {available_genders}")
+            
+            # Cache the data (even if empty, to avoid repeated API calls)
+            if self.cache:
                 self.cache.set(
                     data,
                     indicator_id=indicator_id,
@@ -168,6 +206,10 @@ class SotkanetDataFetcher:
                     years=years,
                     genders=genders
                 )
+                if data:
+                    logger.info(f"✓ CACHED: Stored {len(data)} data points for indicator {indicator_id}")
+                else:
+                    logger.info(f"✓ CACHED: Stored empty result for indicator {indicator_id} (to avoid repeated API calls)")
             
             if return_dataframe:
                 if data:

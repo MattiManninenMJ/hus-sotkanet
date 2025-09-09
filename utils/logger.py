@@ -11,7 +11,7 @@ import colorlog
 # Default configuration
 LOG_DIR = Path(__file__).parent.parent / "logs"
 LOG_LEVEL = "INFO"
-LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 def setup_logging(
@@ -42,14 +42,16 @@ def setup_logging(
     
     # Create formatters
     detailed_formatter = logging.Formatter(log_format, datefmt=date_format)
-    simple_formatter = logging.Formatter(
-        '%(levelname)s - %(message)s', 
-        datefmt=date_format
+    
+    # Console formatter with timestamp
+    console_formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s', 
+        datefmt='%H:%M:%S'  # Shorter time format for console
     )
     
-    # Console handler (simple format for readability)
+    # Console handler with timestamps
     console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(simple_formatter)
+    console_handler.setFormatter(console_formatter)
     console_handler.setLevel(getattr(logging, log_level.upper()))
     root_logger.addHandler(console_handler)
     
@@ -157,22 +159,21 @@ def log_data_processing(operation: str, records: int, duration: float = -1.0):
     """
     logger = get_logger('data')
     
-    if duration> 0.0:
+    if duration > 0.0:
         logger.info(f"{operation}: {records} records in {duration:.2f}s ({records/duration:.0f} records/s)")
     else:
         logger.info(f"{operation}: {records} records")
 
 # Color support for console output (optional)
 try:
-        
     def setup_color_logging():
         """Setup colored console logging if colorlog is available."""
         
         handler = colorlog.StreamHandler()
         handler.setFormatter(
             colorlog.ColoredFormatter(
-                '%(log_color)s%(levelname)-8s%(reset)s %(message)s',
-                datefmt=DATE_FORMAT,
+                '%(asctime)s - %(log_color)s%(levelname)-8s%(reset)s %(message)s',
+                datefmt='%H:%M:%S',
                 log_colors={
                     'DEBUG': 'cyan',
                     'INFO': 'green',
