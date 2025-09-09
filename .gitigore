@@ -1,9 +1,0 @@
-# Virtual environment
-.venv/
-
-# (potential) secrets
-.env
-
-# cache files
-__pycache__/
-

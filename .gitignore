@@ -1,0 +1,41 @@
+# Virtual environment
+.venv/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+.env
+logs/*.log
+data/cache/*
+data/exports/*
+!data/cache/.gitkeep
+!data/exports/.gitkeep
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+*.coverage
+
+# Temporary files
+*.tmp
+*.bak
+~*
+
