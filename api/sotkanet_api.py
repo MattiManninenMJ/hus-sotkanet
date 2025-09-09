@@ -53,6 +53,18 @@ class SotkanetAPI:
         # Create session for connection pooling
         self.session = requests.Session()
         
+        # Add browser-like headers to avoid 403 errors
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept': 'application/json',
+            'Accept-Language': 'fi-FI,fi;q=0.9,en;q=0.8',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache',
+            'Referer': 'https://sotkanet.fi/',
+            'Origin': 'https://sotkanet.fi'
+        })
+        
         logger.info(f"Initialized SotkanetAPI client for {self.base_url}")
     
     def _make_request(self, 
@@ -310,8 +322,7 @@ class SotkanetAPI:
                 if g is not None:
                     available_genders.append(g)
 
-            available_genders = sorted(set(available_genders))
-                    
+            available_genders = sorted(set(available_genders))            
             return {
                 'indicator_id': indicator_id,
                 'has_data': len(available_years) > 0,

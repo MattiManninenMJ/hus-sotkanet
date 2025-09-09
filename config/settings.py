@@ -10,17 +10,17 @@ ENV = os.getenv('APP_ENV', 'development')
 # Indicator sets for different environments
 INDICATOR_SETS = {
     'development': [
-        186,   # Syntyneiden ennenaikaisuus, %
-        322,   # Dementoivien muistisairauksien esiintyvyys
-        5527,  # Diabetes lääkeostot
+        186,   
+        322,   
+        5527,  
     ],
     'production': [
-        186,   # Syntyneiden ennenaikaisuus, %
-        322,   # Dementoivien muistisairauksien esiintyvyys
-        5527,  # Diabetes lääkeostot
-        5529,  # Verenpainetauti lääkeostot
-        4559,  # Sepelvaltimotauti lääkeostot
-        4461,  # Psykoosi lääkeostot
+        186,   
+        322,   
+        5527,  
+        5529,  
+        4559,  
+        4461, 
     ],
     'testing': [
         186,   # Single indicator for unit tests
@@ -50,9 +50,11 @@ CACHE_DIR = Path(__file__).parent.parent / 'data' / 'cache'
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
 LOG_DIR = Path(__file__).parent.parent / 'logs'
 
-# Paths
+# Metadata settings
 METADATA_FILE = Path(__file__).parent / 'indicators_metadata.json'
 VALIDATION_RESULTS_FILE = Path(__file__).parent / 'data_validation_results.json'
+METADATA_AUTO_REFRESH = os.getenv('METADATA_AUTO_REFRESH', 'false').lower() == 'true'
+METADATA_MAX_AGE_DAYS = int(os.getenv('METADATA_MAX_AGE_DAYS', '7'))
 
 def load_metadata():
     """Load generated metadata if it exists."""

@@ -1,15 +1,27 @@
-"""Sotkanet API module."""
+"""API module for Sotkanet data access."""
 
 from .sotkanet_api import (
     SotkanetAPI,
-    fetch_indicator,
-    fetch_latest,
-    fetch_all_indicators
+    SotkanetAPIError,
+    get_api,
+    fetch_indicator_metadata,
+    fetch_indicator_data,
+    fetch_all_metadata,
+    validate_data_availability,
+    filter_data_by_gender,
+    filter_data_by_year,
+    filter_data_by_years,
 )
 
 __all__ = [
     'SotkanetAPI',
-    'fetch_indicator',
-    'fetch_latest',
-    'fetch_all_indicators'
+    'SotkanetAPIError',
+    'get_api',
+    'fetch_indicator_metadata',
+    'fetch_indicator_data',
+    'fetch_all_metadata',
+    'validate_data_availability',
+    'filter_data_by_gender',
+    'filter_data_by_year',
+    'filter_data_by_years',
 ]

@@ -1,0 +1,394 @@
+{
+  "generated_at": "2025-09-09T17:56:45.666391",
+  "environment": "development",
+  "source": "Sotkanet REST API",
+  "indicator_ids": [
+    186,
+    322,
+    5527
+  ],
+  "indicator_count": 3,
+  "indicators": {
+    "186": {
+      "id": 186,
+      "data-updated": "2025-04-29",
+      "range": {
+        "start": 1990,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Kuolleisuus / 100 000 asukasta",
+        "en": "Mortality per 100 000 inhabitants",
+        "sv": "Dödlighet / 100 000 invånare"
+      },
+      "description": {
+        "fi": "Indikaattori ilmaisee kuolleiden lukumäärän ja osuuden 100 000 asukasta kohti sukupuolen mukaan. Väestötietona käytetään keskiväkilukua. Kuolleisuuslukuja ei ole vakioitu.<br><br><br /><br />Kuolemansyytilastossa ovat mukana kalenterivuoden aikana kansalaisuudesta riippumatta Suomessa tai ulkomailla kuolleet, joilla kuolinhetkellä oli kotipaikka Suomessa. Kuolemansyytilaston peittävyys kuolleista on käytännössä 100 prosenttia, koska kuolintieto tarkastetaan myös väestötietojärjestelmästä. Väestömuutostilaston kuolleiden määrä on kuolemansyytilaston kuolleiden määrään verrattuna suurempi. Väestötietojärjestelmään perustuva kuolleiden määrä ei ole kalenterivuoden aikana kuolleiden määrä, vaan se voi sisältää viiden edellisen vuoden kuolleita, joista kuolintieto on tullut kyseisen tilastovuoden laadinta-aikana eli 1.1.2003 - 31.1.2004. Vastaavasti väestönmuutosaineistoon eivät kuulu vuonna 2003 kuolleet, jotka on rekisteröity kuolleeksi 1.2.2004 jälkeen.<p id=suhteutus>Väestösuhteutus on tehty THL:ssä käyttäen Tilastokeskuksen Väestötilaston tietoja.</p> ",
+        "en": "The indicator gives the number of deaths and death rate per 100 000 inhabitants by sex. Population figures refer to mean population. Mortality figures are non-standardised. <br><br>The cause-of-death statistics cover the deaths in Finland or abroad (during the calendar year) of persons who at the time of death were residents of Finland regardless of their nationality. The statistics practically have a full coverage of deaths as the death data are verified by comparing them with data in the Population Information System. The number of deaths in the vital statistics is higher than that of the cause-of-death statistics. The number of deaths based on the Population Information System does not refer to the number of deaths during the calendar year as it may also contain deaths from the five previous years in cases where the death data have been received at the time of compiling the statistics of the statistical year concerned (between 1 January 2003 and 31 January 2004). Similarly, the vital statistics data do not include people who have deceased in 2003 if they have been registered as deceased later than 1 February 2004.<p id=suhteutus>Population proportions are calculated at THL based on the Population Statistics of Statistics Finland.</p> ",
+        "sv": "Indikatorn visar antalet och andelen döda per 100 000 invånare efter kön. Medelfolkmängden används som befolkningsuppgift. Dödlighetstalen är inte standardiserade.<br><br><br /><br />Dödsorsaksstatistiken omfattar utan hänsyn till medborgarskap alla personer som avlidit under kalenderåret antingen i Finland eller utomlands och som vid tidpunkten för sin död hade en hemort i Finland. Dödsorsaksstatistikens täckning i fråga om avlidna är i praktiken 100 procent, eftersom dödsuppgiften även kontrolleras i befolkningsdatasystemet. Antalet döda enligt statistiken över befolkningsförändringar är större än enligt dödsorsaksstatistiken. Antalet döda enligt befolkningsdatasystemet motsvarar inte antalet döda under kalenderåret, utan kan omfatta t.ex. antalet döda under de senaste fem åren, om man fått dödsuppgifterna om dessa under det berörda statistikåret, dvs. 1.1.2003 - 31.1.2004. På motsvarande sätt omfattar inte befolkningsförändringsmaterialet de personer som avlidit 2003, om de registrerats som döda efter den 1 februari 2004.<p id=suhteutus>THL har relaterat uppgifterna till befolkningen på basis av uppgifterna i statistikcentralens befolkningsstatistik.</p> "
+      },
+      "interpretation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "limits": {
+        "fi": "Kuolemansyytilaston lisäksi kuolleiden määrä tilastoidaan väestötilastoissa. Väestötilastojen kuolleiden lukumäärä poikkeaa kuolintodistusten perusteella laaditun kuolemansyytilaston luvuista hieman, koska kuolemansyytilastossa on mukana kaikki ko. kalenterivuonna kuolleet. Väestötilasto odottaa väestönmuutostietoja yhden kuukauden ajan tilastovuoden päättymisen jälkeen. Noin 0,2 % kuolintapauksista siirtyy siten tilastoissa seuraavalle vuodelle. ",
+        "en": "In addition to the cause of death statistics, the number of deaths is recorded in the Population Statistics. The number of deaths in the population statistics differs somewhat from the figures in the cause of death statistics compiled on the basis of death certificates as the cause of death statistics include all deaths during the calendar year. Population statistics, in turn, are not compiled until one month after the end of the statistical year, when vital statistics data are available. Some 0.2 per cent of deaths thus appear in the next year's statistics. ",
+        "sv": "Vid sidan av dödsorsaksstatistiken statistikförs antalet döda också i befolkningsstatistiken. Antalet döda enligt befolkningsstatistiken avviker lite från antalet enligt dödsorsaksstatistiken, som sammanställs på grundval av dödsattesterna. Dödsorsaksstatistiken inbegriper nämligen alla som dött kalenderåret i fråga. Efter statistikårets slut väntar befolkningsstatistiken en månad på uppgifterna om befolkningsförändringar. Sålunda överförs cirka 0,2 % av dödsfallen till nästa års statistik. "
+      },
+      "legislation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "notices": {
+        "fi": "Ikääntyvän väestön kuolleisuutta kuvaa indikaattori: <br><br />- Kuolleisuus 65 vuotta täyttäneillä / 100 000 vastaavanikäistä (322) ",
+        "en": "Also see indicator:<br><br />- Mortality among population aged 65 and over per 100 000 persons of same age (322) ",
+        "sv": " "
+      },
+      "primaryValueType": {
+        "code": "PER100000",
+        "title": {
+          "fi": "Sataa tuhatta asukasta kohden",
+          "en": "Per 100 000 inhabitants",
+          "sv": "Per hundratusen invånare"
+        }
+      },
+      "decimals": 1,
+      "classifications": {
+        "region": {
+          "title": {
+            "fi": "Kunta, seutukunta, maakunta, hyvinvointialue, sairaanhoitopiiri, yhteistyöalue, aluehallintoviraston alue, suuralue, Manner-Suomi/Ahvenanmaa, erityisvastuualue, koko maa",
+            "en": "Municipality, sub-region, region, the wellbeing services county, hospital district, collaborative area, area for the regional state administrative agency, major region, university hospital special responsibility area, Mainland Finland/Åland, whole country",
+            "sv": "Kommun, ekonomisk region, landskap, välfärdsområde, sjukvårdsdistrikt, samarbetsområde, området för regionförvaltningsverket, storområde, specialupptagningsområde, Fastlandsfinland/Åland, hela landet"
+          },
+          "values": [
+            "Suuralue",
+            "Maa",
+            "Sairaanhoitopiiri",
+            "Aluehallintovirasto",
+            "Nuts1",
+            "Kunta",
+            "Erva",
+            "Seutukunta",
+            "Maakunta"
+          ]
+        },
+        "sex": {
+          "title": {
+            "fi": "Miehet, naiset, yhteensä",
+            "en": "Male, female, combined",
+            "sv": "Män, kvinnor, totalt"
+          },
+          "values": [
+            "male",
+            "female",
+            "total"
+          ]
+        }
+      },
+      "organization": {
+        "id": 3,
+        "title": {
+          "fi": "Tilastokeskus",
+          "en": "Statistics Finland",
+          "sv": "Statistikcentralen"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "kuolleisuus",
+          "sv": "dödlighet",
+          "en": "mortality",
+          "uri": "http://www.yso.fi/onto/yso/p5003"
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 3,
+            "title": {
+              "fi": "Tilastokeskus",
+              "en": "Statistics Finland",
+              "sv": "Statistikcentralen"
+            }
+          },
+          "title": {
+            "fi": "Kuolleet (Tilastokeskus)",
+            "en": "Deaths (Statistics Finland)",
+            "sv": "Avlidna (Statistikcentralen)"
+          },
+          "description": {
+            "fi": "Kuolleiden tilastoissa ovat kuolinpäivänään vakinaisesti Suomessa asuneet henkilöt. Kuolleita tilastoidaan mm. iän,sukupuolen, siviilisäädyn, äidinkielen ja kansalaisuuden mukaan. Kuolleiden tilastosta ei ole tietoja henkilöiden kuolinsyistä, joista on saatavilla tilastotietoa terveystilastojen Kuolemansyytilastoista.",
+            "en": "The statistics on deaths cover persons permanently domiciled in Finland on the day of death. Statistical data on deaths are produced by a number of variables including age, gender, marital status, native language and nationality. The statistics on deaths contain no data on causes of death, on which data are vailable from the statistics on causes of death produced within health statistics.",
+            "sv": "Statistiken över avlidna omfattar personer som på sin dödsdag varit fast bosatta i Finland. Avlidna statistikförs bl.a. efter ålder, kön, civilstånd, modersmål och nationalitet. Statistiken omfattar inte uppgifter om dödsorsaker, utan dessa fås ur statistiken över dödsorsaker som ingår i hälsovårdsstatistiken."
+          }
+        }
+      ],
+      "groups": [
+        188,
+        102
+      ],
+      "indicator_id": 186
+    },
+    "322": {
+      "id": 322,
+      "data-updated": "2025-04-29",
+      "range": {
+        "start": 1990,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Kuolleisuus 65 vuotta täyttäneillä / 100 000 vastaavan ikäistä",
+        "en": "Mortality among population aged 65 and over per 100 000 persons of same age",
+        "sv": "Dödlighet i åldrarna 65 år och över / 100 000 i samma åldrar"
+      },
+      "description": {
+        "fi": "<p>Indikaattori ilmaisee 65 vuotta täyttäneiden kuolleiden lukumäärän ja osuuden 100 000 asukasta kohti sukupuolen mukaan. Väestötietona käytetään keskiväkilukua. Kuolleisuuslukuja ei ole vakioitu. </p><br /><p><br />Kuolemansyytilastossa ovat mukana kalenterivuoden aikana kansalaisuudesta riippumatta Suomessa tai ulkomailla kuolleet, joilla kuolinhetkellä oli kotipaikka Suomessa. Kuolemansyytilaston peittävyys kuolleista on käytännössä 100 prosenttia, koska kuolintieto tarkastetaan myös väestötietojärjestelmästä. Väestömuutostilaston kuolleiden määrä on kuolemansyytilaston kuolleiden määrään verrattuna suurempi. Väestötietojärjestelmään perustuva kuolleiden määrä ei ole kalenterivuoden aikana kuolleiden määrä, vaan se voi sisältää viiden edellisen vuoden kuolleita, joista kuolintieto on tullut kyseisen tilastovuoden laadinta-aikana eli 1.1.2003 - 31.1.2004. Vastaavasti väestönmuutosaineistoon eivät kuulu vuonna 2003 kuolleet, jotka on rekisteröity kuolleeksi 1.2.2004 jälkeen. </p><p id=suhteutus>Väestösuhteutus on tehty THL:ssä käyttäen Tilastokeskuksen Väestötilaston tietoja.</p> ",
+        "en": "<p>The indicator gives the number of deaths for those aged 65 and over and their death rate per 100 000 inhabitants by sex. Mortality figures are non-standardised. </p><p>The cause-of-death statistics cover the deaths in Finland or abroad (during the calendar year) of persons who at the time of death were residents of Finland regardless of their nationality. The statistics practically have a full coverage of deaths as the death data are verified by comparing them with data in the Population Information System. The number of deaths in the vital statistics is higher than that of the cause-of-death statistics. The number of deaths based on the Population Information System does not refer to the number of deaths during the calendar year as it may also contain deaths from the five previous years in cases where the death data have been received at the time of compiling the statistics of the statistical year concerned (between 1 January 2003 and 31 January 2004). Similarly, the vital statistics data do not include people who have deceased in 2003 if they have been registered as deceased later than 1 February 2004. </p><p id=suhteutus>Population proportions are calculated at THL based on the Population Statistics of Statistics Finland.</p> ",
+        "sv": "<p>Indikatorn visar antalet och andelen döda i åldrarna 65 år och över / 100 000 i samma åldrar efter kön. Dödlighetstalen är inte standardiserade.</p><p><br />Dödsorsaksstatistiken omfattar utan hänsyn till medborgarskap alla personer som avlidit under kalenderåret antingen i Finland eller utomlands och som vid tidpunkten för sin död hade en hemort i Finland. Dödsorsaksstatistikens täckning i fråga om avlidna är i praktiken 100 procent, eftersom dödsuppgiften även kontrolleras i befolkningsdatasystemet. Antalet döda enligt statistiken över befolkningsförändringar är större än enligt dödsorsaksstatistiken. Antalet döda enligt befolkningsdatasystemet motsvarar inte antalet döda under kalenderåret, utan kan omfatta t.ex. antalet döda under de senaste fem åren, om man fått dödsuppgifterna om dessa under det berörda statistikåret, dvs. 1.1.2003 - 31.1.2004. På motsvarande sätt omfattar inte befolkningsförändringsmaterialet de personer som avlidit 2003, om de registrerats som döda efter den 1 februari 2004. </p><p id=suhteutus>THL har relaterat uppgifterna till befolkningen på basis av uppgifterna i statistikcentralens befolkningsstatistik.</p> "
+      },
+      "interpretation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "limits": {
+        "fi": "Kuolemansyytilaston lisäksi kuolleiden määrä tilastoidaan väestötilastoissa. Väestötilastojen kuolleiden lukumäärä poikkeaa kuolintodistusten perusteella laaditun kuolemansyytilaston luvuista hieman, koska kuolemansyytilastossa on mukana kaikki ko. kalenterivuonna kuolleet. Väestötilasto odottaa väestönmuutostietoja yhden kuukauden ajan tilastovuoden päättymisen jälkeen. Noin 0,2 % kuolintapauksista siirtyy siten tilastoissa seuraavalle vuodelle. ",
+        "en": "In addition to the cause-of-death statistics, the number of deaths is recorded in the population statistics. The number of deaths in the population statistics differs somewhat from the figures in the cause-of-death statistics compiled on the basis of death certificates as the cause of death statistics include all deaths during the calendar year. Population statistics, in turn, are not compiled until one month after the end of the statistical year, when vital statistics data are available. Some 0.2 per cent of deaths thus appear in the next year's statistics. ",
+        "sv": "Vid sidan av dödsorsaksstatistiken statistikförs antalet döda också i befolkningsstatistiken. Antalet döda enligt befolkningsstatistiken avviker lite från antalet enligt dödsorsaksstatistiken, som sammanställs på grundval av dödsattesterna. Dödsorsaksstatistiken inbegriper nämligen alla som dött kalenderåret i fråga. Efter statistikårets slut väntar befolkningsstatistiken en månad på uppgifterna om befolkningsförändringar. Sålunda överförs cirka 0,2 % av dödsfallen till nästa års statistik. "
+      },
+      "legislation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "notices": {
+        "fi": "Ks. myös indikaattori:<br><br />- Kuolleisuus / 100 000 asukasta (186) ",
+        "en": "Also see indicator:<br><br />- Mortality / 100 000 inhabitants (186) ",
+        "sv": " "
+      },
+      "primaryValueType": {
+        "code": "PER100000",
+        "title": {
+          "fi": "Sataa tuhatta asukasta kohden",
+          "en": "Per 100 000 inhabitants",
+          "sv": "Per hundratusen invånare"
+        }
+      },
+      "decimals": 0,
+      "classifications": {
+        "age": {
+          "title": {
+            "fi": "65 vuotta täyttäneet",
+            "en": "65 years and older",
+            "sv": "65 år och över"
+          },
+          "values": []
+        },
+        "region": {
+          "title": {
+            "fi": "Kunta, seutukunta, maakunta, hyvinvointialue, sairaanhoitopiiri, yhteistyöalue, aluehallintoviraston alue, suuralue, Manner-Suomi/Ahvenanmaa, erityisvastuualue, koko maa",
+            "en": "Municipality, sub-region, region, the wellbeing services county, hospital district, collaborative area, area for the regional state administrative agency, major region, university hospital special responsibility area, Mainland Finland/Åland, whole country",
+            "sv": "Kommun, ekonomisk region, landskap, välfärdsområde, sjukvårdsdistrikt, samarbetsområde, området för regionförvaltningsverket, storområde, specialupptagningsområde, Fastlandsfinland/Åland, hela landet"
+          },
+          "values": [
+            "Suuralue",
+            "Maa",
+            "Sairaanhoitopiiri",
+            "Aluehallintovirasto",
+            "Nuts1",
+            "Kunta",
+            "Erva",
+            "Seutukunta",
+            "Maakunta"
+          ]
+        },
+        "sex": {
+          "title": {
+            "fi": "Miehet, naiset, yhteensä",
+            "en": "Male, female, combined",
+            "sv": "Män, kvinnor, totalt"
+          },
+          "values": [
+            "male",
+            "female",
+            "total"
+          ]
+        }
+      },
+      "organization": {
+        "id": 3,
+        "title": {
+          "fi": "Tilastokeskus",
+          "en": "Statistics Finland",
+          "sv": "Statistikcentralen"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "kuolleisuus",
+          "sv": "dödlighet",
+          "en": "mortality",
+          "uri": "http://www.yso.fi/onto/yso/p5003"
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 3,
+            "title": {
+              "fi": "Tilastokeskus",
+              "en": "Statistics Finland",
+              "sv": "Statistikcentralen"
+            }
+          },
+          "title": {
+            "fi": "Kuolleet (Tilastokeskus)",
+            "en": "Deaths (Statistics Finland)",
+            "sv": "Avlidna (Statistikcentralen)"
+          },
+          "description": {
+            "fi": "Kuolleiden tilastoissa ovat kuolinpäivänään vakinaisesti Suomessa asuneet henkilöt. Kuolleita tilastoidaan mm. iän,sukupuolen, siviilisäädyn, äidinkielen ja kansalaisuuden mukaan. Kuolleiden tilastosta ei ole tietoja henkilöiden kuolinsyistä, joista on saatavilla tilastotietoa terveystilastojen Kuolemansyytilastoista.",
+            "en": "The statistics on deaths cover persons permanently domiciled in Finland on the day of death. Statistical data on deaths are produced by a number of variables including age, gender, marital status, native language and nationality. The statistics on deaths contain no data on causes of death, on which data are vailable from the statistics on causes of death produced within health statistics.",
+            "sv": "Statistiken över avlidna omfattar personer som på sin dödsdag varit fast bosatta i Finland. Avlidna statistikförs bl.a. efter ålder, kön, civilstånd, modersmål och nationalitet. Statistiken omfattar inte uppgifter om dödsorsaker, utan dessa fås ur statistiken över dödsorsaker som ingår i hälsovårdsstatistiken."
+          }
+        }
+      ],
+      "groups": [
+        105,
+        188,
+        458
+      ],
+      "indicator_id": 322
+    },
+    "5527": {
+      "id": 5527,
+      "data-updated": "2025-05-14",
+      "range": {
+        "start": 2020,
+        "end": 2024
+      },
+      "title": {
+        "fi": "Terveysliikuntasuosituksen mukaan liian vähän liikkuvien osuus (%)",
+        "en": "According to the recommendation on physical activity, the share of those with insufficient physical activity (%)",
+        "sv": "Andelen personer (%) som motionerar för lite enligt rekommendationen om hälsomotion"
+      },
+      "description": {
+        "fi": "Indikaattori ilmaisee prosenttiosuuden 20 vuotta täyttäneistä, jotka eivät liiku viikoittain säännöllisesti terveysliikuntasuosituksen mukaisesti.<br /><br />Perustuu seuraaviin kahteen kysymyspatteriin ja niiden alakysymyksiin: K1) Kuinka paljon kaikkiaan liikut viikoittain työssä, työmatkalla ja vapaa-aikana? Ajattele 12 viime kuukautta. Ota huomioon kaikki säännöllisesti viikoittain toistuva liikunnallinen rasitus. Vastaa tarvittaessa useammalle riville. Ensimmäisenä alakohtana esitettiin: a) ei juurikaan mitään säännöllistä viikoittaista liikuntaa -> voit siirtyä seuraavaan kysymykseen. Seuraavissa 3:ssa alakohdassa kysyttiin viikottaisen liikunnan määrää seuraavasti: ____ päivänä viikossa, yhteensä ____ tuntia ja ____ minuuttia viikossa. Alakysymykset olivat: b) verkkaista ja rauhallista liikuntaa (=ei hikoilua tai hengityksen kiihtymistä, esim. rauhallinen kävely), c) ripeää ja reipasta liikuntaa (= jonkin verran hikoilua ja/tai hengityksen kiihtymistä, esim. reipas kävely), d) rasittavaa ja voimaperäistä liikuntaa (=voimakasta hikoilua ja/tai hengityksen kiihtymistä, esim. hölkkä tai juoksu). K2) Kuinka monena päivänä tavallisesti viikon aikana harrastat lihaskuntoa ylläpitävää tai kehittävää liikuntaa? Esim. kuntosaliharjoittelu, kotijumppa, ryhmäliikunta, pallo- ja mailapelit tai fyysisesti rasittavat askareet. Jos et lainkaan, vastaa 0. ____ kertaa. Terveysliikuntasuositus on: Vähintään 2 tuntia 30 minuuttia kohtuukuormitteista kestävyysliikuntaa, tai 1 tunti 15 minuuttia raskasta kestävyysliikuntaa viikossa. Lisäksi vähintään 2 kertaa lihaskuntoa ylläpitävää tai kehittävää liikuntaa viikossa. Tarkastelussa ovat ne, jotka eivät liiku terveysliikuntasuosituksen mukaisesti. ",
+        "en": "The indicator shows the percentage of people aged 20 or over who engage in less weekly physical activity than recommended for maintaining health.<br /><br />Based on the following two batteries of questions and their sub-questions: Q1) How much exercise do you get in a week in the course of your work, commute, and spare time? Think about the past 12 months. Take all regular, weekly physical exertion in consideration. You can write your answer on several lines if necessary. The first response alternative given was: a) hardly any regular weekly exercise &#8594; move on the next question. The following three sub-questions asked the respondents to specify their amount of weekly physical activity as follows: _______ on days per week, total _______ hours _______ and minutes per week. The sub-questions included: b) low-intensity aerobic exercise (= does not make you sweat or get out of breath, e.g. walking leisurely), c) moderate-intensity aerobic exercise (= makes you sweat a bit and/or get slightly out of breath, e.g. Walking briskly), d) high-intensity aerobic exercise (= makes you sweat a lot and/or get out of breath, e.g. jogging or running). Q2) On how many days during an ordinary week do you engage in exercise that maintains or develops muscle tone? E.g. exercising at a gym, home exercises, fitness classes, ball games and racked sports, or physically strenuous household chores. If you do not engage in any exercise, please write 0. ____ times. The recommendation for physical activity promoting health is: At least 2 hours 30 minutes of moderate-intensity endurance training, or 1 hour 15 minutes of high-intensity endurance training per week. Also at least 2 sessions of exercise maintaining or developing muscle health. The examination includes those do not engage in physical activity in accordance with the recommendation for physical activity promoting health.",
+        "sv": "Indikatorn visar procentandelen 20 år fyllda som inte motionerar regelbundet varje vecka enligt rekommendationen om hälsomotion.<br /><br />Grundar sig på följande två frågeuppsättningar och deras underfrågor: K1) Hur mycket motionerar du sammanlagt under en vecka på arbetet, vägen till och från arbetet samt på fritiden? Tänk på situationen de senaste 12 månaderna. Räkna in all fysisk ansträngning som upprepas varje vecka. Välj flera svar om det behövs. Alternativet i den första underpunkten var: a) motionerar i allmänhet inte regelbundet varje vecka -> gå vidare till följande fråga. I följande 3 underpunkter frågade man om mängden motion per vecka enligt följande: ____ dagar i veckan, sammanlagt ____ timmar och ____ minuter i veckan. Underfrågorna var: b) långsam och lugn motion (= svettas inte och blir inte andfådd, t.ex. lugna promenader), c) snabb och rask motion (= svettas något och/eller blir andfådd, t.ex. raska promenader), d) ansträngande och intensiv motion (= svettas kraftigt och/eller blir andfådd, t.ex. jogging eller löpning) K2) Hur många dagar per vecka brukar du utföra träning som upprätthåller eller förbättrar muskelkonditionen? T.ex. träning på gym, träning hemma, gruppträning, boll- och racketsporter eller fysiskt ansträngande sysslor. Om inga dagar alls, svara 0. ____ gånger. Rekommendation om hälsomotion: Minst 2 timmar 30 minuter måttligt ansträngande uthållighetsmotion, eller 1 timme 15 minuter tung uthållighetsmotion per vecka. Dessutom minst 2 gånger per vecka träning som upprätthåller eller förbättrar muskelkonditionen. Granskningen omfattar personer som inte motionerar regelbundet enligt rekommendationen om hälsomotion. "
+      },
+      "interpretation": {
+        "fi": "<p>Liian vähäinen liikunta lisää riskiä sairastua keskeisiin kansantauteihin, kuten sydän- ja verisuonitauteihin, syöpiin, muistisairauksiin, verenpaineeseen ja tyypin 2 diabetekseen. Liikunta ja liikkuminen tukevat terveen painon ylläpitoa, mielen hyvinvointia sekä riittävää ja laadukasta unta. Liikunta ylläpitää arjen tarmokkuutta ja elämänlaatua. Liian vähäinen liikunta heikentää toimintakykyä ja fyysistä suorituskykyä kaikenikäisillä. <br><br>Kaikenlainen liikkuminen ja arkiaktiivisuus on suositeltavaa. Maailman terveysjärjestön (WHO) terveyttä edistävän fyysisen aktiivisuuden suositus 18 vuotta täyttäneille on moniportainen, jossa suositellaan 1) säännöllistä fyysistä aktiivisuutta eli liikkumista terveyshyötyjen saamiseksi, 2) vähintään 150-300 minuuttia kohtuutehoista liikkumista viikoittain tai 75-150 min raskastehoista liikkumista viikoittain tai edellisten yhdistelmä, 3) lihasvoimaa ylläpitävää tai lisäävää harjoittelua vähintään 2 kertaa viikossa. Lisäksi suositusten kohdassa 4) lisätään, että ylittämällä kohdan 2) liikkumisen minimimäärän (300 min/vko kohtuukuormitteinen, 150 min/vko raskastehoinen tai niiden yhdistelmä saavutetaan lisää terveyshyötyjä. <br><br>Ylläkuvattu WHO:n suositus on suunnattu ammattilaisille ja liikunta- terveyspolitiikkaa ohjaaville ja niistä päättäville tahoille. Suositus tulee jalkauttaa väestöön sopivilla viesteillä ja liikkumista lisäävillä toimenpiteillä. WHO:n ohjaamat keskeiset viestit käytännön työhön ovat: a) Vähäinenkin liikkuminen on hyväksi, b) Jos aikuiset eivät saavuta terveysliikunnan suosituksen mukaista liikkumisen määrää, niin pienikin määrä liikkumista edistää terveyttä, c) aikuisten tulee aloittaa liikkuminen pienellä liikkumisen määrällä ja asteittain lisätä liikkumiskertoja, tehoa ja kestoa. <BR><BR><b>Miten liikuntaan voidaan motivoida? </b><BR><BR>Yksilö- ja ryhmälähtöinen elintapaneuvonta, jossa hyödynnetään käyttäytymisen muutosmalleja. Erilaiset rakenteet ja keinot sosiaalisen tuen ja liikuntapystyvyyden lisäämiseksi. Kampanjat, tiedon ja osaamisen lisääminen. <BR><BR><b>Mitä kunnassa / alueella tulisi tehdä? </b><BR><BR>Terveydenhuollon toiminta esimerkiksi liikunnan palveluketjun avulla ja liian vähän liikkuvan tunnistamalla. Liikuntamahdollisuuksien kattava ja kohtuuhintainen tarjonta kaikille väestöryhmille ja niistä tiedottaminen. Kolmannen sektorin toimijoiden kanssa yhteinen kehittäminen ja liikkumismahdollisuuksien järjestäminen. Liikkumista tukeva maankäytön suunnittelu. Innovatiiviset keinot hyöty- ja matkaliikunnan lisäämiseksi sekä ilmastoystävällisyyttä painottaen. </p> ",
+        "en": " <p>Insufficient exercise increases the risk of developing significant chronic diseases, such as cardiovascular diseases, cancers, memory disorders, hypertension and type 2 diabetes. Physical activity and exercise support maintaining a healthy weight, mental wellbeing and sufficient sleep with good quality. Physical activity maintains energy in day-to-day life and contributes to good quality of life. Insufficient physical activity impairs functioning and physical performance in all age groups. <br><br>All kind of physical exercise and activity in day-to-day life is recommended. The World Health Organization's (WHO) recommendation for physical activity promoting health for people aged 18 or over consists of different steps and recommends 1) undertaking regular physical activity or exercise to obtain health benefits, 2) at least 150 to 300 minutes of moderate-intensity aerobic physical activity throughout the week or 75-150 of high-intensity physical activity or an equivalent combination, 3) activities maintaining or increasing muscle strength at least 2 times per week. Item 4) of the recommendations adds that exceeding the minimum amount of physical activity specified in item 2) (300 min/week moderate-intensity, 150 min/week high-intensity physical activity or an equivalent combination) brings additional health benefits. <br><br>The WHO recommendation described above has been aimed at professionals and policy-makers in physical activity and health. The recommendation must be implemented among the population using suitable messages and measures promoting physical activity. The key messages provided by WHO for practical work are: a) Even a small amount of physical activity is beneficial, b) If adults are not meeting the recommendations, doing some physical activity will benefit their health, c) Adults should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time. <BR><BR><b>How can people be motivated to engage in physical activity? </b><BR><BR>Individual- and group-based lifestyle counselling that makes use of the models for changing behaviour. Different structures and means to increase social support and physical ability. Campaigns, increasing knowledge and competence. <BR><BR><b>What should municipalities / regions do? </b><BR><BR>Health care activities, for instance, by using a physical activity service chain and identifying those with insufficient physical activity. Provision of a comprehensive and affordable range of physical activity for all population groups and providing information about these. Joint development activities with third-sector operators and providing opportunities for physical activity. Land use planning that supports physical activity. Innovative means to increase physical activity in performing daily tasks and during commuting and by emphasising climate-friendliness. </p> ",
+        "sv": "<p>För lite motion ökar risken för att insjukna i de största folksjukdomarna, såsom hjärt- och kärlsjukdomar, cancersjukdomar, minnessjukdomar, högt blodtryck och typ 2-diabetes. Motion och rörelse främjar upprätthållandet av hälsosam vikt, psykiskt välbefinnande samt tillräcklig och kvalitativ sömn. Motion upprätthåller handlingskraften i vardagen och livskvaliteten. För lite motion försämrar funktionsförmågan och den fysiska prestationsförmågan hos människor i alla åldrar. <br><br>All slags motion och aktivitet i vardagen rekommenderas. Världshälsoorganisationens (WHO) rekommendation om hälsofrämjande fysisk aktivitet för personer över 18 år är mångfasetterad, och innehåller rekommendationer om 1) regelbunden fysisk aktivitet dvs. motion för att uppnå hälsofördelar, 2) minst 150-300 minuter måttlig motion per vecka eller 75-150 minuter motion med hög intensitet per vecka eller en kombination av de föregående, 3) träning som upprätthåller eller ökar muskelstyrkan minst 2 gånger per vecka. I punkt 4) i rekommendationen tilläggs dessutom att genom att överskrida minimimängden motion i punkt 2) (300 min/vecka med måttlig intensitet, 150 min/vecka med hög intensitet eller en kombination av dem uppnås ytterligare hälsofördelar. <br><br>WHO:s rekommendation som beskrivs ovan riktar sig till yrkesutbildade personer och aktörer som styr och fattar beslut om motions- och hälsopolitiken. Rekommendationen bör förankras i befolkningen med lämplig kommunikation och åtgärder som ökar motionsutövandet. Centrala budskap i det praktiska arbetet är enligt WHO:s anvisningar a) Även en liten mängd motion är till nytta, b) Om vuxna inte uppnår den mängd motion som anges i rekommendationen om hälsomotion, främjar även en liten mängd motion hälsan c) vuxna ska inleda motionen med en liten mängd motion och stegvis öka antalet gånger, effekten och längden för motionen. <BR><BR><b>Hur kan man motivera till motion? </b><BR><BR>Livsstilsrådgivning individuellt eller i grupp, där man utnyttjar modeller för att förändra beteendet. Olika strukturer och metoder för att öka det sociala stödet och varaktig motion. Kampanjer, öka informationen och kunskapen. <BR><BR><b>Vad borde man göra i kommunen/området? </b><BR><BR>Verksamhet inom hälso- och sjukvården till exempel med hjälp av servicekedja för motion och identifiering av de som rör på sig för lite. Täckande utbud av motionsmöjligheter till rimligt pris för alla befolkningsgrupper och information om utbudet. Utveckling och ordnande av motionsmöjligheter tillsammans med aktörer inom tredje sektorn. Planläggning som främjar motion. Innovativa metoder för att öka nytto- och vardagsmotionen samt betoning på klimatvänlighet. </p> "
+      },
+      "limits": {
+        "fi": "<br /><p>Tuloksen varmuuteen vaikuttaa se, että aineisto on tuotettu otostutkimusaineistosta,<br />jossa esiintyy vastauskatoa. Vastauskatoa on korjattu tuloksista painokertoimien avulla. <br />Vuoden 2022 tiedonkeruussa vastausaktiivisuus oli 20 - 64-vuotiailla 37 %, <br />65 vuotta täyttäneillä 59 % ja 75 vuotta täyttäneillä 57 %.</p><br /><p><br />Indikaattorin tulkinnassa täytyy ottaa huomioon, että kyseessä on vastaajan itse ilmoittamat tiedot.<br />Lisätietoja: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Tilastoraportti</a></p>",
+        "en": "<br /><p>The confidence of the result is influenced by the fact that the data is based on survey sampling data,<br />which is affected by nonresponse. <br />In the results, nonresponse has been corrected by using weighting coefficients. <br />In the 2022 data collection, the response rate was 37 % for people aged 20 - 64, <br />59 % for people aged 65 and older, and 57 % for people aged 75 and older.</p><br /><p><br />When interpreting the indicator, it should be noted that this information was reported by <br />the respondents themselves.<br />More information: <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistical Report</a> </p>",
+        "sv": "<br /><p>Resultatens tillförlitlighet påverkas av att materialet har inhämtats från urvalsundersökning där det <br />förekommer svarsbortfall. <br />Svarsbortfallet har korrigerats i resultaten med hjälp av viktkoefficienter. <br />I 2022 års datainsamling var svarsaktiviteten 37 % bland 20 - 64-åringar, <br />59 % bland personer som fyllt 65 år och 57 % bland personer som fyllt 75 år.</p><br /><p><br />Vid tolkning av indikatorn bör man beakta att det är fråga om uppgifter som lämnats av respondenten själv.<br />Mer information <a href =\"https://thl.fi/tilastot/tervesuomi\" target=\"_blank\">Statistikrapport</a> </p>"
+      },
+      "legislation": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "notices": {
+        "fi": "",
+        "en": "",
+        "sv": ""
+      },
+      "primaryValueType": {
+        "code": "PROS",
+        "title": {
+          "fi": "Prosenttia",
+          "en": "Percent",
+          "sv": "Procent"
+        }
+      },
+      "decimals": 1,
+      "classifications": {
+        "region": {
+          "title": {
+            "fi": "Kunta, maakunta, hyvinvointialue, aluehallintoviraston alue, Manner-Suomi",
+            "en": "Municipality, region, the wellbeing services county, area for the regional state administrative agency, Mainland Finland",
+            "sv": "Kommun, landskap, välfärdsområde, området för regionförvaltningsverket, Fastlandsfinland"
+          },
+          "values": [
+            "Aluehallintovirasto",
+            "Nuts1",
+            "Kunta",
+            "Maakunta"
+          ]
+        },
+        "sex": {
+          "title": {
+            "fi": "Miehet, naiset, yhteensä",
+            "en": "Male, female, combined",
+            "sv": "Män, kvinnor, totalt"
+          },
+          "values": [
+            "male",
+            "female",
+            "total"
+          ]
+        }
+      },
+      "organization": {
+        "id": 2,
+        "title": {
+          "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+          "en": "Finnish institute for Health and Welfare (THL)",
+          "sv": "Institutet för hälsa och välfärd (THL)"
+        }
+      },
+      "subjects": [
+        {
+          "fi": "liikunta",
+          "sv": "motion",
+          "en": "physical activity",
+          "uri": "http://www.yso.fi/onto/yso/p916"
+        },
+        {
+          "fi": "fyysinen aktiivisuus",
+          "sv": "fysisk aktivitet",
+          "en": "physical activity",
+          "uri": ""
+        },
+        {
+          "fi": "elintavat",
+          "sv": "levnadsvanor",
+          "en": "living habits",
+          "uri": "http://www.yso.fi/onto/yso/p5530"
+        }
+      ],
+      "sources": [
+        {
+          "organization": {
+            "id": 2,
+            "title": {
+              "fi": "Terveyden ja hyvinvoinnin laitos (THL)",
+              "en": "Finnish institute for Health and Welfare (THL)",
+              "sv": "Institutet för hälsa och välfärd (THL)"
+            }
+          },
+          "title": {
+            "fi": "Terve Suomi -tutkimus (THL)",
+            "en": "Healthy Finland Survey (THL)",
+            "sv": "Undersökningen Hälsosamma Finland (THL)"
+          },
+          "description": {
+            "fi": "Terve Suomi -tutkimus tuottaa ajankohtaista tietoa Suomessa asuvien aikuisten terveydestä, hyvinvoinnista ja palveluista sekä niissä tapahtuneista muutoksista ja tulevasta kehityksestä. Tutkimuksessa yhdistyvät aiemmat kyselytutkimus FinSote sekä terveystarkastustutkimus FinTerveys.",
+            "en": "The Healthy Finland survey provides up-to-date information on the health, well-being and service use of adults living in Finland, as well as on changes and future developments in these areas. The survey brings together the FinSote questionnaire survey and the FinHealth health examination study.",
+            "sv": "Undersökningen Hälsosamma Finland producerar aktuell information om hälsa, välfärd och service för vuxna bosatta i Finland samt om förändringarna i dessa, och den framtida utvecklingen. I undersökningen kombineras den tidigare enkätundersökningen FinSote och undersökningen om hälsa, välfärd och social- och hälsovården FinHälsa."
+          }
+        }
+      ],
+      "groups": [
+        583
+      ],
+      "indicator_id": 5527
+    }
+  }
+}

@@ -1,6 +1,13 @@
-# data/__init__.py
-"""Data handling modules."""
-from .fetcher import SotkanetDataFetcher
-from .processor import DataProcessor
+"""Data processing module for Sotkanet dashboard."""
 
-__all__ = ['SotkanetDataFetcher', 'DataProcessor']
+from .fetcher import (
+    SotkanetDataFetcher,
+    DataCache,
+    fetch_indicator_data,
+)
+
+__all__ = [
+    'SotkanetDataFetcher',
+    'DataCache',
+    'fetch_indicator_data',
+]

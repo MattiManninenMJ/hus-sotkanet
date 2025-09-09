@@ -37,7 +37,7 @@ class DataValidator:
         
         # Build URL with repeated year parameters
         year_params = "&".join([f"years={year}" for year in self.years])
-        url = f"{self.BASE_URL}/json?indicator={indicator_id}&{year_params}&genders=total&regions={self.HUS_REGION_ID}"
+        url = f"{self.BASE_URL}/json?indicator={indicator_id}&{year_params}&genders=total"
         
         logger.info(f"Checking data for indicator {indicator_id}")
         
