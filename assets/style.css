@@ -56,11 +56,26 @@ body {
     margin-bottom: 20px;
 }
 
-.controls-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr auto;
-    gap: 20px;
-    align-items: end;
+.controls-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.controls-row .control-group {
+    flex: 0 1 auto;
+}
+
+.controls-row .button-group {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.year-selector {
+    margin-bottom: 20px;
 }
 
 /* ========================================
@@ -251,12 +266,36 @@ body {
     .indicators-grid {
         grid-template-columns: 1fr;
     }
+    
+    .controls-row {
+        flex-wrap: wrap;
+    }
+    
+    .controls-row .button-group {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .controls-row .button-group .btn {
+        flex: 1;
+    }
 }
 
 @media (max-width: 992px) {
-    .options-row {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .controls-row .control-group {
+        width: 100%;
+    }
+    
+    .controls-row .button-group {
+        width: 100%;
+        margin-top: 10px;
     }
 }
 

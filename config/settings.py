@@ -16,15 +16,15 @@ INDICATOR_SETS = {
     'development': [
         186,   # Mortality per 100 000
         322,   # Mortality 65+
-        5527,  # Physical activity
+        5358,  
     ],
     'production': [
         186,   # Mortality per 100 000
         322,   # Mortality 65+
-        5527,  # Physical activity
-        5529,  # Additional indicator
-        4559,  # Additional indicator
-        4461,  # Additional indicator
+        5358,  
+        5473,  
+        5152,  
+        2453, 
     ],
     'testing': [
         186,   # Single indicator for unit tests
@@ -36,7 +36,7 @@ INDICATOR_IDS = INDICATOR_SETS.get(ENV, INDICATOR_SETS['development'])
 
 # Regional and time configuration
 HUS_REGION_ID = 629
-DEFAULT_YEARS = list(range(2018, 2024))
+DEFAULT_YEARS = list(range(2020, 2025))
 DEFAULT_LANGUAGE = 'fi'
 
 # API settings

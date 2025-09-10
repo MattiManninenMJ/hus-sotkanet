@@ -46,7 +46,7 @@ def setup_logging(
     # Console formatter with timestamp
     console_formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s', 
-        datefmt='%H:%M:%S'  # Shorter time format for console
+        datefmt='%Y-%m-%d %H:%M:%S'  # Shorter time format for console
     )
     
     # Console handler with timestamps
@@ -173,7 +173,7 @@ try:
         handler.setFormatter(
             colorlog.ColoredFormatter(
                 '%(asctime)s - %(log_color)s%(levelname)-8s%(reset)s %(message)s',
-                datefmt='%H:%M:%S',
+                datefmt='%Y-%m-%d %H:%M:%S',
                 log_colors={
                     'DEBUG': 'cyan',
                     'INFO': 'green',
