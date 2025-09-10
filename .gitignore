@@ -21,7 +21,7 @@ dist/
 .DS_Store
 
 # Project specific
-.env
+#.env
 logs/*.log
 data/cache/*
 data/exports/*

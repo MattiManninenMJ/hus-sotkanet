@@ -2,6 +2,7 @@
 
 from dash import dcc, html
 from typing import Dict, List, Optional, Any
+import datetime
 
 
 class DashboardLayout:
@@ -107,6 +108,8 @@ class DashboardLayout:
     def create_controls_panel(lang: str = 'fi') -> html.Div:
         """Create global controls panel with language support."""
         t = lambda key: DashboardLayout.get_text(key, lang)
+
+        this_year = datetime.datetime.now().year
         
         return html.Div([
             html.H3(t('controls'), className="panel-title", id="controls-title"),
@@ -117,10 +120,10 @@ class DashboardLayout:
                 dcc.RangeSlider(
                     id='year-slider',
                     min=2015,
-                    max=2024,
+                    max=this_year,
                     step=1,
-                    marks={year: str(year) for year in range(2015, 2025, 2)},
-                    value=[2018, 2023],
+                    marks={year: str(year) for year in range(2015, this_year+1, 2)},
+                    value=[2018, this_year],
                     tooltip={"placement": "bottom", "always_visible": False}
                 )
             ], className="control-group year-selector"),
