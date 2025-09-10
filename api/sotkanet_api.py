@@ -21,7 +21,10 @@ logger = get_logger('sotkanet_api')
 
 
 class SotkanetAPIError(Exception):
-    """Base exception for Sotkanet API errors."""
+    """
+    Base exception for Sotkanet API errors.
+    Raised for any error encountered during API requests or processing.
+    """
     pass
 
 
@@ -29,6 +32,7 @@ class SotkanetAPI:
     """
     Unified client for Sotkanet REST API.
     All API interactions should go through this class.
+    Handles metadata and data fetching, retry logic, and session management.
     """
     
     def __init__(self, 
@@ -38,7 +42,7 @@ class SotkanetAPI:
                  retry_delay: Optional[int] = None):
         """
         Initialize Sotkanet API client.
-        
+        Sets up session, headers, and retry logic for robust API communication.
         Args:
             base_url: API base URL (defaults to settings)
             timeout: Request timeout in seconds
@@ -72,16 +76,14 @@ class SotkanetAPI:
                       params: Optional[Dict[str, Any]] = None,
                       method: str = 'GET') -> Any:
         """
-        Make HTTP request with retry logic.
-        
+        Make HTTP request to the Sotkanet API with retry logic.
+        Handles timeouts, HTTP errors, and JSON decoding errors.
         Args:
             endpoint: API endpoint (can include query string)
             params: Query parameters (optional, since we often build the query string manually)
             method: HTTP method
-            
         Returns:
             Response data (JSON)
-            
         Raises:
             SotkanetAPIError: On API errors
         """
@@ -137,11 +139,9 @@ class SotkanetAPI:
     
     def get_indicator_metadata(self, indicator_id: int) -> Dict:
         """
-        Fetch metadata for a single indicator.
-        
+        Fetch metadata for a single indicator from the API.
         Args:
             indicator_id: Indicator ID
-            
         Returns:
             Indicator metadata dictionary
         """
@@ -161,14 +161,12 @@ class SotkanetAPI:
                           years: Optional[List[int]] = None,
                           genders: Optional[List[str]] = None) -> List[Dict]:
         """
-        Fetch data for a single indicator.
-        
+        Fetch data for a single indicator for a region, years, and genders.
         Args:
             indicator_id: Indicator ID (required)
             region_id: Region ID (defaults to HUS)
             years: List of years (defaults to settings)
             genders: List of genders (defaults to all: ['male', 'female', 'total'])
-            
         Returns:
             List of data points with all requested genders
         """
@@ -217,14 +215,12 @@ class SotkanetAPI:
                                     years: Optional[List[int]] = None,
                                     genders: Optional[List[str]] = None) -> Dict[int, List[Dict]]:
         """
-        Fetch data for multiple indicators.
-        
+        Fetch data for multiple indicators for a region, years, and genders.
         Args:
             indicator_ids: List of indicator IDs
             region_id: Region ID
             years: List of years
             genders: List of genders (defaults to all)
-            
         Returns:
             Dictionary mapping indicator_id to data points
         """
@@ -251,10 +247,8 @@ class SotkanetAPI:
     def get_all_metadata(self, indicator_ids: Optional[List[int]] = None) -> Dict[str, Dict]:
         """
         Fetch metadata for all configured indicators.
-        
         Args:
             indicator_ids: List of IDs (defaults to settings.INDICATOR_IDS)
-            
         Returns:
             Dictionary mapping indicator_id (as string) to metadata
         """
@@ -284,14 +278,12 @@ class SotkanetAPI:
                                    years: Optional[List[int]] = None,
                                    genders: Optional[List[str]] = None) -> Dict:
         """
-        Check data availability for an indicator.
-        
+        Check data availability for an indicator for a region, years, and genders.
         Args:
             indicator_id: Indicator ID
             region_id: Region ID
             years: Years to check
             genders: Genders to check (defaults to ['total'])
-            
         Returns:
             Validation results dictionary
         """
@@ -345,8 +337,7 @@ class SotkanetAPI:
     
     def get_regions(self) -> List[Dict]:
         """
-        Fetch all available regions.
-        
+        Fetch all available regions from the API.
         Returns:
             List of region dictionaries
         """
@@ -356,15 +347,22 @@ class SotkanetAPI:
         return self._make_request(endpoint)
     
     def close(self):
-        """Close the session."""
+        """
+        Close the requests session.
+        Should be called when done with the API client.
+        """
         self.session.close()
     
     def __enter__(self):
-        """Context manager entry."""
+        """
+        Context manager entry. Returns self for use in 'with' statements.
+        """
         return self
-    
+
     def __exit__(self, exc_type, exc_val, exc_tb):
-        """Context manager exit."""
+        """
+        Context manager exit. Closes the session.
+        """
         self.close()
 
 
@@ -373,8 +371,7 @@ _api_instance = None
 
 def get_api() -> SotkanetAPI:
     """
-    Get singleton API instance.
-    
+    Get singleton API instance for convenience functions.
     Returns:
         SotkanetAPI instance
     """
@@ -386,7 +383,13 @@ def get_api() -> SotkanetAPI:
 
 # Convenience functions that use the singleton
 def fetch_indicator_metadata(indicator_id: int) -> Dict:
-    """Fetch metadata for a single indicator."""
+    """
+    Convenience function to fetch metadata for a single indicator.
+    Args:
+        indicator_id: Indicator ID
+    Returns:
+        Indicator metadata dictionary
+    """
     return get_api().get_indicator_metadata(indicator_id)
 
 
@@ -394,12 +397,27 @@ def fetch_indicator_data(indicator_id: int,
                          region_id: Optional[int] = None,
                          years: Optional[List[int]] = None,
                          genders: Optional[List[str]] = None) -> List[Dict]:
-    """Fetch data for a single indicator with all genders."""
+    """
+    Convenience function to fetch data for a single indicator with all genders.
+    Args:
+        indicator_id: Indicator ID
+        region_id: Region ID
+        years: List of years
+        genders: List of genders
+    Returns:
+        List of data points
+    """
     return get_api().get_indicator_data(indicator_id, region_id, years, genders)
 
 
 def fetch_all_metadata(indicator_ids: Optional[List[int]] = None) -> Dict[str, Dict]:
-    """Fetch metadata for all configured indicators."""
+    """
+    Convenience function to fetch metadata for all configured indicators.
+    Args:
+        indicator_ids: List of indicator IDs
+    Returns:
+        Dictionary mapping indicator_id to metadata
+    """
     return get_api().get_all_metadata(indicator_ids)
 
 
@@ -407,18 +425,25 @@ def validate_data_availability(indicator_id: int,
                                region_id: Optional[int] = None,
                                years: Optional[List[int]] = None,
                                genders: Optional[List[str]] = None) -> Dict:
-    """Check data availability for an indicator."""
+    """
+    Convenience function to check data availability for an indicator.
+    Args:
+        indicator_id: Indicator ID
+        region_id: Region ID
+        years: List of years
+        genders: List of genders
+    Returns:
+        Validation results dictionary
+    """
     return get_api().validate_data_availability(indicator_id, region_id, years, genders)
 
 
 def filter_data_by_gender(data: List[Dict], gender: str) -> List[Dict]:
     """
     Filter data points by specific gender.
-    
     Args:
         data: List of data points from API
         gender: Gender to filter for ('male', 'female', or 'total')
-        
     Returns:
         Filtered list of data points
     """
@@ -428,11 +453,9 @@ def filter_data_by_gender(data: List[Dict], gender: str) -> List[Dict]:
 def filter_data_by_year(data: List[Dict], year: int) -> List[Dict]:
     """
     Filter data points by specific year.
-    
     Args:
         data: List of data points from API
         year: Year to filter for
-        
     Returns:
         Filtered list of data points
     """
@@ -442,11 +465,9 @@ def filter_data_by_year(data: List[Dict], year: int) -> List[Dict]:
 def filter_data_by_years(data: List[Dict], years: List[int]) -> List[Dict]:
     """
     Filter data points by multiple years.
-    
     Args:
         data: List of data points from API
         years: Years to filter for
-        
     Returns:
         Filtered list of data points
     """

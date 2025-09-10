@@ -6,9 +6,13 @@ import datetime
 
 
 class DashboardLayout:
-    """Manages dashboard layout components."""
+    """
+    Manages dashboard layout components for the HUS Sotkanet dashboard.
+    Provides static methods to generate UI components with language support.
+    """
     
     # UI translations
+    # Supported UI translations for Finnish, Swedish, and English
     TRANSLATIONS = {
         'fi': {
             'title': 'HUS Sotkanet Terveysmittaristo',
@@ -86,12 +90,25 @@ class DashboardLayout:
     
     @staticmethod
     def get_text(key: str, lang: str = 'fi') -> str:
-        """Get translated text for a key."""
+        """
+        Get translated text for a key.
+        Args:
+            key: The translation key (e.g. 'title', 'refresh').
+            lang: Language code ('fi', 'sv', 'en').
+        Returns:
+            Translated string if available, otherwise the key itself.
+        """
         return DashboardLayout.TRANSLATIONS.get(lang, DashboardLayout.TRANSLATIONS['fi']).get(key, key)
     
     @staticmethod
     def create_header(lang: str = 'fi') -> html.Div:
-        """Create dashboard header with language support."""
+        """
+        Create dashboard header with language support.
+        Args:
+            lang: Language code for translation.
+        Returns:
+            html.Div containing the dashboard title and subtitle.
+        """
         return html.Div([
             html.H1(
                 id="dashboard-title",
@@ -106,14 +123,21 @@ class DashboardLayout:
     
     @staticmethod
     def create_controls_panel(lang: str = 'fi') -> html.Div:
-        """Create global controls panel with language support."""
+        """
+        Create global controls panel with language support.
+        Includes year selector, chart type, gender, language, and action buttons.
+        Args:
+            lang: Language code for translation.
+        Returns:
+            html.Div containing controls for year selection, chart type, gender, language, refresh, and download.
+        """
         t = lambda key: DashboardLayout.get_text(key, lang)
 
         this_year = datetime.datetime.now().year
-        
+        # Controls panel contains all dashboard controls grouped by function
         return html.Div([
             html.H3(t('controls'), className="panel-title", id="controls-title"),
-            
+
             # Year selector - full width
             html.Div([
                 html.Label(t('select_years'), className="control-label", id="year-label"),
@@ -127,7 +151,7 @@ class DashboardLayout:
                     tooltip={"placement": "bottom", "always_visible": False}
                 )
             ], className="control-group year-selector"),
-            
+
             # All controls in one row
             html.Div([
                 # Chart type selector
@@ -144,7 +168,7 @@ class DashboardLayout:
                         className="radio-items"
                     )
                 ], className="control-group"),
-                
+
                 # Gender selector
                 html.Div([
                     html.Label(t('gender'), className="control-label", id="gender-label"),
@@ -160,7 +184,7 @@ class DashboardLayout:
                         className="radio-items"
                     )
                 ], className="control-group"),
-                
+
                 # Language selector
                 html.Div([
                     html.Label(t('language'), className="control-label", id="language-label"),
@@ -176,8 +200,8 @@ class DashboardLayout:
                         className="radio-items"
                     )
                 ], className="control-group"),
-                
-                # Buttons
+
+                # Buttons for refreshing and downloading data
                 html.Div([
                     html.Button(
                         t('refresh'), 
@@ -199,28 +223,30 @@ class DashboardLayout:
     def create_indicator_card(indicator_id: int, metadata: Dict, lang: str = 'fi') -> html.Div:
         """
         Create a card for a single indicator with its chart and info.
-        
+        The card includes the indicator title, info button, collapsible info section, and chart.
         Args:
             indicator_id: The indicator ID
             metadata: Indicator metadata dictionary
             lang: Language code
+        Returns:
+            html.Div representing the indicator card.
         """
         # Get title in selected language, fallback to Finnish
         title = metadata.get('title', {}).get(lang, 
                 metadata.get('title', {}).get('fi', f'Indicator {indicator_id}'))
-        
-        # Truncate long titles
+
+        # Truncate long titles for better UI
         if len(title) > 100:
             title = title[:97] + "..."
-        
+
         return html.Div([
-            # Indicator header with title
+            # Indicator header with title and info button
             html.Div([
                 html.H4(f"[{indicator_id}] {title}", 
                        className="indicator-title",
                        id={'type': 'indicator-title', 'index': indicator_id}),
-                
-                # Info button that shows/hides metadata
+
+                # Info button to show/hide metadata
                 html.Button(
                     "ℹ", 
                     id={'type': 'info-button', 'index': indicator_id},
@@ -228,15 +254,15 @@ class DashboardLayout:
                     title="Show/hide information"
                 )
             ], className="indicator-header"),
-            
-            # Collapsible info section
+
+            # Collapsible info section (hidden by default)
             html.Div(
                 id={'type': 'info-content', 'index': indicator_id},
                 className="indicator-info-content",
                 style={'display': 'none'}
             ),
-            
-            # Chart container
+
+            # Chart container with loading spinner
             dcc.Loading(
                 dcc.Graph(
                     id={'type': 'indicator-chart', 'index': indicator_id},
@@ -256,20 +282,21 @@ class DashboardLayout:
     def create_indicators_grid(indicators_metadata: Dict, lang: str = 'fi') -> html.Div:
         """
         Create a grid of all indicator cards.
-        
         Args:
             indicators_metadata: Dictionary of all indicators metadata
             lang: Language code
+        Returns:
+            html.Div containing a grid of indicator cards.
         """
         # Sort indicators by ID for consistent ordering
         sorted_indicators = sorted(indicators_metadata.items(), key=lambda x: int(x[0]))
-        
+
         indicator_cards = []
         for ind_id_str, metadata in sorted_indicators:
             ind_id = int(ind_id_str)
             card = DashboardLayout.create_indicator_card(ind_id, metadata, lang)
             indicator_cards.append(card)
-        
+
         return html.Div(
             indicator_cards,
             id="indicators-grid",
@@ -278,9 +305,15 @@ class DashboardLayout:
     
     @staticmethod
     def create_footer(lang: str = 'fi') -> html.Div:
-        """Create dashboard footer with attribution."""
+        """
+        Create dashboard footer with attribution and source info.
+        Args:
+            lang: Language code for translation.
+        Returns:
+            html.Div containing footer attribution.
+        """
         attribution_text = DashboardLayout.get_text('footer_attribution', lang)
-        
+
         return html.Div([
             html.Hr(),
             html.P([
@@ -303,32 +336,34 @@ class DashboardLayout:
     def create_layout(indicators_metadata: Dict) -> html.Div:
         """
         Create complete dashboard layout.
-        
+        Assembles header, controls, indicator grid, footer, and hidden stores.
         Args:
             indicators_metadata: Dictionary of all indicators metadata
+        Returns:
+            html.Div containing the complete dashboard layout.
         """
         # Start with Finnish as default
         return html.Div([
             # Header
             DashboardLayout.create_header('fi'),
-            
+
             # Global controls
             DashboardLayout.create_controls_panel('fi'),
-            
+
             # Main content - grid of all indicators
             html.Div([
                 DashboardLayout.create_indicators_grid(indicators_metadata, 'fi')
             ], id="main-content"),
-            
+
             # Footer with attribution
             DashboardLayout.create_footer('fi'),
-            
+
             # Hidden stores for data
             dcc.Store(id='all-indicators-data-store'),
             dcc.Store(id='ui-settings-store'),
             dcc.Store(id='current-language-store', data='fi'),
-            
+
             # Download component
             dcc.Download(id="download-all-data-csv")
-            
+
         ], id="app-container")
