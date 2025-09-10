@@ -59,12 +59,12 @@ The application is lacking a proper testing - now the application has only basic
 
 1. **Extract the ZIP file**
    ```bash
-   # Extract the provided hus-sotkanet-dashboard.zip file to your desired location
+   # Extract the provided hus-sotkanet-main.zip file to your desired location
    # For example on Windows: right-click and "Extract All..."
-   # On macOS/Linux: unzip hus-sotkanet-dashboard.zip
+   # On macOS/Linux: unzip hus-sotkanet-main.zip
    
    # Navigate to the extracted directory
-   cd hus-sotkanet-dashboard
+   cd hus-sotkanet-main
    ```
 
 2. **Create a virtual environment**
