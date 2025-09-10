@@ -235,5 +235,6 @@ fetcher.clear_cache()
 TBD
 
 ## Contact
-
+Matti Manninen
++358 50 362 7724
 matti.manninen@gwlnetworks.com
