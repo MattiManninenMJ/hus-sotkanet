@@ -50,7 +50,7 @@ class MetadataFetcher:
         logger.info(f"Successfully fetched metadata for {len(metadata)} indicators")
         return metadata
     
-    def save_metadata(self, metadata: Dict, output_path: Path = None):
+    def save_metadata(self, metadata: Dict, output_path: Path = None): # type: ignore
         """Save fetched metadata to JSON file."""
         output_path = output_path or settings.METADATA_FILE
         
@@ -245,10 +245,11 @@ def main():
                 'results': validation_results
             }
             
-            with open(settings.VALIDATION_RESULTS_FILE, 'w') as f:
+            validation_file = Path("config/data_validation_results.json")
+            with open(validation_file, 'w') as f:
                 json.dump(validation_output, f, indent=2)
             
-            print(f"\n✓ Validation results saved to {settings.VALIDATION_RESULTS_FILE}")
+            print(f"\n✓ Validation results saved to {validation_file}")
         
         print("\n✓ Complete!")
     else:

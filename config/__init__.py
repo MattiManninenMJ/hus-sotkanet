@@ -15,13 +15,6 @@ from .settings import (
     CACHE_DIR,
     LOG_LEVEL,
     LOG_DIR,
-    METADATA_FILE,
-    VALIDATION_RESULTS_FILE,
-    INDICATORS_METADATA,
-    get_indicator_metadata,
-    get_all_indicator_ids,
-    get_environment,
-    require_metadata,
 )
 
 __all__ = [
@@ -39,11 +32,4 @@ __all__ = [
     'CACHE_DIR',
     'LOG_LEVEL',
     'LOG_DIR',
-    'METADATA_FILE',
-    'VALIDATION_RESULTS_FILE',
-    'INDICATORS_METADATA',
-    'get_indicator_metadata',
-    'get_all_indicator_ids',
-    'get_environment',
-    'require_metadata',
 ]

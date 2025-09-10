@@ -107,11 +107,8 @@ class SotkanetDataFetcher:
         """
         self.api = SotkanetAPI()
         self.region_id = settings.HUS_REGION_ID
-        self.metadata = settings.INDICATORS_METADATA
+        self.metadata = {}  # Will be set by the app after fetching
         self.cache = DataCache(ttl_seconds=settings.CACHE_TTL) if use_cache else None
-        
-        if not self.metadata:
-            logger.warning("No metadata loaded. Run 'python scripts/fetch_metadata.py' first.")
     
     def fetch_indicator_data(self, 
                            indicator_id: int, 
@@ -133,7 +130,7 @@ class SotkanetDataFetcher:
         years = years or settings.DEFAULT_YEARS
         genders = genders or ['male', 'female', 'total']
         
-        #logger.info(f"Fetching data for indicator  {indicator_id}, years: {years}, genders: {genders} in fetcher.py")
+        logger.info(f"Fetching data for indicator  {indicator_id}, years: {years}, genders: {genders} in fetcher.py")
         
         # Check metadata for data availability
         metadata = self.get_indicator_metadata(indicator_id)

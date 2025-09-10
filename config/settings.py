@@ -5,10 +5,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 
 # Environment configuration
 ENV = os.getenv('APP_ENV', 'development')
+
 
 # Indicator sets for different environments
 INDICATOR_SETS = {
